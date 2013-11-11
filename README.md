@@ -5,13 +5,13 @@ AppotaGameSDK - Version 0.1
 
 Connect with Appota user and payment system
 
-1. Requirement:
+* 	Requirement:
 
 	*	XCode 4.6 and above
 
 	*	iOS 5.0 and above
 
-2. Setup
+* 	Setup
 
 	*	Required framework: 
 		* AppotaSDK
@@ -37,8 +37,8 @@ Connect with Appota user and payment system
 		
 Getting started - (Reference AppotaGameTest)
 ----------------
-1. 	*import <AppotaSDK/AppotaSDK.h>* where do you want to use SDK
-2.	Setup SDK in Appdelegate:
+*	*import <AppotaSDK/AppotaSDK.h>* where do you want to use SDK
+*	Setup SDK in Appdelegate:
 	* AppDelegate.h
 	
 		* Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
@@ -81,7 +81,7 @@ Getting started - (Reference AppotaGameTest)
 }
 	~~~
 
-3. 	Payment setup
+*	Payment setup
 
 	Each payment is an instance of class AppotaPayment. You can create a payment by
 	
@@ -109,7 +109,7 @@ Getting started - (Reference AppotaGameTest)
 		~~~
 	    [AppotaGameSDKConfigure addSupportPayment:p0];		
 		~~~
-4. 	Support function
+*	Support function
 
 	Every function will be accessed via  *AppotaGameSDKConfigure* class
 	* *+showSDKView* Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
