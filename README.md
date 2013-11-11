@@ -88,13 +88,16 @@ Getting started - (Reference AppotaGameTest)
 
 	Each payment is an instance of class AppotaPayment. You can create a payment by
 	
+	~~~
+	
 	   AppotaPayment *p0 = [[AppotaPayment alloc]     initWithPaymentMethod:PAYMENT_SMS    
 	   withAmount:15000 
 	       withCoinAmount:1000 
 	       withCurrency:@"VND" 
 	       withCoinName:@"Gold" 
 	       withCoinImage:nil    
-    	       withPaymentDescription:@"500 vnd free"];    	       
+    	       withPaymentDescription:@"500 vnd free"];    	
+   ~~~       
     	       	       
 	* With PAYMENT_SMS is the payment method (can use PAYMENT_CARD as phone card, PAYMENT_INTERNET_BANKING (PAYMENT_BAOKIM) as bank, PAYMENT_PAYPAL, PAYMENT_APPLE as well)		
 			* 15000 is amount of money for that method
