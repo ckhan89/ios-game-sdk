@@ -83,7 +83,6 @@ Getting started - (Reference AppotaGameTest)
 		
 		
 
-
 3. Payment setup
 
 	Each payment is an instance of class AppotaPayment. You can create a payment by
@@ -112,7 +111,7 @@ Getting started - (Reference AppotaGameTest)
 		~~~
 	    [AppotaGameSDKConfigure addSupportPayment:p0];		
 		~~~
-3. Support function
+4. Support function
 
 	Every function will be accessed via  *AppotaGameSDKConfigure* class
 	* *+showSDKView* Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
