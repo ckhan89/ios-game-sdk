@@ -37,19 +37,19 @@ Connect with Appota user and payment system
 		
 Getting started - (Reference AppotaGameTest)
 ----------------
-1. 	import <AppotaSDK/AppotaSDK.h> where do you want to use SDK
+1. 	*import <AppotaSDK/AppotaSDK.h>* where do you want to use SDK
 2.	Setup SDK in Appdelegate:
 	* AppDelegate.h
 	
-		* Add protocol AppotaGameSDKConfigureDelegate to AppDelegate
-	* AppDelegate.m		
-	Config AppotaGameSDK after setting up windows in Appdelegate (Reference AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class
-		* Init payment list (AppotaPayment class represents payment item)
+		* Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+	* AppDelegate.m			
+	Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaGameTest/AppDelegate.m*) by AppotaGameSDKConfigure class
+		* Init payment list (*AppotaPayment* class represents payment item)
 		* Init AppotaGameSDKConfigure with 
-			* CLIENT_ID - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_ID instead
-			* CLIENT_SECRET - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_SECRET instead
-			* INAPP_API_KEY - Config con dev.appota.com if app is not in published state please use SANDBOX_INAPP_API_KEY instead
-			* noticeUrl - URL for payment notification
+			* *CLIENT_ID* - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_ID instead
+			* *CLIENT_SECRET* - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_SECRET instead
+			* *INAPP_API_KEY* - Config con dev.appota.com if app is not in published state please use SANDBOX_INAPP_API_KEY instead
+			* *noticeUrl* - URL for payment notification
 			* checkUpdate option - Enable this option for automatic update by AppotaGameSDK
 			* show payment button optition:
 				- YES: Enable this option for automatic show a payment button floating on game screen
@@ -71,21 +71,32 @@ Getting started - (Reference AppotaGameTest)
 		
 		~~~~
 			To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-		* Set delegate for AppotaGameSDKConfigure (shoul use AppDelegate for delegate)
-		* Handle login status by protocol function - (void) didFinishLogin:(NSDictionary *)userInfoDict (UserInfo dict can be used for verification process)
-		* Each payment is an instance of class AppotaPayment. You can create a payment by:
+		* Set delegate for *AppotaGameSDKConfigure* (shoul use AppDelegate for delegate)
+		* Handle login status by protocol function *- (void) didFinishLogin:(NSDictionary \*)userInfoDict* (UserInfo dict can be used for verification process)
+		* If you are using Social Login please add handle open URL in your AppDelegate by this function :
 		
-		~~~
-    AppotaPayment *p0 = [[AppotaPayment alloc] 
-    initWithPaymentMethod:PAYMENT_SMS 
-    withAmount:15000 
-    withCoinAmount:1000 
-    withCurrency:@"VND" 
-    withCoinName:@"Gold" 
-    withCoinImage:nil 
-    withPaymentDescription:@"500 vnd free"];	
-		~~~
-			* With PAYMENT_SMS is the payment method (can use PAYMENT_CARD as phone card, PAYMENT_INTERNET_BANKING (PAYMENT_BAOKIM) as bank, PAYMENT_PAYPAL, PAYMENT_APPLE as well)		
+		~~~		
+		(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+	~~~
+		
+		
+
+
+3. Payment setup
+
+	Each payment is an instance of class AppotaPayment. You can create a payment by
+	
+	   AppotaPayment *p0 = [[AppotaPayment alloc]     initWithPaymentMethod:PAYMENT_SMS    
+	   withAmount:15000 
+	       withCoinAmount:1000 
+	       withCurrency:@"VND" 
+	       withCoinName:@"Gold" 
+	       withCoinImage:nil    
+    	       withPaymentDescription:@"500 vnd free"];    	       
+    	       	       
+	* With PAYMENT_SMS is the payment method (can use PAYMENT_CARD as phone card, PAYMENT_INTERNET_BANKING (PAYMENT_BAOKIM) as bank, PAYMENT_PAYPAL, PAYMENT_APPLE as well)		
 			* 15000 is amount of money for that method
 			* 1000 is coin amount in game corresponding money amount above
 			* "VND" is currency of the payment
