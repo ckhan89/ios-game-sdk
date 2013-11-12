@@ -80,9 +80,10 @@ AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
 floating on game screen
  - NO: Don't show the floating payment button (Payment view can
 be shown via function [AppotaGameSDKConfigre showPaymentView])
- - Set delegate for AppotaGameSDKConfigure (should use AppDelegate for
+
+- Set delegate for AppotaGameSDKConfigure (should use AppDelegate for
 delegate)
- - Handle login status by protocol function - (void)
+- Handle login status by protocol function - (void)
 didFinishLogin:(NSDictionary *)userInfoDict (UserInfo dict can be used
 for verification process)
 
