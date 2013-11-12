@@ -68,18 +68,19 @@ Config AppotaGameSDK after setting up windows in Appdelegate (reference
 AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
 
 - Init payment list (AppotaPayment class represents payment item)
- - Init AppotaGameSDKConfigure with
-     CLIENT\_ID - Config on dev.appota.com
-     CLIENT\_SECRET - Config on dev.appota.com
-     INAPP\_API\_KEY - Config on dev.appota.com
-     noticeUrl - URL for payment notification
-     checkUpdate option - Enable this option for automatic update by
-AppotaGameSDK
-     autoShowPaymentButton option:
-         - YES: Enable this option for automatic show a payment button
+
+- Init AppotaGameSDKConfigure with:
+    CLIENT_ID - Config on dev.appota.com
+    CLIENT_SECRET - Config on dev.appota.com
+    INAPP_API_KEY - Config on dev.appota.com 
+    noticeUrl - URL for payment notification 
+    checkUpdate option - Enable this option for automatic update by AppotaGameSDK
+    autoShowPaymentButton option:
+        - YES: Enable this option for automatic show a payment button
 floating on game screen
-         - NO: Don't show the floating payment button (Payment view can
+        - NO: Don't show the floating payment button (Payment view can
 be shown via function [AppotaGameSDKConfigre showPaymentView])
+
  - Set delegate for AppotaGameSDKConfigure (should use AppDelegate for
 delegate)
  - Handle login status by protocol function - (void)
