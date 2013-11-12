@@ -70,9 +70,9 @@ AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
 - Init payment list (AppotaPayment class represents payment item)
 
 - Init AppotaGameSDKConfigure with:
-    CLIENT_ID - Config on dev.appota.com
-    CLIENT_SECRET - Config on dev.appota.com
-    INAPP_API_KEY - Config on dev.appota.com 
+   - CLIENT_ID - Config on dev.appota.com
+   - CLIENT_SECRET - Config on dev.appota.com
+   - INAPP_API_KEY - Config on dev.appota.com 
     noticeUrl - URL for payment notification 
     checkUpdate option - Enable this option for automatic update by AppotaGameSDK
     autoShowPaymentButton option:
