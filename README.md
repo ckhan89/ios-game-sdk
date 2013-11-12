@@ -78,9 +78,6 @@ AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
  - autoShowPaymentButton option:
     - YES: Enable this option for automatic show a payment button
 floating on game screen
-    - YES: Enable this option for automatic show a payment button
-floating on game screen
-
     - NO: Don't show the floating payment button (Payment view can
 be shown via function [AppotaGameSDKConfigre showPaymentView])
 
