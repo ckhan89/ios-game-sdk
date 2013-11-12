@@ -79,8 +79,8 @@ Connect with Appota user and payment system
 	     ];
 		
 		~~~~
-			To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-		* Set delegate for *AppotaGameSDKConfigure* (shoul use AppDelegate for delegate)
+	To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
+		* Set delegate for AppotaGameSDKConfigure (shoul use AppDelegate for delegate)
 		* Handle login status by protocol function *- (void) didFinishLogin:(NSDictionary \*)userInfoDict* (UserInfo dict can be used for verification process)
 		* If you are using Social Login please add handle open URL in your AppDelegate by this function :
 		
