@@ -76,11 +76,10 @@ AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
     noticeUrl - URL for payment notification 
     checkUpdate option - Enable this option for automatic update by AppotaGameSDK
     autoShowPaymentButton option:
-        - YES: Enable this option for automatic show a payment button
+ - YES: Enable this option for automatic show a payment button
 floating on game screen
-        - NO: Don't show the floating payment button (Payment view can
+ - NO: Don't show the floating payment button (Payment view can
 be shown via function [AppotaGameSDKConfigre showPaymentView])
-
  - Set delegate for AppotaGameSDKConfigure (should use AppDelegate for
 delegate)
  - Handle login status by protocol function - (void)
