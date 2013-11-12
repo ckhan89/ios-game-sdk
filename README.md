@@ -125,9 +125,10 @@ Each payment is an instance of class AppotaPayment. You can create a payment by
 	```
 	    [AppotaGameSDKConfigure addSupportPayment:p0];		
 	```
+
 - Support function
 
-Every function will be accessed via  *AppotaGameSDKConfigure* class
+Every function will be accessed via AppotaGameSDKConfigure class
 	* +showSDKView: Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
 	* +logOut: Manualy show logout popup in your game
 	* +(NSDictionary): getUserInfo* Return userinfo (acces_token, username, email, …) in NSDictionary
