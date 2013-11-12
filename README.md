@@ -46,7 +46,7 @@ Import header file to source file where do you want to use SDK:
 
 Add 1 string AppotaClientId with the value is CLIENT_ID (details about CLIENT_ID are in section of getting ACCESS_TOKEN)
 
-Add more schema: Add 1 string URL Array types. Creat 1 item more with URL Schemes is appotaCLIENT_ID.
+Add more schema: Add 1 string URL Array types. Create 1 item more with URL Schemes is appotaCLIENT_ID.
 
 For example: If CLIENT_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540,
 schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
@@ -75,7 +75,7 @@ Setup SDK in Appdelegate:
 			* Social login can be configured via boolean value enableFacebookLogin, googleLogin, twitterLogin
 		* Sample:
 		
-		~~~ objective-c
+		~~~
 	    [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
                                  withClientSecret:CLIENT_SECRET
                                   withInAppAPIKey:INAPP_API_KEY
