@@ -32,8 +32,7 @@ MessageUI, Security, SystemConfiguration, CFNetwork, OpenGLES, CoreMedia, libxml
 
 ![](docs/vn/step1.jpg)
 
-In project build settings section, find Other Linker Flags, add two
-values: -ObjC và -all\_load.
+In project build settings section, find Other Linker Flags, add these linker flags: -ObjC, -lc++ và -all_load.
 
 ![](docs/vn/step2.jpg)
 
@@ -58,33 +57,51 @@ schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
 **Config SDK in Appdelegate:**
 
-**+AppDelegate.h**
+Setup SDK in Appdelegate:
+	* AppDelegate.h
+	* Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+	* AppDelegate.m			
+	Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaGameTest/AppDelegate.m*) by AppotaGameSDKConfigure class
+		* Init payment list (*AppotaPayment* class represents payment item)
+		* Init AppotaGameSDKConfigure with 
+			* *CLIENT_ID* - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_ID instead
+			* *CLIENT_SECRET* - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_SECRET instead
+			* *INAPP_API_KEY* - Config con dev.appota.com if app is not in published state please use SANDBOX_INAPP_API_KEY instead
+			* *noticeUrl* - URL for payment notification
+			* checkUpdate option - Enable this option for automatic update by AppotaGameSDK
+			* show payment button optition:
+				- YES: Enable this option for automatic show a payment button floating on game screen
+				- NO: Don't show the floating payment button (Payment view can be shown via function [AppotaGameSDKConfigre showPaymentView])
+			* Social login can be configured via boolean value enableFacebookLogin, googleLogin, twitterLogin
+		* Sample:
+		
+		~~~ objective-c
+	    [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
+                                 withClientSecret:CLIENT_SECRET
+                                  withInAppAPIKey:INAPP_API_KEY
+                         withNoticeUrl:@"http://filestore9.com/test.php"
+                                  withCheckUpdate:YES
+                              enableFacebookLogin:YES
+                                enableGoogleLogin:YES
+                               enableTwitterLogin:YES
+                            autoShowPaymentButton:YES
+	     ];
+		
+		~~~
+			
+			To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
+			
+		* Set delegate for *AppotaGameSDKConfigure* (shoul use AppDelegate for delegate)
+		* Handle login status by protocol function *- (void) didFinishLogin:(NSDictionary \*)userInfoDict* (UserInfo dict can be used for verification process)
+		* If you are using Social Login please add handle open URL in your AppDelegate by this function :
+		
+		~~~		
+		(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+	~~~
 
-Add protocol AppotaGameSDKConfigureDelegate to AppDelegate
-
-**+AppDelegate.m**
-
-Config AppotaGameSDK after setting up windows in Appdelegate (reference
-AppotaGameTest/AppDelegate.m) by AppotaGameSDKConfigure class.
-
-- Init payment list (AppotaPayment class represents payment item)
-
-- Init AppotaGameSDKConfigure with:
- - CLIENT_ID - Config on dev.appota.com
- - CLIENT_SECRET - Config on dev.appota.com
- - INAPP_API_KEY - Config on dev.appota.com 
- - noticeUrl - URL for payment notification 
- - checkUpdate option - Enable this option for automatic update by AppotaGameSDK
- - autoShowPaymentButton option:
-    YES: Enable this option for automatic show a payment button
-floating on game screen
-    NO: Don't show the floating payment button (Payment view can
-be shown via function [AppotaGameSDKConfigre showPaymentView])
-
-- Set delegate for AppotaGameSDKConfigure (should use AppDelegate for
-delegate)
-- Handle login status by protocol function - (void)
-didFinishLogin:(NSDictionary *)userInfoDict (UserInfo dict can be used
-for verification process)
+		* Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl*
+	
 
 **3. Integrate SDK**
