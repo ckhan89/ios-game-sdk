@@ -81,6 +81,8 @@ Getting started - (Reference AppotaGameTest)
 }
 	~~~
 
+		* Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl*
+	
 *	Payment setup
 
 	Each payment is an instance of class AppotaPayment. You can create a payment by
@@ -119,3 +121,4 @@ Getting started - (Reference AppotaGameTest)
 	* *+showLoginView* Manualy show login view from your game, can be implemented your button click
 	* *+showSwitchUserView* Manualy show switchuser view from your game, can be implemented your button click	
 	* *showPaymentButton*, *hidePaymentButton* Show and hide floating button of AppotaSDK in your game
+	* *+sharedGameConfig* Singleton shared instance of *AppotaGameSDKConfigure* 
