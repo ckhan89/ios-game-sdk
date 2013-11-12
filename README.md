@@ -30,12 +30,12 @@ frameworks:
 
     AppotaSDK CoreText StoreKit AudioToolBox MobileCoreServices AVFoudation CoreVideo MessageUI Security SystemConfiguration CFNetwork OpenGLES CoreMedia libxml2.dylib libsqlite3.dylib
 
-![](docs\vn\step1.jpg)
+![](docs/vn/step1.jpg)
 
 In project build settings section, find Other Linker Flags, add two
 values: -ObjC và -all\_load.
 
-![](docs\vn\step2.jpg)
+![](docs/vn/step2.jpg)
 
 Import header file to source file where do you want to use SDK:
 
@@ -51,7 +51,7 @@ URL Schemes is appotaCLIENT\_ID.\
  For example: If CLIENT\_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540,
 schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
-![](docs\vn\step3.jpg)
+![](docs/vn/step3.jpg)
 
 **2. Config SDK**
 
