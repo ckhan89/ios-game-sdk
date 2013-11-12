@@ -73,35 +73,5 @@ Setup SDK in Appdelegate:
 				- YES: Enable this option for automatic show a payment button floating on game screen
 				- NO: Don't show the floating payment button (Payment view can be shown via function [AppotaGameSDKConfigre showPaymentView])
 			* Social login can be configured via boolean value enableFacebookLogin, googleLogin, twitterLogin
-		* Sample:
-		
-		~~~
-	    [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
-                                 withClientSecret:CLIENT_SECRET
-                                  withInAppAPIKey:INAPP_API_KEY
-                         withNoticeUrl:@"http://filestore9.com/test.php"
-                                  withCheckUpdate:YES
-                              enableFacebookLogin:YES
-                                enableGoogleLogin:YES
-                               enableTwitterLogin:YES
-                            autoShowPaymentButton:YES
-	     ];
-		
-		~~~
-			
-			To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-			
-		* Set delegate for *AppotaGameSDKConfigure* (shoul use AppDelegate for delegate)
-		* Handle login status by protocol function *- (void) didFinishLogin:(NSDictionary \*)userInfoDict* (UserInfo dict can be used for verification process)
-		* If you are using Social Login please add handle open URL in your AppDelegate by this function :
-		
-		~~~		
-		(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
-}
-	~~~
-
-		* Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl*
-	
 
 **3. Integrate SDK**
