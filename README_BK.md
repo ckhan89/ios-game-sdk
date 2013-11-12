@@ -90,7 +90,7 @@ Connect with Appota user and payment system
 }
 	~~~
 
-		* Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl*
+* Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl*
 	
 *	Payment setup
 

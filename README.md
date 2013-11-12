@@ -87,7 +87,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
                             autoShowPaymentButton:YES
 	     ];
 	```
-	To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
+To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
 	* Set delegate for AppotaGameSDKConfigure (shoul use AppDelegate for delegate)
 	* Handle login status by protocol function *- (void) didFinishLogin:(NSDictionary \*)userInfoDict* (UserInfo dict can be used for verification process)
 	* If you are using Social Login please add handle open URL in your AppDelegate by this function :
@@ -97,4 +97,42 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
     		return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 	}
 	```
+Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl
+
 **3. Integrate SDK**
+
+Each payment is an instance of class AppotaPayment. You can create a payment by
+	
+``` objective-c
+	   AppotaPayment *p0 = [[AppotaPayment alloc]     initWithPaymentMethod:PAYMENT_SMS    
+	   withAmount:15000 
+	       withCoinAmount:1000 
+	       withCurrency:@"VND" 
+	       withCoinName:@"Gold" 
+	       withCoinImage:nil    
+    	       withPaymentDescription:@"500 vnd free"];    	
+```
+    	       	       
+- With PAYMENT_SMS is the payment method (can use PAYMENT_CARD as phone card, PAYMENT_INTERNET_BANKING (PAYMENT_BAOKIM) as bank, PAYMENT_PAYPAL, PAYMENT_APPLE as well)		
+	* 15000 is amount of money for that method
+	* 1000 is coin amount in game corresponding money amount above
+	* "VND" is currency of the payment
+	* "Gold" is detail coin name in your game, it depends on the your game - can be nil
+	* coinImage is UIImage can be nil, if it's not nil it'll show in payment part for more detail
+	* payment description is description to describe that item
+	
+	* Add payment support by *addSupportPayment* function:
+	```
+	    [AppotaGameSDKConfigure addSupportPayment:p0];		
+	```
+- Support function
+
+Every function will be accessed via  *AppotaGameSDKConfigure* class
+	* +showSDKView: Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
+	* +logOut: Manualy show logout popup in your game
+	* +(NSDictionary): getUserInfo* Return userinfo (acces_token, username, email, …) in NSDictionary
+	* +showPaymentView: Manualy show payment view from your game, can be implemented your button click
+	* +showLoginView: Manualy show login view from your game, can be implemented your button click
+	* +showSwitchUserView: Manualy show switchuser view from your game, can be implemented your button click	
+	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
+	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
