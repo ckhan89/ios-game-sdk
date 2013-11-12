@@ -12,7 +12,7 @@ methods such as: SMS, Card. Internet Banking, Paypal and Apple Payment.
 
 ​3. Integrate SDK
 
-
+-------------------------------
 
 **1. Setup Appota SDK**
 
