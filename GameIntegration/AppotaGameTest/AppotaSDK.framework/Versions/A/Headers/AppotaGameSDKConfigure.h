@@ -142,18 +142,6 @@ typedef enum {
 
 - (void)setSession:(id)newValue;
 
-- (BOOL)enableFacebook;
-
-- (void)setEnableFacebook:(BOOL)newValue;
-
-- (BOOL)enableGoogle;
-
-- (void)setEnableGoogle:(BOOL)newValue;
-
-- (BOOL)enableTwitter;
-
-- (void)setEnableTwitter:(BOOL)newValue;
-
 - (NSString *)googleClientId;
 
 - (void)setGoogleClientId:(NSString *)newValue;
