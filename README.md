@@ -115,10 +115,10 @@ __JSON config__
 	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
 **4. Appota  SDK flow**
-![](docs/vn/flow1.jpg)
+![](docs/vn/flow1.png)
 
 User login flow using Appota SDK
 
-![](docs/vn/flow2.jpg)
+![](docs/vn/flow2.png)
 
 Payment flow using Appota SDK
