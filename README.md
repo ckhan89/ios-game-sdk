@@ -11,6 +11,8 @@ methods such as: SMS, Card. Internet Banking, Paypal and Apple Payment.
 ​2. Config SDK
 
 ​3. Integrate SDK
+ 
+ 4. Appota SDK flow
 
 -------------------------------
 
@@ -112,3 +114,11 @@ __JSON config__
 	* +showSwitchUserView: Manualy show switchuser view from your game, can be implemented your button click	
 	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
+**4. Appota  SDK flow**
+![](docs/vn/flow1.png)
+
+User login flow using Appota SDK
+
+![](docs/vn/flow2.png)
+
+Payment flow using Appota SDK
