@@ -33,8 +33,6 @@
 - (IBAction)forgotPasswordButtonClick:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *twitterLoginButton;
 - (IBAction)twitterLoginClick:(id)sender;
-@property (unsafe_unretained, nonatomic) IBOutlet UIButton *chooseLangButton;
-- (IBAction)chooseLangButtonClick:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *loginTabButton;
 - (IBAction)loginTabClick:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *passwordImageView;

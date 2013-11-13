@@ -7,8 +7,9 @@
 //
 
 #import "AppotaPaymentPaypalDialogView.h"
+#import "AppotaPaymentSMSDialogView.h"
 
-@interface AppotaApplePaymentDialogView : AppotaPaymentPaypalDialogView
+@interface AppotaApplePaymentDialogView : AppotaPaymentSMSDialogView
 - (void) setupViewWithListItem:(NSArray*) listIAPItem
                withDescription:(NSString*) description
                     withDialog:(AppotaPaymentDialog*) paymentDialog;

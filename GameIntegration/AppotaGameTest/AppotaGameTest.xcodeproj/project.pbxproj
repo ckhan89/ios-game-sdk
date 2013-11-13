@@ -22,7 +22,6 @@
 		364D1FDB182482B400187DD5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 364D1FDA182482B400187DD5 /* Icon@2x.png */; };
 		364D1FDD1824831E00187DD5 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FDC1824831E00187DD5 /* AppotaSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		364D1FDF1824832600187DD5 /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 364D1FDE1824832600187DD5 /* AppotaBundle.bundle */; };
-		364D1FE11824841600187DD5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FE01824841600187DD5 /* CoreMedia.framework */; };
 		364D1FE31824841B00187DD5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FE21824841B00187DD5 /* QuartzCore.framework */; };
 		364D1FE51824841F00187DD5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FE41824841F00187DD5 /* OpenGLES.framework */; };
 		364D1FE71824842300187DD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FE61824842300187DD5 /* CFNetwork.framework */; };
@@ -38,7 +37,18 @@
 		364D1FFB1824848600187DD5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFA1824848600187DD5 /* CoreText.framework */; };
 		364D1FFD1824848B00187DD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFC1824848B00187DD5 /* StoreKit.framework */; };
 		364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFE182484BE00187DD5 /* AdSupport.framework */; };
-		364D200E1827B52800187DD5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D200D1827B52800187DD5 /* FacebookSDK.framework */; };
+		366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B580B1831D0C0002EBEFE /* CoreMedia.framework */; };
+		36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F051831CF4500C0653F /* GoogleOpenSource.framework */; };
+		36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36E76F061831CF4500C0653F /* GooglePlus.bundle */; };
+		36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F071831CF4500C0653F /* GooglePlus.framework */; };
+		36E76F0C1831CF5F00C0653F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */; };
+		36E76F0E1831CF8D00C0653F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0D1831CF8D00C0653F /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		36E76F101831CF9E00C0653F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0F1831CF9E00C0653F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		36E76F121831CFAE00C0653F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F111831CFAE00C0653F /* AssetsLibrary.framework */; };
+		36E76F141831CFBC00C0653F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F131831CFBC00C0653F /* CoreMotion.framework */; };
+		36E76F161831CFC400C0653F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F151831CFC400C0653F /* CoreLocation.framework */; };
+		36E76F181831D01200C0653F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F171831D01200C0653F /* MediaPlayer.framework */; };
+		36E76F1A1831D05700C0653F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F191831D05700C0653F /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +72,6 @@
 		364D1FDA182482B400187DD5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		364D1FDC1824831E00187DD5 /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
 		364D1FDE1824832600187DD5 /* AppotaBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppotaBundle.bundle; sourceTree = "<group>"; };
-		364D1FE01824841600187DD5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		364D1FE21824841B00187DD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		364D1FE41824841F00187DD5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		364D1FE61824842300187DD5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -78,7 +87,18 @@
 		364D1FFA1824848600187DD5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		364D1FFC1824848B00187DD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		364D1FFE182484BE00187DD5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		364D200D1827B52800187DD5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../AppStoreVn/mobile_ios_appstorevn/Source/FacebookSDK.framework; sourceTree = "<group>"; };
+		366B580B1831D0C0002EBEFE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		36E76F051831CF4500C0653F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		36E76F061831CF4500C0653F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		36E76F071831CF4500C0653F /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		36E76F0D1831CF8D00C0653F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		36E76F0F1831CF9E00C0653F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		36E76F111831CFAE00C0653F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		36E76F131831CFBC00C0653F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		36E76F151831CFC400C0653F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		36E76F171831D01200C0653F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		36E76F191831D05700C0653F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +106,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */,
+				364D1FF11824845C00187DD5 /* CoreVideo.framework in Frameworks */,
+				36E76F1A1831D05700C0653F /* ImageIO.framework in Frameworks */,
+				364D1FF31824846300187DD5 /* AVFoundation.framework in Frameworks */,
+				36E76F181831D01200C0653F /* MediaPlayer.framework in Frameworks */,
+				36E76F161831CFC400C0653F /* CoreLocation.framework in Frameworks */,
+				36E76F141831CFBC00C0653F /* CoreMotion.framework in Frameworks */,
+				36E76F121831CFAE00C0653F /* AssetsLibrary.framework in Frameworks */,
+				36E76F101831CF9E00C0653F /* Accounts.framework in Frameworks */,
+				36E76F0E1831CF8D00C0653F /* Social.framework in Frameworks */,
 				364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */,
 				364D1FFD1824848B00187DD5 /* StoreKit.framework in Frameworks */,
 				364D1FFB1824848600187DD5 /* CoreText.framework in Frameworks */,
 				364D1FF91824847E00187DD5 /* AudioToolbox.framework in Frameworks */,
 				364D1FF71824847600187DD5 /* MobileCoreServices.framework in Frameworks */,
 				364D1FF51824846C00187DD5 /* libxml2.dylib in Frameworks */,
-				364D1FF31824846300187DD5 /* AVFoundation.framework in Frameworks */,
-				364D1FF11824845C00187DD5 /* CoreVideo.framework in Frameworks */,
 				364D1FEF1824844F00187DD5 /* MessageUI.framework in Frameworks */,
 				364D1FED1824843D00187DD5 /* libsqlite3.dylib in Frameworks */,
 				364D1FEB1824842C00187DD5 /* Security.framework in Frameworks */,
@@ -101,12 +129,13 @@
 				364D1FE71824842300187DD5 /* CFNetwork.framework in Frameworks */,
 				364D1FE51824841F00187DD5 /* OpenGLES.framework in Frameworks */,
 				364D1FE31824841B00187DD5 /* QuartzCore.framework in Frameworks */,
-				364D1FE11824841600187DD5 /* CoreMedia.framework in Frameworks */,
 				364D1FB61824827600187DD5 /* UIKit.framework in Frameworks */,
 				364D1FB81824827600187DD5 /* Foundation.framework in Frameworks */,
 				364D1FBA1824827600187DD5 /* CoreGraphics.framework in Frameworks */,
 				364D1FDD1824831E00187DD5 /* AppotaSDK.framework in Frameworks */,
-				364D200E1827B52800187DD5 /* FacebookSDK.framework in Frameworks */,
+				36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */,
+				36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */,
+				36E76F0C1831CF5F00C0653F /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +145,14 @@
 		364D1FA91824827600187DD5 = {
 			isa = PBXGroup;
 			children = (
+				366B580B1831D0C0002EBEFE /* CoreMedia.framework */,
+				36E76F191831D05700C0653F /* ImageIO.framework */,
+				36E76F171831D01200C0653F /* MediaPlayer.framework */,
+				36E76F151831CFC400C0653F /* CoreLocation.framework */,
+				36E76F131831CFBC00C0653F /* CoreMotion.framework */,
+				36E76F111831CFAE00C0653F /* AssetsLibrary.framework */,
+				36E76F0F1831CF9E00C0653F /* Accounts.framework */,
+				36E76F0D1831CF8D00C0653F /* Social.framework */,
 				364D1FDA182482B400187DD5 /* Icon@2x.png */,
 				364D1FD8182482AF00187DD5 /* Icon.png */,
 				364D1FBB1824827600187DD5 /* AppotaGameTest */,
@@ -135,7 +172,10 @@
 		364D1FB41824827600187DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				364D200D1827B52800187DD5 /* FacebookSDK.framework */,
+				36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */,
+				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,
+				36E76F061831CF4500C0653F /* GooglePlus.bundle */,
+				36E76F071831CF4500C0653F /* GooglePlus.framework */,
 				364D1FFE182484BE00187DD5 /* AdSupport.framework */,
 				364D1FFC1824848B00187DD5 /* StoreKit.framework */,
 				364D1FFA1824848600187DD5 /* CoreText.framework */,
@@ -151,7 +191,6 @@
 				364D1FE61824842300187DD5 /* CFNetwork.framework */,
 				364D1FE41824841F00187DD5 /* OpenGLES.framework */,
 				364D1FE21824841B00187DD5 /* QuartzCore.framework */,
-				364D1FE01824841600187DD5 /* CoreMedia.framework */,
 				364D1FDC1824831E00187DD5 /* AppotaSDK.framework */,
 				364D1FB51824827600187DD5 /* UIKit.framework */,
 				364D1FB71824827600187DD5 /* Foundation.framework */,
@@ -247,6 +286,7 @@
 				364D1FD9182482AF00187DD5 /* Icon.png in Resources */,
 				364D1FDB182482B400187DD5 /* Icon@2x.png in Resources */,
 				364D1FDF1824832600187DD5 /* AppotaBundle.bundle in Resources */,
+				36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +384,8 @@
 		364D1FD61824827600187DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -359,6 +401,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "86EB9272-D188-4411-A1C8-E926AA739D8C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86EB9272-D188-4411-A1C8-E926AA739D8C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -366,6 +410,7 @@
 		364D1FD71824827600187DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -381,6 +426,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "86EB9272-D188-4411-A1C8-E926AA739D8C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

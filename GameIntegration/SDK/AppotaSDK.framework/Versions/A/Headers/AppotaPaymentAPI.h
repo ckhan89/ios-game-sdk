@@ -13,6 +13,7 @@
 #import "Language.h"
 #import "AppotaProgressView.h"
 #import "AppotaAppleIAPItem.h"
+#import "AppotaGameSDKConfigure.h"
 
 // up-front decl's
 @class AppotaPaymentAPI;
@@ -55,19 +56,6 @@ typedef enum {
     AppotaTopupWaiting = 3,
     AppotaTopupFailed = 4,
 } AppotaTopupErrorCode;
-
-typedef enum {
-    AppotaPaymentSucceed = 1,
-    AppotaPaymentFailed = 0,
-    AppotaPaymentSMSPending = 2,
-    AppotaPaymentSMSCanceled = 3,
-    AppotaPaymentSMSInValidAmount = 4,
-    AppotaPaymentClosed = 5,
-    AppotaPaymentCardInvalid = 6,
-    AppotaPaymentInvalidAmount = 7,
-    AppotaGetListSMSError = 11,
-    AppotaPaymentWrongFormatResponse = 12,    
-} AppotaPaymentState;
 
 /*
  * Event handler cho kết quả trả về của Appota API

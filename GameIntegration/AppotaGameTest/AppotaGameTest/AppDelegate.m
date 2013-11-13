@@ -35,27 +35,20 @@
 }
 
 - (void) configGameSDK {
-    AppotaPayment *p1 = [[AppotaPayment alloc] initWithPaymentMethod:PAYMENT_SMS withAmount:500 withCoinAmount:100 withCurrency:@"VND" withCoinName:@"Coin" withCoinImage:nil withPaymentDescription:@""];
-    AppotaPayment *p0 = [[AppotaPayment alloc] initWithPaymentMethod:PAYMENT_SMS withAmount:15000 withCoinAmount:1000 withCurrency:@"VND" withCoinName:@"Gold" withCoinImage:nil withPaymentDescription:@""];
-    AppotaPayment *p2 = [[AppotaPayment alloc] initWithPaymentMethod:PAYMENT_CARD withAmount:500 withCoinAmount:100 withCurrency:@"VND" withCoinName:@"Coin" withCoinImage:nil withPaymentDescription:@""];
-    AppotaPayment *p3 = [[AppotaPayment alloc] initWithPaymentMethod:PAYMENT_BAOKIM withAmount:500 withCoinAmount:100 withCurrency:@"VND" withCoinName:@"Gold" withCoinImage:nil withPaymentDescription:@""];
     
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
                                  withClientSecret:CLIENT_SECRET
                                   withInAppAPIKey:INAPP_API_KEY
                                     withNoticeUrl:@"http://filestore9.com/test.php"
-                                  withCheckUpdate:NO
-                              enableFacebookLogin:YES
-                                enableGoogleLogin:YES
-                               enableTwitterLogin:YES
-                            autoShowPaymentButton:YES
+                                    withConfigUrl:@"http://filestore9.com/config.php"
      ];
+#warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
+//    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
+//    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
     
+    [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"242204253141.apps.googleusercontent.com";
+ 
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
-    [AppotaGameSDKConfigure addSupportPayment:p0];
-    [AppotaGameSDKConfigure addSupportPayment:p1];
-    [AppotaGameSDKConfigure addSupportPayment:p2];
-    [AppotaGameSDKConfigure addSupportPayment:p3];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -91,6 +84,20 @@
  */
 - (void) didFinishLogin:(NSDictionary *)userInfoDict {
 #warning Insert your verify action here
+    NSLog(@"Login token %@: Username:%@ UserID: %@", [AppotaGameSDKConfigure getAccessToken], [AppotaGameSDKConfigure getUserName], [AppotaGameSDKConfigure getUserID]);
+    
+    // Update viewcontroller login state
+    [self.viewController handleLogin];
+}
+
+- (void) didLogOut:(NSString *)userName {
+    NSLog(@"Logout %@", userName);
+    // Update viewcontroller logout state
+    [self.viewController handleLogOut];
+}
+
+- (void) didFinishPaymentWithDictionary:(NSDictionary *)paymentDict withState:(AppotaPaymentState)status withError:(NSError *)error {
+    NSLog(@"Payment result");
 }
 
 #warning Insert your handle open URL here

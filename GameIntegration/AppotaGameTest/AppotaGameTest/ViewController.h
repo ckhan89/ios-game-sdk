@@ -11,11 +11,14 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *showHidePaymentButton;
 @property (weak, nonatomic) IBOutlet UIButton *hidePaymentButton;
+@property (weak, nonatomic) IBOutlet UIButton *logInOutButon;
 - (IBAction)showPaymentButtonClick:(id)sender;
 - (IBAction)hidePaymentButtonClick:(id)sender;
 - (IBAction)openPaymentClick:(id)sender;
 - (IBAction)openSDKClick:(id)sender;
 - (IBAction)openSwitchUserClick:(id)sender;
-- (IBAction)logOutClick:(id)sender;
+- (IBAction)logClick:(id)sender;
 
+- (void) handleLogin;
+- (void) handleLogOut;
 @end

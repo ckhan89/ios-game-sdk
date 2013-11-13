@@ -22,6 +22,7 @@
 #define APPOTA_APP_REFRESH_TOKEN_URL @"https://id.appota.com/oauth/refresh_token"
 #define APPOTA_LOGIN_DICT_KEY_SAVED @"key_appota_login_dict_saved"
 #define APPOTA_USER_DEVICE_KEY @"gamota_samedevice_user"
+#define APPOTA_COUNTRY_LOCATION_KEY @"appota_country_location_key"
 
 #define PAYMENT_TOPUP_BANK @"https://api.appota.com/payment/topup_bank?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_TOPUP_PAYPAL @"https://api.appota.com/payment/topup_paypal?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
@@ -45,6 +46,8 @@
 
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
+#define APPOTA_SDK_VERSION @"1.0"
+
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_ISBOUGHT @"https://api.appota.com/item/is_bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
@@ -65,6 +68,7 @@
 
 #define CHECK_DEVICE_ID_URL @"https://api.appota.com/game/checkDeviceId?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define REMOVE_ACCOUNT_URL @"https://api.appota.com/game/removeDevice?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define INIT_SDK_TRACK_URL @"http://api.appota.com/client/track"
 
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
 

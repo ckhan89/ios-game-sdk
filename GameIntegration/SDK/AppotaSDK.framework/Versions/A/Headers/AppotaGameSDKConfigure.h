@@ -11,24 +11,48 @@
 #import "CHDraggingCoordinator.h"
 #import "AppotaPayment.h"
 
+typedef enum {
+    AppotaPaymentSucceed = 1,
+    AppotaPaymentFailed = 0,
+    AppotaPaymentSMSPending = 2,
+    AppotaPaymentSMSCanceled = 3,
+    AppotaPaymentSMSInValidAmount = 4,
+    AppotaPaymentClosed = 5,
+    AppotaPaymentCardInvalid = 6,
+    AppotaPaymentInvalidAmount = 7,
+    AppotaGetListSMSError = 11,
+    AppotaPaymentWrongFormatResponse = 12,
+} AppotaPaymentState;
+
+
 @protocol AppotaGameSDKConfigureDelegate <NSObject>
 @required
 /*
  * Callback after login
  */
 - (void) didFinishLogin:(NSDictionary*) userInfoDict;
+/*
+ * Callback after logout
+ */
+- (void) didLogOut:(NSString*) userName;
 
+- (void) didFinishPaymentWithDictionary:(NSDictionary*) paymentDict withState:(AppotaPaymentState) status withError:(NSError*) error;
 @end
 
 @interface AppotaGameSDKConfigure : NSObject <CHDraggableViewDelegate, CHDraggingCoordinatorDelegate>
 {
     BOOL checkUpdate;
     BOOL autoShowPaymentButton;
+    BOOL autoShowLoginDialog;
+    
     NSMutableArray *listPayment;
-    NSMutableArray *listPaymentByMethod;
     NSString *noticeUrl;
     id session;
-    BOOL enableFacebook, enableGoogle, enableTwitter;
+    
+    BOOL enableSocialLogin;
+    BOOL enableAppotaLogin;
+    BOOL enableQuickLogin;
+    
     NSString *googleClientId;
     NSString *jsonConfigUrl;
 }
@@ -46,11 +70,7 @@
               withClientSecret:(NSString*) clientSecret
                withInAppAPIKey:(NSString*) inAppAPIKey
                  withNoticeUrl:(NSString*) noticeUrl
-               withCheckUpdate:(BOOL) checkUpdate
-           enableFacebookLogin:(BOOL) enableFacebook
-             enableGoogleLogin:(BOOL) enableGoogle
-            enableTwitterLogin:(BOOL) enableTwitter
-         autoShowPaymentButton:(BOOL) autoShowButton;
+                 withConfigUrl:(NSString*) configUrl;
 
 /*
  * Add payment support
@@ -61,6 +81,12 @@
  * Get user infor for verify process
  */
 + (NSDictionary*) getUserInfo;
+
++ (NSString*) getUserName;
+
++ (NSString*) getUserID;
+
++ (NSString*) getAccessToken;
 
 + (BOOL) checkUserLogin;
 /*
@@ -133,5 +159,21 @@
 - (NSString *)jsonConfigUrl;
 
 - (void)setJsonConfigUrl:(NSString *)newValue;
+
+- (BOOL)enableSocialLogin;
+
+- (void)setEnableSocialLogin:(BOOL)newValue;
+
+- (BOOL)enableAppotaLogin;
+
+- (void)setEnableAppotaLogin:(BOOL)newValue;
+
+- (BOOL)enableQuickLogin;
+
+- (void)setEnableQuickLogin:(BOOL)newValue;
+
+- (BOOL)autoShowLoginDialog;
+
+- (void)setAutoShowLoginDialog:(BOOL)newValue;
 
 @end

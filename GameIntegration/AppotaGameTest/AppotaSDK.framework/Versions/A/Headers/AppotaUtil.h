@@ -51,6 +51,7 @@
 + (NSDictionary *) getDeviceDictionary;
 + (UIImage*) getAppIcon;
 + (NSString*) getAppName;
++ (NSString*) getAppBundleId;
 + (CGAffineTransform)transformForOrientation;
 + (CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation;
 + (UIView*) getConfigurePaymentView;
@@ -58,18 +59,26 @@
 + (void) showPaymentView;
 + (void) showPaymentViewFromView:(AppotaGameView*) v;
 + (void) showSwitchView;
++ (void) checkAutoLoginAndShowLoginView;
++ (void) checkAutoLoginAndShowChooseUserView;
 + (void) showLoginView;
 + (void) showLoginViewFromChooseUser:(AppotaGameView*) v;
 + (void) showLoginViewFromChooseUser:(AppotaGameView*) v withHideQuickLoginView:(BOOL) hideQuickLogin;
 + (void) showChooseUserView;
 + (void) showChooseUserViewFromView:(AppotaGameView*) v;
 + (BOOL) checkUserLogin;
++ (NSString*) getLocalCountry;
 + (void) logOut;
 + (void)logOutAlertWithView:(AppotaGameView*)gameView;
++ (NSString*) getAccessTokenFromLoginDict;
++ (NSString*) getUserIDFromLoginDict;
 + (NSString*) getUserNameFromLoginDict;
++ (NSString*) getKeyFromLoginDict:(NSDictionary*) loginDict_
+                          withKey:(NSString*) key;
 + (NSString*) getUserNameFromDict:(NSDictionary*) loginDict_;
 + (NSDictionary*) getUserDictFromLoginDict:(NSDictionary*) loginDict_;
 + (void) saveLoginDict:(NSDictionary*) loginDict;
++(PAYMENT_METHOD) getPaymentMethodFromString:(NSString*) pMethod;
 +(NSString*) getPaymentMethodString:(PAYMENT_METHOD) pMethod;
 +(NSString*) getDescriptionStringFromListItem:(NSArray*) listPaymentItem;
 

@@ -47,7 +47,20 @@
     [AppotaGameSDKConfigure showSwitchUserView];
 }
 
-- (IBAction)logOutClick:(id)sender {
-    [AppotaGameSDKConfigure logOut];
+- (IBAction)logClick:(id)sender {
+    if ([AppotaGameSDKConfigure checkUserLogin]) {
+        [AppotaGameSDKConfigure logOut];
+    }
+    else {
+        [AppotaGameSDKConfigure showLoginView];
+    }
 }
+
+- (void) handleLogin {
+    [self.logInOutButon setTitle:@"LogOut" forState:UIControlStateNormal];
+}
+- (void) handleLogOut {
+    [self.logInOutButon setTitle:@"LogIn" forState:UIControlStateNormal];    
+}
+
 @end

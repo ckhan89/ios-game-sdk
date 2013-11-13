@@ -7,13 +7,11 @@
 //
 
 #import "AppotaGameView.h"
-#import "AppotaPopoverView.h"
 
-@interface AppotaGamePaymentDialogView : AppotaGameView <UITableViewDataSource, UITableViewDelegate, AppotaPopoverViewDelegate> {
+@interface AppotaGamePaymentDialogView : AppotaGameView <UITableViewDataSource, UITableViewDelegate> {
     __unsafe_unretained IBOutlet UILabel *titleLabel;
     __unsafe_unretained IBOutlet UIImageView *tabBarIconImageView;    
     __unsafe_unretained IBOutlet UILabel *userNameLabel;
-    UIButton *chooseLangButton;
 }
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *paymentMethodTableView;
 
