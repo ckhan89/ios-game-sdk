@@ -23,6 +23,7 @@
 #define APPOTA_LOGIN_DICT_KEY_SAVED @"key_appota_login_dict_saved"
 #define APPOTA_USER_DEVICE_KEY @"gamota_samedevice_user"
 #define APPOTA_COUNTRY_LOCATION_KEY @"appota_country_location_key"
+#define APPOTA_API_CONFIG_KEY @"appota_api_config_key"
 
 #define PAYMENT_TOPUP_BANK @"https://api.appota.com/payment/topup_bank?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_TOPUP_PAYPAL @"https://api.appota.com/payment/topup_paypal?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

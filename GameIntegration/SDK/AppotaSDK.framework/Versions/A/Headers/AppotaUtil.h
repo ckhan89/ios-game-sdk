@@ -44,6 +44,7 @@
 
 + (void) setLanguageForView:(UIView*) v;
 + (void) deleteLinkedDeviceUserInfo:(NSDictionary*) userInfoDict;
++ (NSDictionary*) getRemoteConfigDict;
 + (NSDictionary*) getLoginDictFromDefault;
 + (NSString*) getDeviceID;
 + (NSString *)systemVersion;

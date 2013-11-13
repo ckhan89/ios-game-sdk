@@ -122,12 +122,13 @@ typedef enum {
 + (void) logOut;
 
 #pragma mark - Class method
+- (void) reloadRemoteConfig;
 - (BOOL)checkUpdate;
 - (void)setCheckUpdate:(BOOL)newValue;
 - (NSMutableArray *)listPayment;
 
 - (void)setListPayment:(NSMutableArray *)newValue;
-- (void) didFinishLoginSignal:(id) sender;
+- (void) didFinishLoginSignalAndReloadRemoteConfig:(id) sender;
 - (NSMutableArray*) getListPaymentOrderedByMethod;
 - (NSMutableArray*) getListPaymentByMethod:(PAYMENT_METHOD) pMethod;
 - (NSString *)noticeUrl;
