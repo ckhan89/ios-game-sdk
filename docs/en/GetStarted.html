@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Android SDK - Get Started</title>
+<style type="text/css">
+.class_title {
+	font-size: x-large;
+}
+.auto-style1 {
+	font-size: large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+<link href="../code.css" rel="stylesheet" type="text/css" />
+<script src="../rainbow.min.js"></script>
+
+</head>
+
+<body>
+
+<p class="class_title"><strong>Get Started</strong></p>
+<p>Appota Payment SDK for iOS is the simplest way to integrate payment for your 
+application on Appota system. This SDK provides solutions for payment methods 
+such as: SMS, Card, Internet Banking, Paypal and Apple Payment.</p>
+<p class="auto-style1"><strong>Steps to integrate SDK:</strong></p>
+<p>1. Setup Appota SDK</p>
+<p>2. Config SDK</p>
+<p>3. Integrate SDK</p>
+<p>&nbsp;</p>
+<p class="auto-style1"><strong>1. Setup Appota SDK</strong></p>
+<p><strong>Import Appota.framework into project</strong></p>
+<p>Drag and drop AppotaSDK.framework and AppotaBundle.bundle into your project.<br />
+<br />
+Tick on checkbox: “Copy items into destination group's folder (if needed)”.<br />
+<br />
+In Project app’s target settings section, find [Build phases] and open Link Binary 
+with Libraries. Click on ‘+’ button and add these frameworks:</p>
+<pre>SystemConfiguration.framework, Security.framework, CFNetwork.framework, QuaztCore.framework, MessageUI.framework, StoreKit.framework AudioToolbox.framework MobileCoreServices.framework AVFoundation.framework OpenGLES.framework CoreVideo.framework libxml2.dylib CoreMedia.framework AdSupport.framework libsqlite3.dylib</pre>
+<p><img height="300" src="step1.jpg" width="553" /></p>
+<p>In project build settings section, find Other Linker Flags, add two values: -ObjC và -all_load.</p>
+<p><img height="312" src="step2.jpg" width="553" /></p>
+<p>Import headers into source files:<br />
+In source file you need to use Appota SDK Library, import: </p>
+<pre>#import &lt;AppotaSDK/AppotaSDK.h&gt;</pre>
+<p><strong>Config plist with CLIENT_KEY</strong><br /><br />Add 1 string 
+AppotaClientId with the value is CLIENT_ID (details about CLIENT_ID are in 
+section of getting ACCESS_TOKEN)<br />
+Add more schema: Add 1 string URL Array types. Creat 1 item more with URL 
+Schemes is appotaCLIENT_ID.<br /><br />For example: If CLIENT_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540, 
+schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.</p>
+<p><img height="252" src="step3.jpg" width="578" /></p>
+<p class="auto-style1"><strong>2. Config SDK</strong></p>
+<p><strong>&nbsp;Config AppotaAPI</strong></p>
+<p>Functions of AppotaSDK used via AppotaPayment. You can call AppotaPayment via 
+[AppotaPayment shareAPI].<br />
+<br />
+Before using SDK to call functions setting up CLIENT_ID, CLIENT_SECRET, INAPP_ID 
+(just call only one time):<br />
+<br />
+For application in sandbox status:</p>
+<p>AppotaPayment *appotaPayment = [AppotaPayment shareAPI];<br />
+appotaPayment.isSandBoxMode = YES;<br />
+appotaPayment.clientID = SAND_BOX_CLIENT_ID;<br />
+appotaPayment.clientSecret = SAND_BOX_CLIENT_SECRET;<br />
+appotaPayment.inappKey = SAND_BOX_INAPP_API_KEY;<br />
+appotaPayment.sandboxKey = SAND_BOX_KEY;<br />
+</p>
+<p>For application in publish status:</p>
+<pre>AppotaPayment *appotaPayment = [AppotaPayment shareAPI];
+appotaPayment.clientID = CLIENT_ID;
+appotaPayment.clientSecret = CLIENT_SECRET;
+appotaPayment.inappKey = INAPP_API_KEY;</pre>
+<p>Parameters such as CLIENT_KEY, CLIENT_SECRET, INAPP_API_KEY, 
+SAND_BOX_CLIENT_ID, SAND_BOX_CLIENT_SECRET, SAND_BOX_INAPP_API_KEY, SAND_BOX_KEY 
+can be seen on
+<a href="https://developer.appota.com/manage-content.html">
+https://developer.appota.com/manage-content.html</a> (in section of application 
+management).</p>
+<p><strong>&nbsp;Config handleOpenURL</strong></p>
+<p>In AppDelegate of application call function [[Appota shareAPI] handleOpenURL:url] 
+as follow:</p>
+<pre><code>- (BOOL)application:(UIApplication *)application
+openURL:(NSURL *)url
+sourceApplication:(NSString *)sourceApplication
+annotation:(id)annotation {<br />     return [[AppotaAPI shareAPI] handleOpenURL:url];
+}</code></pre>
+<p>In case that you used another SDK setting handleOpenURL function in 
+AppDelegate (for example FacebookSDK), you can call [[AppotaAPI shareAPI] 
+handleOpenURL:url] before returning as follow:</p>
+<pre>- (BOOL)application:(UIApplication *)application
+openURL:(NSURL *)url
+sourceApplication:(NSString *)sourceApplication
+annotation:(id)annotation {
+&nbsp;&nbsp;&nbsp;[[AppotaAPI shareAPI] handleOpenURL:url];
+return [self.facebookSDKSession handleOpenURL:url];
+}</pre>
+<p class="auto-style1"><strong>3. Integrate SDK</strong></p>
+<p>Appota Payment SDK provides class <a href="AppotaPayment.html">AppotaPayment</a> 
+packaging entire interface of each payment method. To integrate any payment 
+methods, you just call respective functions given (refer to AppotaPaymentTest).</p>
+<p class="auto-style1"><strong>4 - Run SDK Samples</strong></p>
+<p>- Requirement: Xcode 4.6, iOS SDK 6 or more.</p>
+<p>- Open AppotaPaymentTest.xcodeproj to run sample.</p>
+<p>- Use SDK in example:</p>
+<p>All APIs of SDK are called via 1 function, for example:<br />
+makeSMSPaymentWithAmount</p>
+<p>Results returned in block of function via AppotaPaymentHandler (refer to 
+AppotaPayment.h in SDK). Value of result can be identified via value of 
+NSDictionary, AppotaPaymentState and NSError are returned via AppotaPaymentHandler. 
+(States of AppotaPaymentState are referred to&nbsp; AppotaPayment.h in SDK)</p>
+<p>Dev need to set code to handle results of payment in payment's block, for 
+example:</p>
+<pre>[appotaPayment makeSMSPaymentWithAmount:500 withState:@"" withTarget:@"" withNoticeUrl:@"" withCompletionHandler:^(NSDictionary *apiDict, AppotaPaymentState status, NSError *error) {
+// Process payment result here
+    [self handleSMSPaymentResultDict:apiDict withPaymentState:status];
+}];
+</pre>
+<p>&nbsp;<img src="sample1.png" width="200" />
+<img src="sample2.png" width="200"  />
+<img src="sample3.png" width="200"  />
+<img src="sample4.png" width="200" /></p>
+</body>
+
+</html>
