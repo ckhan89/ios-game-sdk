@@ -86,7 +86,7 @@ To integrate Google, FB and Twitter login please follow instruction for each SDK
 	```		
 	* Handle login status by protocol function callback _- (void) didFinishLogin:(NSDictionary *)userInfoDict_ (UserInfo dict can be used for verification process)
 	* Handle logout status by protocol function callback _- (void) didLogOut:(NSString*) userName_
-	* Handle payment status by protocol function callback _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error
+	* Handle payment status by protocol function callback _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error_
 	* If you are using Social Login please add handle open URL in your AppDelegate by this function :
 		
 	``` objective-c
