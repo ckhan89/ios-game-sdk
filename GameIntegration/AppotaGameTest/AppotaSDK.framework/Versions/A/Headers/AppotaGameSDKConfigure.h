@@ -10,6 +10,7 @@
 #import "CHDraggableView.h"
 #import "CHDraggingCoordinator.h"
 #import "AppotaPayment.h"
+#import "Appota_OpenUDID.h"
 
 typedef enum {
     AppotaPaymentSucceed = 1,

@@ -29,6 +29,8 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>AppotaClientId</key>
+	<string>e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -62,7 +64,8 @@
 			<string>com.appota.example</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.appota.example</string>
+				<string>appotae8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
+				<string>fb435546253225772</string>
 			</array>
 		</dict>
 	</array>
