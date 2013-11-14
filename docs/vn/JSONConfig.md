@@ -5,7 +5,7 @@ nhà phát triển khai báo các tùy chọn đăng nhập và thanh toán mộ
 dàng. Để có cấu hình JSON này, Appota cung cấp một công cụ tên là
 ConfigJSON Generator.
 
-##Sử dụng ConfigJSON Generator:##
+###Sử dụng ConfigJSON Generator:###
 
 Truy cập công cụ tại địa chỉ:
 [https://developer.appota.com/sdktool.php](https://developer.appota.com/sdktool.php)
@@ -16,7 +16,7 @@ Bấm Generate để sinh ra mã JSON.
 
  
 
-##1. Tùy chọn Ứng dụng##
+###1. Tùy chọn Ứng dụng###
 
 **Check version update**
 
@@ -28,7 +28,7 @@ phiên bản mới.
 Đơn vị tiền tệ của game, có thể sử dụng text hoặc hình ảnh (yêu cầu
 upload).
 
-##2. Tùy chọn Đăng nhập##
+###2. Tùy chọn Đăng nhập###
 
 **Appota User**
 
@@ -43,7 +43,7 @@ nhập vào game.
 
 Cho phép dùng ID của thiết bị để đăng nhập nhanh vào game.
 
-##3. Tùy chọn Thanh toán##
+###3. Tùy chọn Thanh toán###
 
 **SMS**
 
@@ -75,7 +75,7 @@ Cho phép sử dụng hình thức thanh toán Google Payment hoặc Apple Payme
  - Name: Tên item\
  - Game Currency: Số tiền ảo
 
-##4 - JSON mẫu##
+###4 - JSON mẫu###
 
 Khai báo các tùy chọn như sau:
 
