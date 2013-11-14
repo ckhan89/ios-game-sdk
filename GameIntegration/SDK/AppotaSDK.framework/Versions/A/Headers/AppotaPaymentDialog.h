@@ -64,12 +64,12 @@
                          withDescriptionString:(NSString*) descriptionString
                                    withHandler:(AppotaPaymentHandler)handler;
 
-- (void) showPaypalPaymentDialogWithListAmount:(NSArray*) listAmount
-                                     withState:(NSString*) state
-                                    withTarget:(NSString*) target
-                                 withNoticeUrl:(NSString*) noticeUrl
-                         withDescriptionString:(NSString*) descriptionString
-                                   withHandler:(AppotaPaymentHandler)handler;
+- (void) showPaypalPaymentDialogWithListItem:(NSArray*) listAmount
+                                   withState:(NSString*) state
+                                  withTarget:(NSString*) target
+                               withNoticeUrl:(NSString*) noticeUrl
+                       withDescriptionString:(NSString*) descriptionString
+                                 withHandler:(AppotaPaymentHandler)handler;
 
 - (void) showBankPaymentDialogWithListPayment:(NSArray*) listPayment
                                     withState:(NSString*) state
@@ -109,6 +109,7 @@
 - (void) resendPaypal:(id) sender;
 - (void) confirmPaypal:(id) sender;
 - (void) payCardAction:(id) sender;
+- (void) clickChooseItem:(id) sender;
 - (void) clickChooseMessage:(id) sender;
 - (void) clickChoosePaypal:(id) sender;
 - (void) clickChoosePaypalWithValue:(id) sender;

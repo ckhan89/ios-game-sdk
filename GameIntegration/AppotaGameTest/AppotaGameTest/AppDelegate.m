@@ -41,7 +41,7 @@
                                   withInAppAPIKey:INAPP_API_KEY
                                         withState:@""
                                     withNoticeUrl:@"http://filestore9.com/test.php"
-                                    withConfigUrl:@"http://filestore9.com/config.php"
+                                    withConfigUrl:@"http://filestore9.com/config_ios.php"
      ];
 #warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;

@@ -12,7 +12,4 @@
 {
     __unsafe_unretained IBOutlet UIImageView *scrollViewBackground;
 }
-- (void) setupViewWithListAmount:(NSArray*) listAmount
-                 withDescription:(NSString*) description
-                      withDialog:(AppotaPaymentDialog*) paymentDialog;
 @end

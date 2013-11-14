@@ -22,7 +22,6 @@
 - (IBAction)logClick:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *gaiTextField;
-- (IBAction)startTrackingGA:(id)sender;
 - (void) handleLogin;
 - (void) handleLogOut;
 @end

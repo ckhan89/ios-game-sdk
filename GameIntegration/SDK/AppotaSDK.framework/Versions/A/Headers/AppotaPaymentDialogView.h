@@ -35,10 +35,14 @@
 - (void) setUpViewWithTitle:(NSString*) title
             withDescription:(NSString*) description
           withPaymentDialog:(AppotaPaymentDialog*) paymentDialog;
+- (void) setupViewWithListItem:(NSArray*) listPaymentItem
+               withDescription:(NSString*) description
+                    withDialog:(AppotaPaymentDialog*) paymentDialog;
 - (void) closePaymentView;
 - (AppotaPaymentLoginDialog*) getDialog;
 
 - (void) setMoveViewUp:(BOOL) moveUp
           withTimeShow:(float) timeShow
             withOffset:(float) offset;
+
 @end

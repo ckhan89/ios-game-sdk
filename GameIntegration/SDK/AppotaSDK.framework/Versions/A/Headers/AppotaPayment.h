@@ -82,5 +82,5 @@ typedef enum {
 - (NSString *)productId;
 
 - (void)setProductId:(NSString *)newValue;
-
+- (void) printItem;
 @end

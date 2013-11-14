@@ -94,4 +94,15 @@
 
 + (void) showProfileViewFromView:(AppotaGameView*) v;
 + (void) showLogoutAlertViewWithHandler:(AppotaPaymentHandler) handler;
++ (NSDictionary*) getPaymentCallBackDictFromState:(AppotaPaymentState) pMethod
+                                  withPaymentDict:(NSDictionary*) paymentDict
+                                        withError:(NSError*) error;
+
+#pragma mark - Post protocol
++ (void) postPaymentWithState:(AppotaPaymentState) paymentState
+                     withDict:(NSDictionary*) dict
+                    withError:(NSError*) error;
++ (void) postFinishLogin:(NSDictionary*) loginDict;
++ (void) postFinishLogout:(NSString*) userName;
 @end
+

@@ -37,8 +37,8 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIButton" id="60646562">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{86, 30}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{38, 30}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="113651134"/>
@@ -73,8 +73,8 @@
 					</object>
 					<object class="IBUIButton" id="428328140">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{86, 97}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{38, 97}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="195022375"/>
@@ -96,8 +96,8 @@
 					</object>
 					<object class="IBUIButton" id="663748792">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{86, 166}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{38, 166}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="283568827"/>
@@ -119,8 +119,8 @@
 					</object>
 					<object class="IBUIButton" id="113651134">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{298, 30}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{250, 30}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="428328140"/>
@@ -142,8 +142,8 @@
 					</object>
 					<object class="IBUIButton" id="195022375">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{298, 100}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{250, 100}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="663748792"/>
@@ -165,10 +165,11 @@
 					</object>
 					<object class="IBUIButton" id="283568827">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{298, 166}, {181, 44}}</string>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{250, 166}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -186,10 +187,10 @@
 						<reference key="IBUIFont" ref="621570307"/>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {568, 300}}</string>
+				<string key="NSFrame">{{0, 20}, {480, 300}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="60646562"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC43NQA</bytes>
@@ -212,13 +213,13 @@
 							<integer value="3"/>
 						</array>
 						<array key="dict.values">
-							<string>{320, 568}</string>
-							<string>{568, 320}</string>
+							<string>{320, 480}</string>
+							<string>{480, 320}</string>
 						</array>
 					</object>
 					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
-					<string key="IBUIDisplayName">Retina 4 Full Screen</string>
-					<int key="IBUIType">2</int>
+					<string key="IBUIDisplayName">Retina 3.5 Full Screen</string>
+					<int key="IBUIType">0</int>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -403,12 +404,10 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="hidePaymentButtonClick:">id</string>
 						<string key="logClick:">id</string>
-						<string key="logOutClick:">id</string>
 						<string key="openPaymentClick:">id</string>
 						<string key="openSDKClick:">id</string>
 						<string key="openSwitchUserClick:">id</string>
 						<string key="showPaymentButtonClick:">id</string>
-						<string key="startTrackingGA:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="hidePaymentButtonClick:">
@@ -417,10 +416,6 @@
 						</object>
 						<object class="IBActionInfo" key="logClick:">
 							<string key="name">logClick:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="logOutClick:">
-							<string key="name">logOutClick:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="openPaymentClick:">
@@ -437,10 +432,6 @@
 						</object>
 						<object class="IBActionInfo" key="showPaymentButtonClick:">
 							<string key="name">showPaymentButtonClick:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="startTrackingGA:">
-							<string key="name">startTrackingGA:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

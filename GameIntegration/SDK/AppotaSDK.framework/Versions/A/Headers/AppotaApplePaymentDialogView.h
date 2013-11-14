@@ -10,7 +10,4 @@
 #import "AppotaPaymentSMSDialogView.h"
 
 @interface AppotaApplePaymentDialogView : AppotaPaymentSMSDialogView
-- (void) setupViewWithListItem:(NSArray*) listIAPItem
-               withDescription:(NSString*) description
-                    withDialog:(AppotaPaymentDialog*) paymentDialog;
 @end

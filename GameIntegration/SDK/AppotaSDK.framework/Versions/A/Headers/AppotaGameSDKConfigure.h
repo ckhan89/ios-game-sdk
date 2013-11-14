@@ -23,6 +23,8 @@ typedef enum {
     AppotaPaymentInvalidAmount = 7,
     AppotaGetListSMSError = 11,
     AppotaPaymentWrongFormatResponse = 12,
+    AppotaApplePaymentProductNotValid = 13,
+    AppotaAppleTransactionFailed = 14,
 } AppotaPaymentState;
 
 
@@ -48,6 +50,7 @@ typedef enum {
     
     NSMutableArray *listPayment;
     NSString *noticeUrl;
+    NSString *paymentState;
     id session;
     
     BOOL enableSocialLogin;
@@ -70,9 +73,9 @@ typedef enum {
 + (void) configureWithClientID:(NSString*) clientID
               withClientSecret:(NSString*) clientSecret
                withInAppAPIKey:(NSString*) inAppAPIKey
-                 withNoticeUrl:(NSString*) noticeUrl
-                 withConfigUrl:(NSString*) configUrl;
-
+                     withState:(NSString*) state_
+                 withNoticeUrl:(NSString*) noticeUrl_
+                 withConfigUrl:(NSString*) configUrl_;
 /*
  * Add payment support
  */
@@ -165,5 +168,9 @@ typedef enum {
 - (BOOL)autoShowLoginDialog;
 
 - (void)setAutoShowLoginDialog:(BOOL)newValue;
+
+- (NSString *)paymentState;
+
+- (void)setPaymentState:(NSString *)newValue;
 
 @end

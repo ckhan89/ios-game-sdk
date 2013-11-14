@@ -208,6 +208,12 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
                        withNoticeUrl:(NSString*) noticeUrl
                withCompletionHandler:(AppotaPaymentHandler) handler;
 
+- (void) makePaypalPaymentWithAmount:(float) amount
+                           withState:(NSString*) state
+                          withTarget:(NSString*) target
+                       withNoticeUrl:(NSString*) noticeUrl
+                   withPaymentDialog:(AppotaPaymentLoginDialog*) pDialog
+               withCompletionHandler:(AppotaPaymentHandler) handler;
 /*!
  @method
  @param listAmount - list price for Paypal message, NSArray of NSNumber (required)
@@ -223,6 +229,14 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
                        withNoticeUrl:(NSString*) noticeUrl
                      withDescription:(NSString*) description
                withCompletionHandler:(AppotaPaymentHandler) handler;
+
+- (void) makePaypalPaymentWithListItem:(NSArray*) listPaymentItem
+                             withState:(NSString*) state
+                            withTarget:(NSString*) target
+                         withNoticeUrl:(NSString*) noticeUrl
+                       withDescription:(NSString*) description
+                     withPaymentDialog:(AppotaPaymentLoginDialog*) pDialog
+                 withCompletionHandler:(AppotaPaymentHandler) handler;
 
 /*!
  @method
@@ -381,6 +395,13 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
                   withDescription:(NSString*) description
             withCompletionHandler:(AppotaPaymentHandler) handler;
 
+- (void) makeApplePaymentWithListItem:(NSArray*) lisItem
+                            withState:(NSString*) state
+                           withTarget:(NSString*) target
+                        withNoticeUrl:(NSString*) noticeUrl
+                      withDescription:(NSString*) description
+                    withPaymentDialog:(AppotaPaymentLoginDialog*) pDialog
+                withCompletionHandler:(AppotaPaymentHandler) handler;
 
 -(void) checkTransactionInAppWithID:(NSString *)inApp_id
               withCompletionHandler:(AppotaResultHandler) handler;

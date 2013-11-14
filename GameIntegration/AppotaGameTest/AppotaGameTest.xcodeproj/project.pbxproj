@@ -384,8 +384,8 @@
 		364D1FD61824827600187DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kien Ha (545WAPR6LK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kien Ha (545WAPR6LK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -404,8 +404,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
+				PROVISIONING_PROFILE = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,7 +413,7 @@
 		364D1FD71824827600187DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kien Ha (545WAPR6LK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kien Ha (545WAPR6LK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,7 +433,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
+				PROVISIONING_PROFILE = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
 				WRAPPER_EXTENSION = app;
 			};

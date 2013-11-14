@@ -40,4 +40,8 @@
 
 - (void)setInAppID:(NSString *)newValue;
 
+- (AppotaPayment *)paymentItem;
+
+- (void)setPaymentItem:(AppotaPayment *)newValue;
+
 @end
