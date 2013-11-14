@@ -384,8 +384,8 @@
 		364D1FD61824827600187DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kien Ha (545WAPR6LK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kien Ha (545WAPR6LK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -393,6 +393,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppotaGameTest/Library\"",
+				);
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -400,8 +404,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "86EB9272-D188-4411-A1C8-E926AA739D8C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86EB9272-D188-4411-A1C8-E926AA739D8C";
+				PROVISIONING_PROFILE = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,7 +413,8 @@
 		364D1FD71824827600187DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Do Tuan Anh (GXA4HR5KHZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kien Ha (545WAPR6LK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kien Ha (545WAPR6LK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -417,6 +422,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppotaGameTest/Library\"",
+				);
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -424,7 +433,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "86EB9272-D188-4411-A1C8-E926AA739D8C";
+				PROVISIONING_PROFILE = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

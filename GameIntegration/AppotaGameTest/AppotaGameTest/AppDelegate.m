@@ -39,6 +39,7 @@
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
                                  withClientSecret:CLIENT_SECRET
                                   withInAppAPIKey:INAPP_API_KEY
+                                        withState:@""
                                     withNoticeUrl:@"http://filestore9.com/test.php"
                                     withConfigUrl:@"http://filestore9.com/config.php"
      ];

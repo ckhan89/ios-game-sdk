@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <UITextFieldDelegate>
+@property (weak, nonatomic) id tracker;
 @property (weak, nonatomic) IBOutlet UIButton *showHidePaymentButton;
 @property (weak, nonatomic) IBOutlet UIButton *hidePaymentButton;
 @property (weak, nonatomic) IBOutlet UIButton *logInOutButon;
@@ -19,6 +21,8 @@
 - (IBAction)openSwitchUserClick:(id)sender;
 - (IBAction)logClick:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *gaiTextField;
+- (IBAction)startTrackingGA:(id)sender;
 - (void) handleLogin;
 - (void) handleLogOut;
 @end
