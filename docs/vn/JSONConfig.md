@@ -83,7 +83,7 @@ Khai báo các tùy chọn như sau:
 
 Bấm nút Generate sẽ cho kết quả là chuỗi JSON:
 
-```
+``` json
 {"checkUpdate":true,"gameCurrency":{"type":"STRING","data":"VCOIN"},"loginMethods":["LOGIN_APPOTA",
 "LOGIN_SOCIAL","LOGIN_FAST"],"paymentMethods":[{"method":"PAYMENT_SMS","options":[{"currency":"VND",
 "country":"VN","amounts":[{"amount":500,"gameCurrency":5},{"amount":1000,"gameCurrency":10}]}]},
