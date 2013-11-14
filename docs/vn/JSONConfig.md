@@ -16,7 +16,7 @@ Bấm Generate để sinh ra mã JSON.
 
  
 
-**1. Tùy chọn Ứng dụng**
+***1. Tùy chọn Ứng dụng***
 
 **Check version update**
 
@@ -28,7 +28,7 @@ phiên bản mới.
 Đơn vị tiền tệ của game, có thể sử dụng text hoặc hình ảnh (yêu cầu
 upload).
 
-**2. Tùy chọn Đăng nhập**
+***2. Tùy chọn Đăng nhập***
 
 **Appota User**
 
@@ -43,7 +43,7 @@ nhập vào game.
 
 Cho phép dùng ID của thiết bị để đăng nhập nhanh vào game.
 
-**3. Tùy chọn Thanh toán**
+***3. Tùy chọn Thanh toán***
 
 **SMS**
 
@@ -75,7 +75,7 @@ Cho phép sử dụng hình thức thanh toán Google Payment hoặc Apple Payme
  - Name: Tên item\
  - Game Currency: Số tiền ảo
 
-**4 - JSON mẫu**
+***4 - JSON mẫu***
 
 Khai báo các tùy chọn như sau:
 
@@ -83,6 +83,7 @@ Khai báo các tùy chọn như sau:
 
 Bấm nút Generate sẽ cho kết quả là chuỗi JSON:
 
-    {"checkUpdate":true,"gameCurrency":{"type":"STRING","data":"VCOIN"},"loginMethods":["LOGIN_APPOTA","LOGIN_SOCIAL","LOGIN_FAST"],"paymentMethods":[{"method":"PAYMENT_SMS","options":[{"currency":"VND","country":"VN","amounts":[{"amount":500,"gameCurrency":5},{"amount":1000,"gameCurrency":10}]}]},{"method":"PAYMENT_CARD","options":[{"currency":"VND","country":"VN","amounts":[{"amount":300000,"gameCurrency":3000}]}]},{"method":"PAYMENT_PAYPAL","currency":"USD","options":[{"country":"VN","amounts":[{"amount":10,"gameCurrency":100}]}]},{"method":"PAYMENT_INTERNET_BANKING","options":[{"currency":"VND","country":"VN","amounts":[{"amount":10000,"gameCurrency":100}]}]},{"method":"PAYMENT_GOOGLE_PLAY","items":[{"productid":"com.appota.sample.pack1","price":"10","name":"100 
-    Coin","gameCurrency":100},{"productid":"com.appota.sample.pack2","price":"20","name":"200 
-    Coin","gameCurrency":200}]}]}
+```
+{"checkUpdate":true,"gameCurrency":{"type":"STRING","data":"VCOIN"},"loginMethods":["LOGIN_APPOTA","LOGIN_SOCIAL","LOGIN_FAST"],"paymentMethods":[{"method":"PAYMENT_SMS","options":[{"currency":"VND","country":"VN","amounts":[{"amount":500,"gameCurrency":5},{"amount":1000,"gameCurrency":10}]}]},{"method":"PAYMENT_CARD","options":[{"currency":"VND","country":"VN","amounts":[{"amount":300000,"gameCurrency":3000}]}]},{"method":"PAYMENT_PAYPAL","currency":"USD","options":[{"country":"VN","amounts":[{"amount":10,"gameCurrency":100}]}]},{"method":"PAYMENT_INTERNET_BANKING","options":[{"currency":"VND","country":"VN","amounts":[{"amount":10000,"gameCurrency":100}]}]},{"method":"PAYMENT_GOOGLE_PLAY","items":[{"productid":"com.appota.sample.pack1","price":"10","name":"100 
+Coin","gameCurrency":100},{"productid":"com.appota.sample.pack2","price":"20","name":"200 Coin","gameCurrency":200}]}]}
+```
