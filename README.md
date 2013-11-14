@@ -28,7 +28,7 @@ In Project app’s target settings section, find [Build phases] and open
 Link Binary with Libraries. Click on ‘+’ button and add these frameworks:
 
 ```
-AppotaSDK, CoreText, StoreKit, AudioToolBox, MobileCoreServices, AVFoudation, CoreVideo,
+AppotaSDK, QuaztCore, CoreText, StoreKit, AudioToolBox, MobileCoreServices, AVFoudation, CoreVideo,
 MessageUI, Security, SystemConfiguration, CFNetwork, OpenGLES, CoreMedia, libxml2.dylib, libsqlite3.dylib
 ```
 

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Android SDK - Get Started</title>
+<style type="text/css">
+.class_title {
+	font-size: x-large;
+}
+.auto-style1 {
+	font-size: large;
+}
+</style>
+<link href="../main.css" rel="stylesheet" type="text/css" />
+<link href="../code.css" rel="stylesheet" type="text/css" />
+<script src="../rainbow.min.js"></script>
+
+</head>
+
+<body>
+
+<p class="class_title"><strong>Config.json</strong></p>
+<p>Appota Game SDK sử dụng một file cấu hình theo định dạng JSON, cho phép nhà 
+phát triển khai báo các tùy chọn đăng nhập và thanh toán một cách dễ dàng. Để có 
+cấu hình JSON này, Appota cung cấp một công cụ tên là ConfigJSON Generator.</p>
+<p class="auto-style1"><strong>Sử dụng ConfigJSON Generator:</strong></p>
+<p>Truy cập công cụ tại địa chỉ:
+<a href="https://developer.appota.com/sdktool.php">
+https://developer.appota.com/sdktool.php</a></p>
+<p>Tick chọn những option bạn muốn có trong game.</p>
+<p>Bấm Generate để sinh ra mã JSON.</p>
+<p>&nbsp;</p>
+<p class="auto-style1"><strong>1. Tùy chọn Ứng dụng</strong></p>
+<p><strong>Check version update</strong></p>
+<p>Kiểm tra các phiên bản cập nhật khi vào game và force update nếu có phiên bản 
+mới.</p>
+<p><strong>Game currency</strong></p>
+<p>Đơn vị tiền tệ của game, có thể sử dụng text hoặc hình ảnh (yêu cầu upload).</p>
+<p class="auto-style1"><strong>2. Tùy chọn Đăng nhập</strong></p>
+<p><strong>Appota User</strong></p>
+<p>Cho phép sử dụng tài khoản Appota đăng nhập vào game.</p>
+<p><strong>Social User</strong></p>
+<p>Cho phép sử dụng tài khoản mạng xã hội Facebook, Google, Twitter đăng nhập 
+vào game.</p>
+<p><strong>Fast Login</strong></p>
+<p>Cho phép dùng ID của thiết bị để đăng nhập nhanh vào game.</p>
+<p class="auto-style1"><strong>3. Tùy chọn Thanh toán</strong></p>
+<p><strong>SMS</strong></p>
+<p>Cho phép sử dụng hình thức thanh toán SMS. Tick để lựa chọn các mệnh giá và 
+số tiền ảo tương ứng.</p>
+<p><strong>Card</strong></p>
+<p>Cho phép sử dụng hình thức thanh toán Thẻ cào. Tick để lựa chọn các mệnh giá 
+và số tiền ảo tương ứng.</p>
+<p><strong>Paypal</strong></p>
+<p>Cho phép sử dụng hình thức thanh toán Paypal. Nhập vào số tiền (USD) và số 
+tiền ảo tương ứng.</p>
+<p><strong>Bank</strong></p>
+<p>Cho phép sử dụng hình thức thanh toán Internet Banking. Nhập vào số tiền 
+(VNĐ) và số tiền ảo tương ứng.</p>
+<p><strong>Google Play Payment hoặc Apple Payment</strong></p>
+<p>Cho phép sử dụng hình thức thanh toán Google Payment hoặc Apple Payment (phụ 
+thuộc vào loại ứng dụng Android/iOS). Nhập vào các thông tin sau:</p>
+<p>- ProductID: Mã IAP item được Appota cung cấp.<br />
+- Price: Giá tiền (USD)<br />
+- Name: Tên item<br />
+- Game Currency: Số tiền ảo</p>
+<p class="auto-style1"><strong>4 - JSON mẫu</strong></p>
+<p>Khai báo các tùy chọn như sau:</p>
+<p><img height="744" src="json_sample.png" width="664" /></p>
+<p>Bấm nút Generate sẽ cho kết quả là chuỗi JSON:</p>
+<pre><code>{"checkUpdate":true,"gameCurrency":{"type":"STRING","data":"VCOIN"},"loginMethods":["LOGIN_APPOTA","LOGIN_SOCIAL","LOGIN_FAST"],"paymentMethods":[{"method":"PAYMENT_SMS","options":[{"currency":"VND","country":"VN","amounts":[{"amount":500,"gameCurrency":5},{"amount":1000,"gameCurrency":10}]}]},{"method":"PAYMENT_CARD","options":[{"currency":"VND","country":"VN","amounts":[{"amount":300000,"gameCurrency":3000}]}]},{"method":"PAYMENT_PAYPAL","currency":"USD","options":[{"country":"VN","amounts":[{"amount":10,"gameCurrency":100}]}]},{"method":"PAYMENT_INTERNET_BANKING","options":[{"currency":"VND","country":"VN","amounts":[{"amount":10000,"gameCurrency":100}]}]},{"method":"PAYMENT_GOOGLE_PLAY","items":[{"productid":"com.appota.sample.pack1","price":"10","name":"100 
+Coin","gameCurrency":100},{"productid":"com.appota.sample.pack2","price":"20","name":"200 
+Coin","gameCurrency":200}]}]}</code></pre>
+</body>
+
+</html>
