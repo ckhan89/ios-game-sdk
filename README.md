@@ -114,6 +114,7 @@ __JSON config__
 	* +showSwitchUserView: Manualy show switchuser view from your game, can be implemented your button click	
 	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
+
 **4. Appota  SDK flow**
 ![](docs/vn/flow1.png)
 
