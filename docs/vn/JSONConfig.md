@@ -13,7 +13,7 @@ ConfigJSON Generator.
 
 - Bấm Generate để sinh ra mã JSON.
 
- 
+<hr/>
 
 ###1. Tùy chọn Ứng dụng###
 
