@@ -70,6 +70,7 @@
 #define CHECK_DEVICE_ID_URL @"https://api.appota.com/game/checkDeviceId?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define REMOVE_ACCOUNT_URL @"https://api.appota.com/game/removeDevice?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define INIT_SDK_TRACK_URL @"http://api.appota.com/client/track"
+#define TRANSACTION_LOG_URL @"https://api.appota.com/game/getTransactionList?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
 

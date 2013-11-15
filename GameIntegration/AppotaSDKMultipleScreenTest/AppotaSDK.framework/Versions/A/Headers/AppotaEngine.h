@@ -145,6 +145,11 @@ typedef void (^BOOLBlock)(BOOL b);
 - (void) logoutOnComplete:(FetcherDictionary) completionBlock
                   onError:(AppotaNKErrorBlock) errorBlock;
 #pragma mark - Login payment API
+- (void) getTransactionLogWithStart:(int) start
+                          withLimit:(int) limit
+                         onComplete:(FetcherDictionary) completionBlock
+                            onError:(AppotaNKErrorBlock) errorBlock;
+
 - (void) getAndUpdateTrackInfoOnWithSDKVersion:(NSString*) sdkVersion
                        withAppVersion:(NSString*) appVersion
                          withBundleID:(NSString*) bundleID
