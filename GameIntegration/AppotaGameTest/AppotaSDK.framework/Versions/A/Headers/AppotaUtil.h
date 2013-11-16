@@ -97,6 +97,7 @@
 + (NSDictionary*) getPaymentCallBackDictFromState:(AppotaPaymentState) pMethod
                                   withPaymentDict:(NSDictionary*) paymentDict
                                         withError:(NSError*) error;
++ (NSString *) getTargetFromLoginDict;
 
 #pragma mark - Post protocol
 + (void) postPaymentWithState:(AppotaPaymentState) paymentState

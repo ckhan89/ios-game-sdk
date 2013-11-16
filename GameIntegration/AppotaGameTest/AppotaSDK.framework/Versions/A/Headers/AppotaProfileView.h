@@ -9,8 +9,10 @@
 #import <AppotaSDK/AppotaSDK.h>
 #import "AppotaGameView.h"
 
+@class AppotaTransactionView;
 @interface AppotaProfileView : AppotaGameView <UITextFieldDelegate> {
     float moveDistance;
+    AppotaTransactionView *transactionView;
 }
 @property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *itemContentScrollView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *gameIconImageView;
