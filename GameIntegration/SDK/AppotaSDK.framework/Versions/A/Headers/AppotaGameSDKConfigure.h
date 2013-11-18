@@ -47,6 +47,7 @@ typedef enum {
     BOOL checkUpdate;
     BOOL autoShowPaymentButton;
     BOOL autoShowLoginDialog;
+    BOOL enableLogoutDialog;
     
     NSMutableArray *listPayment;
     NSString *noticeUrl;
@@ -172,5 +173,9 @@ typedef enum {
 - (NSString *)paymentState;
 
 - (void)setPaymentState:(NSString *)newValue;
+
+- (BOOL)enableLogoutDialog;
+
+- (void)setEnableLogoutDialog:(BOOL)newValue;
 
 @end
