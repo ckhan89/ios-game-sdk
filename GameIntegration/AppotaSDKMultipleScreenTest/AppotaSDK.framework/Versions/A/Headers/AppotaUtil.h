@@ -105,5 +105,12 @@
                     withError:(NSError*) error;
 + (void) postFinishLogin:(NSDictionary*) loginDict;
 + (void) postFinishLogout:(NSString*) userName;
+
+#pragma mark - GA tracking function
++ (NSString*) getGapotaUserAgentString;
++ (NSString*) getDefaultUserAgentSring;
++ (void) trackGapotaPageWithScreen:(NSString*) title;
++ (void) trackGapotaEventWithCategory:(NSString*) cate
+                      withEventAction:(NSString*) action;
 @end
 

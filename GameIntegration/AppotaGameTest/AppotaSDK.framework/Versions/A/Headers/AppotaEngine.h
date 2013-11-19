@@ -144,7 +144,19 @@ typedef void (^BOOLBlock)(BOOL b);
                           onError:(AppotaNKErrorBlock) errorBlock;
 - (void) logoutOnComplete:(FetcherDictionary) completionBlock
                   onError:(AppotaNKErrorBlock) errorBlock;
+
+#pragma mark - GAPOTA tracking API
+- (void) trackGapotaPageWithScreen:(NSString*) title
+                       onComplete:(FetcherDictionary) completionBlock
+                          onError:(AppotaNKErrorBlock) errorBlock;
+- (void) trackGapotaEventWithCategory:(NSString*) cate
+                      withEventAction:(NSString*) action
+                           onComplete:(FetcherDictionary) completionBlock
+                              onError:(AppotaNKErrorBlock) errorBlock;
+
 #pragma mark - Login payment API
+- (void) getUserInfoOnComplete:(FetcherDictionary) completionBlock
+                       onError:(AppotaNKErrorBlock) errorBlock;
 - (void) getTransactionLogWithStart:(int) start
                           withLimit:(int) limit
                          onComplete:(FetcherDictionary) completionBlock

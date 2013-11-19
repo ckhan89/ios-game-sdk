@@ -60,6 +60,8 @@ typedef enum {
     
     NSString *googleClientId;
     NSString *jsonConfigUrl;
+    
+    NSString *gapotaTrackingID;
 }
 
 @property (nonatomic, unsafe_unretained) id<AppotaGameSDKConfigureDelegate> delegate;
@@ -177,5 +179,9 @@ typedef enum {
 - (BOOL)enableLogoutDialog;
 
 - (void)setEnableLogoutDialog:(BOOL)newValue;
+
+- (NSString *)gapotaTrackingID;
+
+- (void)setGapotaTrackingID:(NSString *)newValue;
 
 @end

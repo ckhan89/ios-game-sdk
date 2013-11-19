@@ -41,6 +41,8 @@
  */
 @interface AppotaNetworkEngine : NSObject
 
+@property (strong, nonatomic) NSDictionary *customHeaders;
+
 /*!
  *  @abstract Initializes your network engine with a hostname
  *  

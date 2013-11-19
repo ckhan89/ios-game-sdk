@@ -71,6 +71,11 @@
 #define REMOVE_ACCOUNT_URL @"https://api.appota.com/game/removeDevice?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define INIT_SDK_TRACK_URL @"http://api.appota.com/client/track"
 #define TRANSACTION_LOG_URL @"https://api.appota.com/game/getTransactionList?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define USER_INFO_URL @"https://api.appota.com/game/get_user_info?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+
+
+#define GAPOTA_TRACKING_URL @"http://www.google-analytics.com/collect"
+
 
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
 
@@ -80,5 +85,5 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-#define DEBUG_MODE YES
+#define DEBUG_MODE NO
 #endif
