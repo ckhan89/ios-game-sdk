@@ -393,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AppotaGameTest/Library\"",
@@ -406,6 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,6 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AppotaGameTest/Library\"",
@@ -435,6 +438,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A26B0E0C-62A7-4173-A227-C79EFBB27CDB";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FFA739D4-18C4-48E8-A649-F95CBF5075DE";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
