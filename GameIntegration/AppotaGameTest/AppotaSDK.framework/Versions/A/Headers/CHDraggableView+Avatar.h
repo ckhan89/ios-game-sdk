@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Matthias Hochgatterer. All rights reserved.
 //
 
-#import "CHDraggableView.h"
+#import "AppotaGameSDKCHDraggableView.h"
 
-@interface CHDraggableView (Avatar)
+@interface AppotaGameSDKCHDraggableView (Avatar)
 
 + (id)draggableViewWithImage:(UIImage *)image;
 

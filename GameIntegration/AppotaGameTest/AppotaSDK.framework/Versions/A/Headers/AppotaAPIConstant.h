@@ -13,7 +13,7 @@
 #define APPOTA_DRAGVIEW_TAG 1428
 #define APPOTA_DIALOG_TAG 1429
 #define APPOTA_DIALOG_PAYMENT_TAG 1430
-#define APPOTA_WINSIZE_HEIGHT 300
+#define APPOTA_WINSIZE_HEIGHT [AppotaUtil getWindowSize].height
 
 #define APPOTA_OAUTH_REQUEST_TOKEN_URL @"https://id.appota.com/oauth/request_token"
 #define APPOTA_APP_REQUEST_TOKEN_URL @"https://id.appota.com/app/request_token"
@@ -48,6 +48,7 @@
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
 #define APPOTA_SDK_VERSION @"1.0"
+#define APPOTA_SDK_BUILD 10
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

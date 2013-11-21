@@ -15,6 +15,7 @@
 @class AppotaGamePaymentDialogView;
 @class AppotaGameView;
 @interface AppotaUtil : NSObject
++ (UIWindow*) getKeyWindow;
 + (NSBundle *)frameworkBundle;
 +(UIImage *)imageWithNamed:(NSString *)imgName ofType:(NSString *)extension;
 + (UIImage*) imageNamed:(NSString*) imageName;
@@ -47,6 +48,7 @@
 + (NSDictionary*) getRemoteConfigDict;
 + (NSDictionary*) getLoginDictFromDefault;
 + (NSString*) getDeviceID;
++ (NSString*) getPTrackingID;
 + (NSString *)systemVersion;
 + (NSString*) getAppVersion;
 + (NSDictionary *) getDeviceDictionary;

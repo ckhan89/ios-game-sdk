@@ -11,7 +11,7 @@
 #import "AppotaError.h"
 #import "AppotaPaymentAPI.h"
 #import "AppotaEngine.h"
-#import "AppotaDialog.h"
+#import "AppotaPaymentSDKDialog.h"
 #import "AppotaPaymentDialog.h"
 #import "AppotaUtil.h"
 #import "AppotaAPIConstant.h"

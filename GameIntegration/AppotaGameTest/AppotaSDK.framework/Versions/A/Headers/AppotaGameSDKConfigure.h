@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHDraggableView.h"
-#import "CHDraggingCoordinator.h"
+#import "AppotaGameSDKCHDraggableView.h"
+#import "AppotaGameSDKCHDraggingCoordinator.h"
 #import "AppotaPayment.h"
 #import "Appota_OpenUDID.h"
 
@@ -62,6 +62,8 @@ typedef enum {
     NSString *jsonConfigUrl;
     
     NSString *gapotaTrackingID;
+    AppotaGameSDKCHDraggingCoordinator *draggingCoordinator;
+//    CHDraggableView *draggableView;
 }
 
 @property (nonatomic, unsafe_unretained) id<AppotaGameSDKConfigureDelegate> delegate;
@@ -183,5 +185,9 @@ typedef enum {
 - (NSString *)gapotaTrackingID;
 
 - (void)setGapotaTrackingID:(NSString *)newValue;
+
+- (AppotaGameSDKCHDraggingCoordinator *)draggingCoordinator;
+
+- (void)setDraggingCoordinator:(AppotaGameSDKCHDraggingCoordinator *)newValue;
 
 @end

@@ -33,5 +33,9 @@
 - (IBAction)updateButtonClick:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *changePasswordTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *reChangePasswordTextField;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *emailImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *phoneImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *changePasswordImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *reChangePasswordImageView;
 
 @end

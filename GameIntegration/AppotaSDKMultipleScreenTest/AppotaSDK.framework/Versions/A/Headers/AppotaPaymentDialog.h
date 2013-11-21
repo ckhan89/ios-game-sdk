@@ -12,7 +12,7 @@
 
 @class AppotaPaymentDialogView;
 @class AppotaPaymentController;
-@interface AppotaPaymentDialog : AppotaDialog <PayPalPaymentDelegate> {
+@interface AppotaPaymentDialog : AppotaPaymentSDKDialog <PayPalPaymentDelegate> {
     PayPalPaymentViewController *pppViewController;
     AppotaPaymentDialogView *appotaPaymentView;
     NSMutableArray *listPaymentController;
