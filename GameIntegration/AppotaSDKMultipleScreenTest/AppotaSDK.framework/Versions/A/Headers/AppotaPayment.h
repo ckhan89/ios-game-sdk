@@ -25,7 +25,7 @@ typedef enum {
     float amount;
     float coinAmount;
     NSString *currency;
-    UIImage *coinImage;
+    NSString *coinImage;
     NSString *coinName;    
     NSString *paymentDescription;
     NSString *productId;
@@ -38,7 +38,7 @@ typedef enum {
               withCoinAmount:(float) coinAmount_
                 withCurrency:(NSString*) currency_
                 withCoinName:(NSString*) coinName
-               withCoinImage:(UIImage*) coinImage_
+               withCoinImage:(NSString*) coinImage_
       withPaymentDescription:(NSString*) paymentDescription_;
 
 - (id) initWithPaymentMethod:(PAYMENT_METHOD) paymentMethod_
@@ -46,7 +46,7 @@ typedef enum {
               withCoinAmount:(float) coinAmount_
                 withCurrency:(NSString*) currency_
                 withCoinName:(NSString*) coinName_
-               withCoinImage:(UIImage*) coinImage_
+               withCoinImage:(NSString*) coinImage_
       withPaymentDescription:(NSString*) paymentDescription_
                withProductId:(NSString*) productId_
 ;
@@ -63,9 +63,9 @@ typedef enum {
 
 - (void)setCoinAmount:(float)newValue;
 
-- (UIImage *)coinImage;
+- (NSString *)coinImage;
 
-- (void)setCoinImage:(UIImage *)newValue;
+- (void)setCoinImage:(NSString *)newValue;
 
 - (NSString *)paymentDescription;
 

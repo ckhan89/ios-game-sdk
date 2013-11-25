@@ -155,6 +155,9 @@ typedef void (^BOOLBlock)(BOOL b);
                               onError:(AppotaNKErrorBlock) errorBlock;
 
 #pragma mark - Login payment API
+- (void) getCoinImageWithURL:(NSString*) coinUrl
+                  onComplete:(BOOLBlock) completionBlock
+                     onError:(AppotaNKErrorBlock) errorBlock;
 - (void) getUserInfoOnComplete:(FetcherDictionary) completionBlock
                        onError:(AppotaNKErrorBlock) errorBlock;
 - (void) getTransactionLogWithStart:(int) start
@@ -206,4 +209,11 @@ typedef void (^BOOLBlock)(BOOL b);
 - (void) loginWithFacebookToken:(NSString*) facebookToken
                      onComplete:(FetcherDictionary) completionBlock
                         onError:(AppotaNKErrorBlock) errorBlock;
+
+- (void) loginWithTwitterToken:(NSString*) twitterToken
+        withTwitterTokenSecret:(NSString*) oauthTwitter
+               withConsumerKey:(NSString*) consumerKey
+            withConsumerSecret:(NSString*) consumerSecret
+                    onComplete:(FetcherDictionary) completionBlock
+                       onError:(AppotaNKErrorBlock) errorBlock;
 @end

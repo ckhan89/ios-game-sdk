@@ -71,5 +71,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>TWITTER_CONSUMER_KEY</key>
+	<string>8JssO2TP6DPUvsMxIiuBA</string>
+	<key>TWITTER_CONSUMER_SECRET</key>
+	<string>t20smaekjNGQONWvN63joVQQ3xZmoGmbnjeunFjI</string>
 </dict>
 </plist>

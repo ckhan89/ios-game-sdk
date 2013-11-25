@@ -74,13 +74,16 @@
                                         withError:(NSError*) error;
 + (NSString *) getTargetFromLoginDict;
 + (NSString*) getAmountStringWithFloatValue:(float) amountValue;
-
++ (NSString*) getTwitterOauthTokenFromArray:(NSArray*) tokenArray;
++ (NSString*) getTwitterAccessTokenFromArray:(NSArray*) tokenArray;
 #pragma mark - Post protocol
 + (void) postPaymentWithState:(AppotaPaymentState) paymentState
                      withDict:(NSDictionary*) dict
                     withError:(NSError*) error;
 + (void) postFinishLogin:(NSDictionary*) loginDict;
 + (void) postFinishLogout:(NSString*) userName;
-
++ (NSString*) getImagePathDir;
++ (NSString*) getImagePathWithURL:(NSString*) url;
++ (UIImage*) getImageWithURL:(NSString*) url;
 @end
 
