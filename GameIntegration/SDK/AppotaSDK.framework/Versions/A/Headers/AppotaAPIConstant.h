@@ -67,6 +67,7 @@
 #define REG_ACCOUNT_URL @"https://api.appota.com/game/register?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define UPDATE_ACOUNT_URL @"https://api.appota.com/game/update_profile?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define LOGOUT_URL @"https://api.appota.com/user/logout?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define TWITTER_LOGIN_URL @"https://api.appota.com/user/login_twitter?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 
 #define CHECK_DEVICE_ID_URL @"https://api.appota.com/game/checkDeviceId?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define REMOVE_ACCOUNT_URL @"https://api.appota.com/game/removeDevice?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

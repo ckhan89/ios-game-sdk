@@ -47,28 +47,13 @@
 + (void) deleteLinkedDeviceUserInfo:(NSDictionary*) userInfoDict;
 + (NSDictionary*) getRemoteConfigDict;
 + (NSDictionary*) getLoginDictFromDefault;
-+ (NSString*) getDeviceID;
 + (NSString*) getPTrackingID;
-+ (NSString *)systemVersion;
 + (NSString*) getAppVersion;
 + (NSDictionary *) getDeviceDictionary;
 + (UIImage*) getAppIcon;
 + (NSString*) getAppName;
 + (NSString*) getAppBundleId;
 + (CGAffineTransform)transformForOrientation;
-+ (CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation;
-+ (UIView*) getConfigurePaymentView;
-+ (void) hideOrShowPaymentButton:(BOOL) hide;
-+ (void) showPaymentView;
-+ (void) showPaymentViewFromView:(AppotaGameView*) v;
-+ (void) showSwitchView;
-+ (void) checkAutoLoginAndShowLoginView;
-+ (void) checkAutoLoginAndShowChooseUserView;
-+ (void) showLoginView;
-+ (void) showLoginViewFromChooseUser:(AppotaGameView*) v;
-+ (void) showLoginViewFromChooseUser:(AppotaGameView*) v withHideQuickLoginView:(BOOL) hideQuickLogin;
-+ (void) showChooseUserView;
-+ (void) showChooseUserViewFromView:(AppotaGameView*) v;
 + (BOOL) checkUserLogin;
 + (NSString*) getLocalCountry;
 + (void) logOut;
@@ -84,22 +69,11 @@
 +(PAYMENT_METHOD) getPaymentMethodFromString:(NSString*) pMethod;
 +(NSString*) getPaymentMethodString:(PAYMENT_METHOD) pMethod;
 +(NSString*) getDescriptionStringFromListItem:(NSArray*) listPaymentItem;
-
-+ (void) showUpdateInfoViewFromView:(AppotaGameView*) v
-                   withUserInfoDict:(NSDictionary*) userInfoDict
-                withRemoveSuperView:(BOOL) enableRemove
-                  withWarningOption:(BOOL) enableWarning;
-
-+ (void) showUpdateInfoViewFromView:(AppotaGameView*) v
-                withRemoveSuperView:(BOOL) enableRemove
-                  withWarningOption:(BOOL) enableWarning;
-
-+ (void) showProfileViewFromView:(AppotaGameView*) v;
-+ (void) showLogoutAlertViewWithHandler:(AppotaPaymentHandler) handler;
 + (NSDictionary*) getPaymentCallBackDictFromState:(AppotaPaymentState) pMethod
                                   withPaymentDict:(NSDictionary*) paymentDict
                                         withError:(NSError*) error;
 + (NSString *) getTargetFromLoginDict;
++ (NSString*) getAmountStringWithFloatValue:(float) amountValue;
 
 #pragma mark - Post protocol
 + (void) postPaymentWithState:(AppotaPaymentState) paymentState
@@ -108,11 +82,5 @@
 + (void) postFinishLogin:(NSDictionary*) loginDict;
 + (void) postFinishLogout:(NSString*) userName;
 
-#pragma mark - GA tracking function
-+ (NSString*) getGapotaUserAgentString;
-+ (NSString*) getDefaultUserAgentSring;
-+ (void) trackGapotaPageWithScreen:(NSString*) title;
-+ (void) trackGapotaEventWithCategory:(NSString*) cate
-                      withEventAction:(NSString*) action;
 @end
 

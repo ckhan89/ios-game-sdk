@@ -13,6 +13,8 @@
     BOOL enableWarning;
     NSDictionary *userInfoDict;
 }
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *phoneImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *emailImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *userOrPasswordImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *titleLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *userNameTextfield;
