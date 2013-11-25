@@ -74,10 +74,10 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 	
 	``` objective-c
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
-                                 withClientSecret:CLIENT_SECRET
-                                  withInAppAPIKey:INAPP_API_KEY
-                                    withNoticeUrl:@"http://filestore9.com/test.php"
-                                    withConfigUrl:@"http://filestore9.com/config.php"
+                            withClientSecret:CLIENT_SECRET
+                            withInAppAPIKey:INAPP_API_KEY
+                            withNoticeUrl:@"http://filestore9.com/test.php"
+                            withConfigUrl:@"http://filestore9.com/config.php"
      ];
 	```
 To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
