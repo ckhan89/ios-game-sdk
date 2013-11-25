@@ -116,10 +116,10 @@ __JSON config__
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
 
 **4. Appota  SDK flow**
-![](docs/vn/flow1.png)
+![](docs/user_flow.png)
 
 User login flow using Appota SDK
 
-![](docs/vn/flow2.png)
+![](docs/payment_flow.png)
 
 Payment flow using Appota SDK
