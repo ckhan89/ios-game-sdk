@@ -123,3 +123,5 @@ User login flow using Appota SDK
 ![](docs/payment_flow.png)
 
 Payment flow using Appota SDK
+
+For more detail about this flow, please refer to Wiki: https://github.com/appota/ios-game-sdk/wiki
