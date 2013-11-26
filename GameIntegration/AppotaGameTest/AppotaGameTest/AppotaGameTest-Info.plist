@@ -22,7 +22,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.appstorevn.sdkexample</string>
+	<string>com.apt.publish.aimynhan</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -48,10 +48,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.appstorevn.sdkexample</string>
+			<string>com.apt.publish.aimynhan</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.appstorevn.sdkexample</string>
+				<string>com.apt.publish.aimynhan</string>
 				<string>appotae8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
 				<string>fb435546253225772</string>
 			</array>
