@@ -406,7 +406,7 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
 -(void) checkTransactionInAppWithID:(NSString *)inApp_id
               withCompletionHandler:(AppotaResultHandler) handler;
 
-- (void) checkUpdate;
+- (void) checkUpdateFunction;
 
 #pragma mark Game payment function
 

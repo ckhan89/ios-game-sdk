@@ -11,6 +11,9 @@
 @interface AppotaRegisterDialogView : UIView <UITextFieldDelegate> {
     BOOL isViewMoveUp;
 }
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *inputRetypeImageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *retypePasswordTextField;
+
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *passwordImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *usernameImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *emailImageView;

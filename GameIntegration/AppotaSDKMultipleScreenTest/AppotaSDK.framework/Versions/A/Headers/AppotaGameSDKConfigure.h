@@ -63,7 +63,7 @@ typedef enum {
     
     NSString *gapotaTrackingID;
     AppotaGameSDKCHDraggingCoordinator *draggingCoordinator;
-//    CHDraggableView *draggableView;
+    AppotaGameSDKCHDraggableView  *draggableView;
 }
 
 @property (nonatomic, unsafe_unretained) id<AppotaGameSDKConfigureDelegate> delegate;
@@ -189,5 +189,9 @@ typedef enum {
 - (AppotaGameSDKCHDraggingCoordinator *)draggingCoordinator;
 
 - (void)setDraggingCoordinator:(AppotaGameSDKCHDraggingCoordinator *)newValue;
+
+- (AppotaGameSDKCHDraggableView *)draggableView;
+
+- (void)setDraggableView:(AppotaGameSDKCHDraggableView *)newValue;
 
 @end

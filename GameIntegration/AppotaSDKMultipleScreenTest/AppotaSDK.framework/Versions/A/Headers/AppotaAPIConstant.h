@@ -48,7 +48,7 @@
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
 #define APPOTA_SDK_VERSION @"1.0"
-#define APPOTA_SDK_BUILD 10
+#define APPOTA_SDK_BUILD 12
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
@@ -78,6 +78,7 @@
 
 #define GAPOTA_TRACKING_URL @"http://www.google-analytics.com/collect"
 
+#define DEFAULT_GG_CLIENT_ID @"242204253141.apps.googleusercontent.com"
 
 #define IS_IOS6_AND_UP ([[UIDevice currentDevice].systemVersion floatValue] >= 6.0)
 
