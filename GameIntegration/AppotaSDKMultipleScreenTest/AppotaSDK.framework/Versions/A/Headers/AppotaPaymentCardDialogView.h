@@ -8,6 +8,8 @@
 
 #import "AppotaPaymentDialogView.h"
 #import "AppotaDropDown.h"
+#import "AppotaPaymentInfoDetailView.h"
+
 @interface AppotaPaymentCardDialogView : AppotaPaymentDialogView <AppotaDropDownDelegate, UITextFieldDelegate>
 {
     __unsafe_unretained IBOutlet UIView *paymentDetailBackGroundView;

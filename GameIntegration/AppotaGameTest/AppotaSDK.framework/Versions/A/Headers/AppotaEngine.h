@@ -175,6 +175,11 @@ typedef void (^BOOLBlock)(BOOL b);
                         onError:(AppotaNKErrorBlock) errorBlock;
 
 - (void) updateUserInfoWithUserString:(NSString*) userString
+                        withTokenDict:(NSDictionary*) tokenDict
+                           onComplete:(FetcherDictionary) completionBlock
+                              onError:(AppotaNKErrorBlock) errorBlock;
+
+- (void) updateUserInfoWithUserString:(NSString*) userString
                            onComplete:(FetcherDictionary) completionBlock
                               onError:(AppotaNKErrorBlock) errorBlock;
 - (void) registerWithUserName:(NSString*) userName

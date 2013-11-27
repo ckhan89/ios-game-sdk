@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppotaPopoverView.h"
+#import "AppotaPaymentInfoDetailView.h"
 @class AppotaPaymentDialog;
 @class AppotaPaymentLoginDialog;
+
 @interface AppotaPaymentDialogView : UIView <AppotaPopoverViewDelegate>{
     __unsafe_unretained IBOutlet UIView *tabBarView;
     __unsafe_unretained IBOutlet UIImageView *iconImageView;
@@ -27,7 +29,8 @@
     __unsafe_unretained IBOutlet UIImageView *payBackGroundImageView;
     BOOL isViewMoveUp;
     
-    __unsafe_unretained IBOutlet UIScrollView *paymentItemscrollView;    
+    __unsafe_unretained IBOutlet UIScrollView *paymentItemscrollView;
+    __unsafe_unretained IBOutlet AppotaPaymentInfoDetailView *detailPaymentInfoView;    
 }
 
 - (void) addChooseLanguageButton;
@@ -44,5 +47,6 @@
 - (void) setMoveViewUp:(BOOL) moveUp
           withTimeShow:(float) timeShow
             withOffset:(float) offset;
-
+- (void) setUpContentScrollViewSizeAndDetailInfoViewWithListPayment:(NSArray*) paymentList;
+- (void) hideOrShowAllPreviousView:(BOOL) isHide;
 @end

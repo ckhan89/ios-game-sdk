@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppotaPayment.h"
 
 @interface AppotaPaymentDescriptionCell : UIView {
     
 }
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *coinImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *contentLabel;
-
+- (void) setUpCellWithItem:(AppotaPayment*) pItem;
 @end

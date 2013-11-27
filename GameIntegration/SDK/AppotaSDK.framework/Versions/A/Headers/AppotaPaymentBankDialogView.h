@@ -12,6 +12,7 @@
 @interface AppotaPaymentBankDialogView : AppotaPaymentDialogView <AppotaDropDownDelegate> {
     
     __unsafe_unretained IBOutlet UIButton *chooseBankButton;
+    __unsafe_unretained IBOutlet UIImageView *coinImageView;
     __unsafe_unretained IBOutlet UIButton *dropDownChooseBankButton;
     __unsafe_unretained IBOutlet UIButton *choseAmountButton;
     __unsafe_unretained IBOutlet UIButton *dropDownChooseAmountButton;

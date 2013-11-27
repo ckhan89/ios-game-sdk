@@ -18,6 +18,7 @@
     NSString *animationDirection;
     UIImageView *imgView;
     NSTextAlignment cellAlight;
+    NSString *generalImageURL;
 }
 @property (nonatomic, retain) id <AppotaDropDownDelegate> delegate;
 @property (nonatomic, retain) NSString *animationDirection;
@@ -25,6 +26,7 @@
 
 -(void)hideDropDown:(UIButton *)b;
 - (id)showDropDown:(UIButton *)b withHeight:(CGFloat *)height withArray:(NSArray *)arr withImageArray:(NSArray *)imgArr withDirection:(NSString *)direction withCellAlight:(NSTextAlignment) al;
+- (id)showDropDown:(UIButton *)b withHeight:(CGFloat *)height withArray:(NSArray *)arr withImageArray:(NSArray *)imgArr withImageURL:(NSString*) imageURL withDirection:(NSString *)direction withCellAlight:(NSTextAlignment) al;
 - (UITableView*) getTableView;
 - (UIButton*) getBtnSender;
 @end
