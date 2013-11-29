@@ -57,6 +57,8 @@ typedef enum {
     BOOL enableSocialLogin;
     BOOL enableAppotaLogin;
     BOOL enableQuickLogin;
+    BOOL isOnlyOpenProfile;
+    BOOL isOnlyOpenPayment;
     
     NSString *googleClientId;
     NSString *jsonConfigUrl;
@@ -143,7 +145,6 @@ typedef enum {
 - (NSString *)noticeUrl;
 - (void)setNoticeUrl:(NSString *)newValue;
 - (BOOL)autoShowPaymentButton;
-
 - (void)setAutoShowPaymentButton:(BOOL)newValue;
 
 - (id)session;
@@ -193,5 +194,13 @@ typedef enum {
 - (AppotaGameSDKCHDraggableView *)draggableView;
 
 - (void)setDraggableView:(AppotaGameSDKCHDraggableView *)newValue;
+
+- (BOOL)isOnlyOpenProfile;
+
+- (void)setIsOnlyOpenProfile:(BOOL)newValue;
+
+- (int)isOnlyOpenPayment;
+
+- (void)setIsOnlyOpenPayment:(int)newValue;
 
 @end
