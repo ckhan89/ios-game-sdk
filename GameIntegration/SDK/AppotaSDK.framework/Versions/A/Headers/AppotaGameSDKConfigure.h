@@ -59,6 +59,7 @@ typedef enum {
     BOOL enableQuickLogin;
     BOOL isOnlyOpenProfile;
     BOOL isOnlyOpenPayment;
+    BOOL isHiddenUserSwitching;
     
     NSString *googleClientId;
     NSString *jsonConfigUrl;
@@ -132,6 +133,17 @@ typedef enum {
  */
 + (void) logOut;
 
+#pragma mark - do login with facebook
+//+ (void) configureWithClientID:(NSString *)clientID
+//              withClientSecret:(NSString *)clientSecret
+//               withInAppAPIKey:(NSString *)inAppAPIKey
+//                     withState:(NSString *)state_
+//                 withNoticeUrl:(NSString *)noticeUrl_
+//                 withConfigUrl:(NSString *)configUrl_
+//                 withLoginDict:(NSDictionary*) loginDict;
+//+ (void) loginFBWithPermission:(NSArray*) permissionList
+//                   withHandler:(AppotaResultHandler) handler;
+
 #pragma mark - Class method
 - (void) reloadRemoteConfig;
 - (BOOL)checkUpdate;
@@ -202,5 +214,9 @@ typedef enum {
 - (int)isOnlyOpenPayment;
 
 - (void)setIsOnlyOpenPayment:(int)newValue;
+
+- (BOOL)isHiddenUserSwitching;
+
+- (void)setIsHiddenUserSwitching:(BOOL)newValue;
 
 @end

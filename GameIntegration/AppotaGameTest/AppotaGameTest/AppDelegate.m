@@ -49,7 +49,7 @@
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
     
     [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"242204253141.apps.googleusercontent.com";
- 
+    [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
 }
 

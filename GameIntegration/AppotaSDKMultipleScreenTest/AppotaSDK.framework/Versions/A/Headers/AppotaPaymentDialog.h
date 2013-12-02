@@ -16,8 +16,10 @@
     PayPalPaymentViewController *pppViewController;
     AppotaPaymentDialogView *appotaPaymentView;
     NSMutableArray *listPaymentController;
-    MFMessageComposeViewController *smsViewController;
     AppotaPaymentHandler paymentHandler;
+    
+    MFMessageComposeViewController *smsViewController;
+    UIViewController *smsContentViewController;
     
     // Payment variable
     NSString *paymentState;
@@ -29,6 +31,8 @@
     BOOL enableDialog;
 }
 @property(nonatomic, strong, readwrite) PayPalPayment *completedPaypalPayment;
+
+- (UIViewController*) getSMSContentViewController;
 
 - (void) showSMSPaymentDialogWithAmount:(int) amount
                             withSMSDict:(NSDictionary*) smsDict

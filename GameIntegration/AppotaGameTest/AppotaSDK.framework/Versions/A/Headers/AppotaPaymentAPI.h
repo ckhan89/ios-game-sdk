@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
-#import "Language.h"
+#import "AppotaGameSDKLanguage.h"
 #import "AppotaProgressView.h"
 #import "AppotaAppleIAPItem.h"
 #import "AppotaGameSDKConfigure.h"
