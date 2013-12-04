@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>822AECB3-9D0E-47D3-B571-C70212AAAA10</string>
+	<string>45FAE414-4DA1-4517-9DF4-B86E063FA32B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AppotaGameTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -21,7 +21,7 @@
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/appota/ios-game-sdk.git</string>
+	<string>ssh://bitbucket.org/toandk/tattay.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

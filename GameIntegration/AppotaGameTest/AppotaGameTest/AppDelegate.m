@@ -10,9 +10,9 @@
 #import <AppotaAdsSDK/AppotaAdsSDK.h>
 #import "ViewController.h"
 
-#define CLIENT_ID           @"e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc"
-#define CLIENT_SECRET       @"060f9c20e5259e2462f1cc00c15c6f93051f0a4fc"
-#define INAPP_API_KEY       @"1e1aa54ce3c646d8f6456558434d9475051f74156"
+#define CLIENT_ID           @"c144a4da61cd83e7b90298fd6dca6e5a052945a17"
+#define CLIENT_SECRET       @"e9f468821c4e4816ddce3f2441a0fd17052945a17"
+#define INAPP_API_KEY       @"dbb9fe36a0652e307d4bbe6512503730052945a17"
 
 /*
  * SANDBOX_ID will be used when app's not been published yet
