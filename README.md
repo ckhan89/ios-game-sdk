@@ -76,6 +76,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
                             withClientSecret:CLIENT_SECRET
                             withInAppAPIKey:INAPP_API_KEY
+                                  withState:@"YOUR_PAYMENT_STATE"                            
                             withNoticeUrl:@"http://filestore9.com/test.php"
                             withConfigUrl:@"http://filestore9.com/config.php"
      ];
