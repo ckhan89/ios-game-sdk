@@ -56,6 +56,7 @@
 + (CGAffineTransform)transformForOrientation;
 + (BOOL) checkUserLogin;
 + (NSString*) getLocalCountry;
++ (NSString*) getLocalLanguage;
 + (void) logOut;
 + (void)logOutAlertWithView:(AppotaGameView*)gameView;
 + (NSString*) getAccessTokenFromLoginDict;
@@ -82,6 +83,7 @@
                     withError:(NSError*) error;
 + (void) postFinishLogin:(NSDictionary*) loginDict;
 + (void) postFinishLogout:(NSString*) userName;
++ (void) postSwitchUser:(NSDictionary*) userDict;
 + (NSString*) getImagePathDir;
 + (NSString*) getImagePathWithURL:(NSString*) url;
 + (UIImage*) getImageWithURL:(NSString*) url;

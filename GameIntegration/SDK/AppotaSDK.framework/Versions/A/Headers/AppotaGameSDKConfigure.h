@@ -39,6 +39,11 @@ typedef enum {
  */
 - (void) didLogOut:(NSString*) userName;
 
+/*
+ * Callback after switch user
+ */
+- (void) didFinishSwitchUser:(NSDictionary*) userInfoDict;
+
 - (void) didFinishPaymentWithDictionary:(NSDictionary*) paymentDict withState:(AppotaPaymentState) status withError:(NSError*) error;
 @end
 
@@ -152,6 +157,7 @@ typedef enum {
 
 - (void)setListPayment:(NSMutableArray *)newValue;
 - (void) didFinishLoginSignalAndReloadRemoteConfig:(id) sender;
+- (void) didFinishSwitchUserSignalAndReloadRemoteConfig:(id) sender;
 - (NSMutableArray*) getListPaymentOrderedByMethod;
 - (NSMutableArray*) getListPaymentByMethod:(PAYMENT_METHOD) pMethod;
 - (NSString *)noticeUrl;
