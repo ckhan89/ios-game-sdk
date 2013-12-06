@@ -32,7 +32,7 @@
 #define PAYMENT_TOPUP_CARD @"https://api.appota.com/payment/topup_card?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_TOPUP @"https://api.appota.com/payment/topup?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 
-#define PAYMENT_INAPP_BANK @"https://api.appota.com/payment/inapp_bank?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
+#define PAYMENT_INAPP_BANK @"plehttps://api.appota.com/payment/inapp_bank?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_INAPP_PAYPAL @"https://api.appota.com/payment/inapp_paypal?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_INAPP_SMS @"https://api.appota.com/payment/inapp_sms?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_INAPP_CARD @"https://api.appota.com/payment/inapp_card?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
@@ -49,7 +49,7 @@
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
 #define APPOTA_SDK_VERSION @"1.0"
-#define APPOTA_SDK_BUILD 14
+#define APPOTA_SDK_BUILD 16
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

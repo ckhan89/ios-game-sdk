@@ -25,6 +25,7 @@ typedef enum {
     AppotaPaymentWrongFormatResponse = 12,
     AppotaApplePaymentProductNotValid = 13,
     AppotaAppleTransactionFailed = 14,
+    AppotaPaymentPending = 15,
 } AppotaPaymentState;
 
 
@@ -72,6 +73,8 @@ typedef enum {
     NSString *gapotaTrackingID;
     AppotaGameSDKCHDraggingCoordinator *draggingCoordinator;
     AppotaGameSDKCHDraggableView  *draggableView;
+    
+    NSArray *appotaInitPaymentMethod;
 }
 
 @property (nonatomic, unsafe_unretained) id<AppotaGameSDKConfigureDelegate> delegate;
