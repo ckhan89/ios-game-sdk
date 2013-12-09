@@ -49,7 +49,7 @@
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
 #define APPOTA_SDK_VERSION @"1.0"
-#define APPOTA_SDK_BUILD 16
+#define APPOTA_SDK_BUILD 17
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
