@@ -123,6 +123,7 @@ Config jsonConfigUrl (for remote updating feature like: promotion, login setting
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
 
 **4. Appota  SDK flow**
+
 ![](docs/user_flow.png)
 
 User login flow using Appota SDK
