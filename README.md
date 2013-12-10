@@ -99,11 +99,13 @@ To integrate Google, FB and Twitter login please follow instruction for each SDK
     		return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 	}
 	```
+
+__JSON config__
+
 Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl
 
 **3. Integrate SDK**
 
-__JSON config__
 
 - Support function: Every function will be accessed via AppotaGameSDKConfigure class	
 	* +showSDKView: Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
