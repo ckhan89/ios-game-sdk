@@ -29,11 +29,11 @@ Trong phần Project app’s target settings, tìm [Build phases] và mở [Link
     MessageUI, Security, SystemConfiguration, CFNetwork, OpenGLES, CoreMedia, libxml2.dylib, libsqlite3.dylib
 ```
 
-![](step1.jpg)
+![](docs/vn/step1.jpg)
 
 Trong phần [project build settings], tìm [Other Linker Flags], thêm 2 giá trị sau: -ObjC, -lc++ và -all\_load.
 
-![](step2.jpg)
+![](docs/vn/step2.jpg)
 
 Import file header vào file code nơi bạn muốn sử dụng SDK:
 
@@ -47,7 +47,7 @@ Thêm 1 trường AppotaClientId với giá trị là CLIENT\_ID. Add thêm sche
  
 Ví dụ nếu CLIENT\_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540 thì schemes sẽ là appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
-![](step3.jpg)
+![](docs/vn/step3.jpg)
 
 **2. Cấu hình SDK**
 
