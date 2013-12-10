@@ -12,6 +12,7 @@
 @interface AppotaUpdateInfoView : AppotaGameView <UITextFieldDelegate> {
     BOOL enableWarning;
     NSDictionary *userInfoDict;
+    BOOL updatedInfo;
 }
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *phoneImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *emailImageView;
