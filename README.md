@@ -61,7 +61,7 @@ schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
 Setup SDK in Appdelegate:
 
-- AppDelegate.h
+- AppDelegate.h			
 Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
 
 - AppDelegate.m			
