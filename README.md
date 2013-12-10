@@ -60,8 +60,10 @@ schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 **Config SDK in Appdelegate:**
 
 Setup SDK in Appdelegate:
-- AppDelegate.h
-- Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+
+- AppDelegate.h			
+Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+
 - AppDelegate.m			
 Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaGameTest/AppDelegate.m*) by AppotaGameSDKConfigure class
 	* Init AppotaGameSDKConfigure with 
@@ -82,7 +84,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
      ];
 	```
 To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-	* Set delegate for AppotaGameSDKConfigure (shoul use AppDelegate for delegate)
+	* Set delegate for AppotaGameSDKConfigure (should use AppDelegate for delegate)
 	
 	``` objective-c
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;	
