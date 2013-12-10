@@ -84,7 +84,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
      ];
 	```
 To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-	* Set delegate for AppotaGameSDKConfigure (shoul use AppDelegate for delegate)
+	* Set delegate for AppotaGameSDKConfigure (should use AppDelegate for delegate)
 	
 	``` objective-c
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;	
