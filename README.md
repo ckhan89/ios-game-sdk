@@ -60,8 +60,10 @@ schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 **Config SDK in Appdelegate:**
 
 Setup SDK in Appdelegate:
+
 - AppDelegate.h
 Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+
 - AppDelegate.m			
 Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaGameTest/AppDelegate.m*) by AppotaGameSDKConfigure class
 	* Init AppotaGameSDKConfigure with 
