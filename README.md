@@ -138,4 +138,13 @@ Tất cả các hàm thực thi SDK có thể được truy cập qua class Appo
 
 **4. Appota SDK Flow**
 
+![](docs/user_flow.png)
+
+User login flow using Appota SDK
+
+![](docs/payment_flow.png)
+
+Payment flow using Appota SDK
+
+For more detail about this flow, please refer to Wiki: https://github.com/appota/ios-game-sdk/wiki
 
