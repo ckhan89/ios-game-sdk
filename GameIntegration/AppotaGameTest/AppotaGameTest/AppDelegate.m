@@ -12,7 +12,7 @@
 
 #define CLIENT_ID           @"c144a4da61cd83e7b90298fd6dca6e5a052945a17"
 #define CLIENT_SECRET       @"e9f468821c4e4816ddce3f2441a0fd17052945a17"
-#define INAPP_API_KEY       @"dbb9fe36a0652e307d4bbe6512503730052945a17"
+#define INAPP_API_KEY       @"ac383fa652834d9094e865dc4867c72b0529d3e61"
 
 /*
  * SANDBOX_ID will be used when app's not been published yet
@@ -42,7 +42,7 @@
                                   withInAppAPIKey:INAPP_API_KEY
                                         withState:@""
                                     withNoticeUrl:@"http://filestore9.com/test.php"
-                                    withConfigUrl:@"http://filestore9.com/config.php"
+                                    withConfigUrl:@"http://plat.center.ffcai.com/user/mobvista_PaymentConfig.php?classify=ios"
      ];
 #warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
@@ -50,6 +50,7 @@
     
     [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"242204253141.apps.googleusercontent.com";
     [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
+    [AppotaGameSDKConfigure sharedGameConfig].isShowCloseLoginView = YES;
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
 }
 
@@ -100,6 +101,10 @@
 
 - (void) didFinishPaymentWithDictionary:(NSDictionary *)paymentDict withState:(AppotaPaymentState)status withError:(NSError *)error {
     NSLog(@"Payment result");
+}
+
+- (void) didCloseLoginView {
+    NSLog(@"Close login view");
 }
 
 #warning Insert your handle open URL here

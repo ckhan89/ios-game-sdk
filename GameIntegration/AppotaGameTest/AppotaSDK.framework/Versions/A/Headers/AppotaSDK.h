@@ -13,6 +13,7 @@
 #import "AppotaEngine.h"
 #import "AppotaPaymentSDKDialog.h"
 #import "AppotaPaymentDialog.h"
+#import "AppotaUtil+SocialHelper.h"
 #import "AppotaUtil.h"
 #import "AppotaAPIConstant.h"
 #import "AppotaPayment.h"

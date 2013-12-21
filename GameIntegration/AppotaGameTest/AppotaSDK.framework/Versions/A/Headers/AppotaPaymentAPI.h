@@ -82,6 +82,7 @@ typedef void (^AppotaApiHandler)(AppotaPaymentAPI *appApi, AppotaApiState status
  */
 typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status, NSError *error);
 
+
 /*
  * Định nghĩa các biến token xác thực kết nối với APPOTA
  */

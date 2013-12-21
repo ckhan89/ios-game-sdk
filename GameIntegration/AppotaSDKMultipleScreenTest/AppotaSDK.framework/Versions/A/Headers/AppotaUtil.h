@@ -87,5 +87,7 @@
 + (NSString*) getImagePathDir;
 + (NSString*) getImagePathWithURL:(NSString*) url;
 + (UIImage*) getImageWithURL:(NSString*) url;
++ (NSString *)URLStringByAppendingQueryString:(NSString *)queryString
+                          withString:(NSString*) string;
 @end
 

@@ -11,6 +11,7 @@
 #import "AppotaGameSDKCHDraggingCoordinator.h"
 #import "AppotaPayment.h"
 #import "Appota_OpenUDID.h"
+#import "AppotaAPIConstant.h"
 
 typedef enum {
     AppotaPaymentSucceed = 1,
@@ -28,6 +29,14 @@ typedef enum {
     AppotaPaymentPending = 15,
 } AppotaPaymentState;
 
+#ifdef NOUI_LOGIN
+/*
+ * Event handler cho kết quả trả về của Appota API
+ */
+typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
+
+#endif
+
 
 @protocol AppotaGameSDKConfigureDelegate <NSObject>
 @required
@@ -44,6 +53,11 @@ typedef enum {
  * Callback after switch user
  */
 - (void) didFinishSwitchUser:(NSDictionary*) userInfoDict;
+
+/*
+ * Callback after close loginview
+ */
+- (void) didCloseLoginView;
 
 - (void) didFinishPaymentWithDictionary:(NSDictionary*) paymentDict withState:(AppotaPaymentState) status withError:(NSError*) error;
 @end
@@ -66,6 +80,7 @@ typedef enum {
     BOOL isOnlyOpenProfile;
     BOOL isOnlyOpenPayment;
     BOOL isHiddenUserSwitching;
+    BOOL isShowCloseLoginView;
     
     NSString *googleClientId;
     NSString *jsonConfigUrl;
@@ -141,7 +156,28 @@ typedef enum {
  */
 + (void) logOut;
 
+#pragma mark - Push notification
+- (void) registerPushNotification;
+- (void) confirmPushNotification;
+
+#ifdef NOUI_LOGIN
 #pragma mark - do login with facebook
+/*
+ * Config SDK function
+ *
+ */
++ (void) configureWithClientID:(NSString*) clientID
+              withClientSecret:(NSString*) clientSecret
+               withInAppAPIKey:(NSString*) inAppAPIKey
+                     withState:(NSString*) state_
+                 withNoticeUrl:(NSString*) noticeUrl_
+                 withConfigUrl:(NSString*) configUrl_
+                       allowUI:(BOOL) enableUI
+;
+
++ (void) loginFacebookWithPermission:(NSArray*) permissionArray
+                         withHandler:(AppotaLoginRequestHandler) handler;
+#endif
 //+ (void) configureWithClientID:(NSString *)clientID
 //              withClientSecret:(NSString *)clientSecret
 //               withInAppAPIKey:(NSString *)inAppAPIKey
@@ -149,8 +185,6 @@ typedef enum {
 //                 withNoticeUrl:(NSString *)noticeUrl_
 //                 withConfigUrl:(NSString *)configUrl_
 //                 withLoginDict:(NSDictionary*) loginDict;
-//+ (void) loginFBWithPermission:(NSArray*) permissionList
-//                   withHandler:(AppotaResultHandler) handler;
 
 #pragma mark - Class method
 - (void) reloadRemoteConfig;
@@ -227,5 +261,9 @@ typedef enum {
 - (BOOL)isHiddenUserSwitching;
 
 - (void)setIsHiddenUserSwitching:(BOOL)newValue;
+
+- (BOOL)isShowCloseLoginView;
+
+- (void)setIsShowCloseLoginView:(BOOL)newValue;
 
 @end

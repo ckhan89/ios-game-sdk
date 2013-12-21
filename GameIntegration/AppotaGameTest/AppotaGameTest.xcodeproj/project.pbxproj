@@ -396,6 +396,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -427,6 +428,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
