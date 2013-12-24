@@ -43,9 +43,9 @@ iOS Appota Game SDK 是让你的应用集成Appota 用户和支付系统的最�
     #import <AppotaSDK/AppotaSDK.h>
 ```
 
-**Config plist với CLIENT\_KEY**\
+**用CLIENT\_KEY来Config plist**
  
-Thêm 1 trường 添加一个AppotaClientId 价值为 CLIENT\_ID. 再添加schema: 添加一个Array式的 URL types.建造另一个item其URL Schemes是appotaCLIENT\_ID。
+添加一个AppotaClientId 价值为 CLIENT\_ID. 再添加schema: 添加一个Array式的 URL types.建造另一个item其URL Schemes是appotaCLIENT\_ID。
  
 比如：如果 CLIENT\_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540 ，那schemes将是 appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
