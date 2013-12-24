@@ -1,130 +1,140 @@
-[Chinese version is coming soon]
-
 Other languages: [Vietnamese](README.md) | [English](README_EN.md)
 
 **Get Started**
 
-Appota Game SDK is the simplest way to integrate user and payment for
-your game in Appota system. This SDK provides solutions for payment
-methods such as: SMS, Card. Internet Banking, Paypal and Apple Payment.
+iOS Appota Game SDK 是让你的应用集成Appota 用户和支付系统的最简单方式。 本SDK提供： 短信、充值卡、网络银行、支付宝、Google Play Payment等各种支付方式的解决方案。
 
-**Steps to integrate SDK:**
 
-​1. Setup Appota SDK
+**添加SDK的步骤:**
 
-​2. Config SDK
+1.安装Appota SDK
 
-​3. Integrate SDK
+2. 配置 SDK
+
+3. 集成
+
+4. 了解 Appota SDK flow
+
  
-​4. Appota SDK flow
 
--------------------------------
+**1. 安装 Appota SDK**
 
-**1. Setup Appota SDK**
+**把Appota.framework Import 到 project**
 
-**Import AppotaSDK.framework into project**
+把AppotaSDK.framework 和 AppotaBundle.bundle拖放到你的project
 
-Drag and drop AppotaSDK.framework and AppotaBundle.bundle into your project.
-
-Tick on checkbox: “Copy items into destination group's folder (if needed)”.
-
-In Project app’s target settings section, find [Build phases] and open
-Link Binary with Libraries. Click on ‘+’ button and add these frameworks:
+在 checkbox: “Copy items into destination group's folder (if needed)”画勾
+ 在 Project app’s target settings, 找到[Build phases] 然后打开 [Link Binary with Libraries]. 点击 ‘+’ 号然后添加以下的frameworks:
 
 ```
-AppotaSDK, QuaztCore, CoreText, StoreKit, AudioToolBox, MobileCoreServices, AVFoudation, CoreVideo,
-MessageUI, Security, SystemConfiguration, CFNetwork, OpenGLES, CoreMedia, libxml2.dylib, libsqlite3.dylib
+    AppotaSDK, QuaztCore, CoreText, StoreKit, AudioToolBox, MobileCoreServices, AVFoudation, CoreVideo,
+    MessageUI, Security, SystemConfiguration, CFNetwork, OpenGLES, CoreMedia, libxml2.dylib, libsqlite3.dylib
 ```
 
 ![](docs/vn/step1.jpg)
 
-In project build settings section, find Other Linker Flags, add these linker flags: -ObjC, -lc++ và -all_load.
+在 [project build settings], 找到 [Other Linker Flags], 添加以下两个价值: -ObjC, -lc++ và -all\_load.
 
 ![](docs/vn/step2.jpg)
 
-Import header file to source file where do you want to use SDK:
+把file header import到你想要使用SDK 的file code：
 
-``` objective-c
-#import <AppotaSDK/AppotaSDK.h>
+``` c
+    #import <AppotaSDK/AppotaSDK.h>
 ```
 
-**Config plist with CLIENT_KEY**
-
-Add 1 string AppotaClientId with the value is CLIENT_ID
-
-Add more schema: Add 1 string URL Array types. Create 1 item more with URL Schemes is appotaCLIENT_ID.
-
-For example: If CLIENT_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540,
-schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
+**Config plist với CLIENT\_KEY**\
+ 
+Thêm 1 trường 添加一个AppotaClientId 价值为 CLIENT\_ID. 再添加schema: 添加一个Array式的 URL types.建造另一个item其URL Schemes是appotaCLIENT\_ID。
+ 
+比如：如果 CLIENT\_ID = b804d6421df6ae7dbcd51469e4d8ee0005101f540 ，那schemes将是 appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
 ![](docs/vn/step3.jpg)
- 
-**2. Config SDK**
 
-**Config SDK in Appdelegate:**
+**2. 配置 SDK**
 
-Setup SDK in Appdelegate:
+** Appdelegate配置SDK:**
 
-- AppDelegate.h			
-Add protocol *AppotaGameSDKConfigureDelegate* to AppDelegate
+**+AppDelegate.h**
 
-- AppDelegate.m			
-Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaGameTest/AppDelegate.m*) by AppotaGameSDKConfigure class
-	* Init AppotaGameSDKConfigure with 
-		* CLIENT_ID - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_ID instead
-		* CLIENT_SECRET - Config con dev.appota.com if app is not in published state please use SANDBOX_CLIENT_SECRET instead
-		* INAPP_API_KEY - Config con dev.appota.com if app is not in published state please use SANDBOX_INAPP_API_KEY instead
-		* noticeUrl - URL for payment notification
-		* configUrl - URL for payment config (implemented on your server)
-	* Sample:
-	
-	``` objective-c
+把AppotaGameSDKConfigureDelegate protocol 添加到AppDelegate
+
+**+AppDelegate.m**
+
+使用 class AppotaGameSDKConfigure 以便配置 SDK.
+
+-初始化付费列表（在class AppotaPayment描写支付item）
+
+- 初始化 AppotaGameSDKConfigure 用：
+     CLIENT\_ID:在dev.appota.com 配置(在sandbox状态用SANDBOX\_CLIENT\_ID).\
+     CLIENT\_SECRET: 在dev.appota.com \配置
+     INAPP\_API\_KEY: 在dev.appota.com 配置(在 sandbox状态用SANDBOX\_INAPP\_API\_KEY).\
+     noticeUrl:当交易成功是叫出的URL.\
+     configUrl:到JSON配置文件的URL
+
+``` c
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
-                            withClientSecret:CLIENT_SECRET
-                            withInAppAPIKey:INAPP_API_KEY
-                                  withState:@"YOUR_PAYMENT_STATE"                            
-                            withNoticeUrl:@"http://filestore9.com/test.php"
-                            withConfigUrl:@"http://filestore9.com/config.php"
-     ];
-	```
-To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
-	* Set delegate for AppotaGameSDKConfigure (should use AppDelegate for delegate)
-	
-	``` objective-c
-    [AppotaGameSDKConfigure sharedGameConfig].delegate = self;	
-	```		
-	* Handle login status by protocol function callback _- (void) didFinishLogin:(NSDictionary *)userInfoDict_ (UserInfo dict can be used for verification process)
-	* Handle logout status by protocol function callback _- (void) didLogOut:(NSString*) userName_
-	* Handle payment status by protocol function callback _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error_
-	* If you are using Social Login please add handle open URL in your AppDelegate by this function :
-		
-	``` objective-c
-	(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    		return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
-	}
-	```
+        withClientSecret:CLIENT_SECRET
+        withInAppAPIKey:INAPP_API_KEY
+        withState:@"YOUR_PAYMENT_STATE" 
+        withNoticeUrl:@"http://filestore9.com/test.php"
+        withConfigUrl:@"http://filestore9.com/config.json" 
+    ];
+```
 
-__JSON config__
+如果你想要集成Facebook, Google, Twitter账号登录的功能，请参考每类SDK的指导。使用FBSDK要配置info.plist 和 FacebookAppId， 使用Google SDK要配置googleClientId（参考AppotaGameTest）
 
-Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl
+-给 AppotaGameSDKConfigure 设定delegate (应该使用 Appdelegate).
 
-**3. Integrate SDK**
+``` c
+    [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
+```
+
+-用callback函数 - *(void) didFinishLogin:(NSDictionary \*)userInfoDict*以便Handle登录状态
+ (UserInfo dict可在确认过程中使用). 
+-用 callback 函数- *(void) didLogOut:(NSString\*) userName* 以便Handle退出状态
+
+-用callback函数 - *(void) didFinishPaymentWithDictionary:(NSDictionary\*)paymentDict 以便Handle交易状态
+withState:(AppotaPaymentState)status withError:(NSError\*) error*
+
+-如果要使用更多handle， 在 AppDelegate打开URL：
+
+``` c
+(BOOL) application:(UIApplication \*)application openURL:(NSURL \*)url sourceApplication:(NSString \*)sourceApplication annotation:(id)annotation {\
+    return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];\
+ }
+```
+
+**配置JSON:**
+
+Appota Game SDK给开发商提供一个便利的配置方式。 您需要进行一下的步骤以便使用Appota Game SDK
 
 
-- Support function: Every function will be accessed via AppotaGameSDKConfigure class	
-	* +showSDKView: Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
-	* +logOut: Manualy show logout popup in your game
-	* +(NSDictionary): getUserInfo* Return userinfo (acces_token, username, email, …) in NSDictionary
-	* +(NSString): getUserName return username
-	* +(NSString): getUserId return userid
-	* +(NSString): getAccessToken return access token	
-	* +showPaymentView: Manualy show payment view from your game, can be implemented your button click
-	* +showLoginView: Manualy show login view from your game, can be implemented your button click
-	* +showSwitchUserView: Manualy show switchuser view from your game, can be implemented your button click	
-	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
-	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
+- 使用JSON Generator来 创造有配置的JSON 文件
+([https://developer.appota.com/sdktool.php](https://developer.appota.com/sdktool.php)).
+ -把JSON配置文件Upload 到可以访问的host
+ - 设置 \*[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl 传到 file JSON的链接
 
-**4. Appota  SDK flow**
+ 
+
+**3. 集成 SDK**
+
+所有的SDK实施函数都能从class AppotaGameSDKConfigure进入。 各个辅助函数：
+
+ +showSDKView: 显示 SDK界面
+ +logOut: 显示 logout界面
+ +(NSDictionary): getUserInfo\*在 NSDictionary拿取 user 信息(acces\_token,username, email…) 
++(NSString): getUserName: 拿取 username
+ +(NSString): getUserId: 拿取 userid
+ +(NSString): getAccessToken: 拿球 access token
+ +showPaymentView: 显示交易界面
+ +showLoginView: 显示login界面
+ +showSwitchUserView:显示switch user 界面
+ +showPaymentButton, hidePaymentButton:显示/隐藏Appota SDK默认按钮
+ +sharedGameConfig: AppotaGameSDKConfigure 的Singleton shared instance 
+ 
+
+**4. Appota SDK Flow**
 
 ![](docs/user_flow.png)
 
@@ -134,4 +144,5 @@ User login flow using Appota SDK
 
 Payment flow using Appota SDK
 
-For more detail about this flow, please refer to Wiki: https://github.com/appota/ios-game-sdk/wiki
+关于 该flow的更详细信息，请进入Wiki: https://github.com/appota/ios-game-sdk/wiki
+
