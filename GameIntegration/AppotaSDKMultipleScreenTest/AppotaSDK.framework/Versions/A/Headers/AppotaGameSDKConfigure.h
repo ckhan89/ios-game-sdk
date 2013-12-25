@@ -82,6 +82,8 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL isHiddenUserSwitching;
     BOOL isShowCloseLoginView;
     
+    BOOL isUsingPrivateUserSystem;
+    
     NSString *googleClientId;
     NSString *jsonConfigUrl;
     
@@ -265,5 +267,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 - (BOOL)isShowCloseLoginView;
 
 - (void)setIsShowCloseLoginView:(BOOL)newValue;
+
+- (BOOL)isUsingPrivateUserSystem;
+
+- (void)setIsUsingPrivateUserSystem:(BOOL)newValue;
 
 @end
