@@ -27,6 +27,7 @@
 #define APPOTA_COUNTRY_LOCATION_KEY @"appota_country_location_key"
 #define APPOTA_API_CONFIG_KEY @"appota_api_config_key"
 #define APPOTA_NORMAL_LOGIN_USERNAME_KEY @"appota_normal_login_username_key"
+#define APPOTA_GAME_DEVICE_TOKEN_KEY @"appota_game_push_device_token"
 
 #define PAYMENT_TOPUP_BANK @"https://api.appota.com/payment/topup_bank?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_TOPUP_PAYPAL @"https://api.appota.com/payment/topup_paypal?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

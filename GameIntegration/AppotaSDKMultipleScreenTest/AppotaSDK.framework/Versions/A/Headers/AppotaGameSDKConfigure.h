@@ -159,9 +159,8 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 + (void) logOut;
 
 #pragma mark - Push notification
-- (void) registerPushNotification;
-- (void) confirmPushNotification;
-
++ (void) configurePushNotificationWithTokenData:(NSData*) deviceTokenData;
++ (void) registerPushNotification;
 #ifdef NOUI_LOGIN
 #pragma mark - do login with facebook
 /*

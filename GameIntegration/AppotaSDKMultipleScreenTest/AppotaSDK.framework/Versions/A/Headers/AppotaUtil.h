@@ -77,6 +77,7 @@
 + (NSString*) getAmountStringWithFloatValue:(float) amountValue;
 + (NSString*) getTwitterOauthTokenFromArray:(NSArray*) tokenArray;
 + (NSString*) getTwitterAccessTokenFromArray:(NSArray*) tokenArray;
++ (NSString*) getAppotaPushDeviceToken;
 #pragma mark - Post protocol
 + (void) postPaymentWithState:(AppotaPaymentState) paymentState
                      withDict:(NSDictionary*) dict
