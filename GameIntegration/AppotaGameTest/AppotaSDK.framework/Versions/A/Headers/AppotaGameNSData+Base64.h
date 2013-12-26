@@ -23,12 +23,12 @@
 
 #import <Foundation/Foundation.h>
 
-void *NewBase64Decode(
+void *ApptotaGameSDKNewBase64Decode(
                       const char *inputBuffer,
                       size_t length,
                       size_t *outputLength);
 
-char *NewBase64Encode(
+char *ApptotaGameSDKNewBase64Encode(
                       const void *inputBuffer,
                       size_t length,
                       bool separateLines,

@@ -442,7 +442,7 @@ typedef void (^AppotaGameMBProgressHUDCompletionBlock)();
 /**
  * A progress view for showing definite progress by filling up a circle (pie chart).
  */
-@interface MBRoundProgressView : UIView 
+@interface AppotaGameMBRoundProgressView : UIView 
 
 /**
  * Progress (0.0 to 1.0)
@@ -472,7 +472,7 @@ typedef void (^AppotaGameMBProgressHUDCompletionBlock)();
 /**
  * A flat bar progress view. 
  */
-@interface MBBarProgressView : UIView
+@interface AppotaGameMBBarProgressView : UIView
 
 /**
  * Progress (0.0 to 1.0)
