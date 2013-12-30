@@ -9,7 +9,7 @@
 #ifndef AppotaSDK_AppotaAPIConstant_h
 #define AppotaSDK_AppotaAPIConstant_h
 
-#define NOUI_LOGIN
+//#define NOUI_LOGIN
 
 #define APPOTA_SCHEMA @"appota"
 #define APPOTA_DRAGVIEW_TAG 1428
