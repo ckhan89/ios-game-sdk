@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364B381F183C587F00AA91B7 /* AppotaAdsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B381E183C587F00AA91B7 /* AppotaAdsSDK.framework */; };
 		364D1FB61824827600187DD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FB51824827600187DD5 /* UIKit.framework */; };
 		364D1FB81824827600187DD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FB71824827600187DD5 /* Foundation.framework */; };
 		364D1FBA1824827600187DD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FB91824827600187DD5 /* CoreGraphics.framework */; };
@@ -53,7 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		364B381E183C587F00AA91B7 /* AppotaAdsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaAdsSDK.framework; sourceTree = "<group>"; };
 		364D1FB21824827600187DD5 /* AppotaGameTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppotaGameTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364D1FB51824827600187DD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		364D1FB71824827600187DD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,7 +136,6 @@
 				36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */,
 				36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */,
 				36E76F0C1831CF5F00C0653F /* FacebookSDK.framework in Frameworks */,
-				364B381F183C587F00AA91B7 /* AppotaAdsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +172,6 @@
 		364D1FB41824827600187DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				364B381E183C587F00AA91B7 /* AppotaAdsSDK.framework */,
 				36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */,
 				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,
 				36E76F061831CF4500C0653F /* GooglePlus.bundle */,
