@@ -90,5 +90,6 @@
 + (UIImage*) getImageWithURL:(NSString*) url;
 + (NSString *)URLStringByAppendingQueryString:(NSString *)queryString
                           withString:(NSString*) string;
++(NSString *) urlEncoded:(NSString*) refString;
 @end
 

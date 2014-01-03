@@ -9,7 +9,7 @@
 #ifndef AppotaSDK_AppotaAPIConstant_h
 #define AppotaSDK_AppotaAPIConstant_h
 
-#define NOUI_LOGIN
+//#define NOUI_LOGIN
 
 #define APPOTA_SCHEMA @"appota"
 #define APPOTA_DRAGVIEW_TAG 1428
@@ -18,6 +18,8 @@
 #define APPOTA_WINSIZE_HEIGHT [AppotaUtil getWindowSize].height
 
 #define APPOTA_OAUTH_REQUEST_TOKEN_URL @"https://id.appota.com/oauth/request_token"
+#define APPOTA_FACEBOOK_OAUTH_REQUEST_TOKEN_URL @"https://id.appota.com/social/facebook_oauth?callback="
+
 #define APPOTA_APP_REQUEST_TOKEN_URL @"https://id.appota.com/app/request_token"
 #define APPOTA_OAUTH_ACCESS_TOKEN_URL @"https://id.appota.com/oauth/access_token"
 #define APPOTA_APP_ACCESS_TOKEN_URL @"https://id.appota.com/app/access_token"

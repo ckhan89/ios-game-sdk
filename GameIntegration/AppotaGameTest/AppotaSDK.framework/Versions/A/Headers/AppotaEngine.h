@@ -155,6 +155,9 @@ typedef void (^BOOLBlock)(BOOL b);
                               onError:(AppotaNKErrorBlock) errorBlock;
 
 #pragma mark - Login payment API
+-(NSString*) getFacebookRequestTokenURLWithClientID:(NSString*) clientID
+                                  withScope:(NSString*) scope;
+
 - (void) getCoinImageWithURL:(NSString*) coinUrl
                   onComplete:(BOOLBlock) completionBlock
                      onError:(AppotaNKErrorBlock) errorBlock;
@@ -221,4 +224,9 @@ typedef void (^BOOLBlock)(BOOL b);
             withConsumerSecret:(NSString*) consumerSecret
                     onComplete:(FetcherDictionary) completionBlock
                        onError:(AppotaNKErrorBlock) errorBlock;
+-(void)startOperationWithLink:(NSString *)url
+               withParameters:(NSMutableDictionary *)params
+                   httpMethod:(NSString *)method
+                   onComplete:(FetcherDictionary) completionBlock
+                      onError:(AppotaNKErrorBlock) errorBlock;
 @end

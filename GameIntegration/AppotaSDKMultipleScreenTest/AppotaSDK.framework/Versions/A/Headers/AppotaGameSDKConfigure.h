@@ -83,8 +83,10 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL isShowCloseLoginView;
     
     BOOL isUsingPrivateUserSystem;
+    BOOL isUsingWebLoginSystem;
     
     NSString *googleClientId;
+    NSString *googleClientSecret;
     NSString *jsonConfigUrl;
     
     NSString *gapotaTrackingID;
@@ -270,5 +272,13 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 - (BOOL)isUsingPrivateUserSystem;
 
 - (void)setIsUsingPrivateUserSystem:(BOOL)newValue;
+
+- (BOOL)isUsingWebLoginSystem;
+
+- (void)setIsUsingFBWebLoginSystem:(BOOL)newValue;
+
+- (NSString *)googleClientSecret;
+
+- (void)setGoogleClientSecret:(NSString *)newValue;
 
 @end

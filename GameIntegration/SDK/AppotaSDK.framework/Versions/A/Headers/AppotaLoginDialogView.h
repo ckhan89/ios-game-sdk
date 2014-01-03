@@ -40,4 +40,5 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *passwordTextField;
 
+- (void) googleLoginWithToken:(NSString*) ggToken;
 @end
