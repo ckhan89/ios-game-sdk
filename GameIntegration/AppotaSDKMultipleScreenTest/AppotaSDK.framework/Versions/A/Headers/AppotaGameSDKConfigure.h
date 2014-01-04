@@ -275,7 +275,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 - (BOOL)isUsingWebLoginSystem;
 
-- (void)setIsUsingFBWebLoginSystem:(BOOL)newValue;
+- (void)setIsUsingWebLoginSystem:(BOOL)newValue;
 
 - (NSString *)googleClientSecret;
 
