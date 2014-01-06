@@ -84,6 +84,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     
     BOOL isUsingPrivateUserSystem;
     BOOL isUsingWebLoginSystem;
+    BOOL isSignOutSession;
     
     NSString *googleClientId;
     NSString *googleClientSecret;
@@ -280,5 +281,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 - (NSString *)googleClientSecret;
 
 - (void)setGoogleClientSecret:(NSString *)newValue;
+
+- (BOOL)isSignOutSession;
+
+- (void)setIsSignOutSession:(BOOL)newValue;
 
 @end

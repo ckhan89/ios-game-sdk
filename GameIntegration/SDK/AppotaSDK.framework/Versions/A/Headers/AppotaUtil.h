@@ -58,6 +58,7 @@
 + (NSString*) getLocalCountry;
 + (NSString*) getLocalLanguage;
 + (void) logOut;
++ (void) logOutWithoutDialog;
 + (void)logOutAlertWithView:(AppotaGameView*)gameView;
 + (NSString*) getAccessTokenFromLoginDict;
 + (NSString*) getUserIDFromLoginDict;
