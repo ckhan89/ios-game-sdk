@@ -69,7 +69,6 @@
 #define NORMAL_LOGIN_URL @"https://api.appota.com/game/login?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define FB_LOGIN_URL @"https://api.appota.com/game/login_facebook?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define GOOGLE_LOGIN_URL @"https://api.appota.com/game/login_google?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
-//#define TWITTER_LOGIN_URL @"https://api.appota.com/game/login_google?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define REG_ACCOUNT_URL @"https://api.appota.com/game/register?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define UPDATE_ACOUNT_URL @"https://api.appota.com/game/update_profile?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define LOGOUT_URL @"https://api.appota.com/user/logout?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

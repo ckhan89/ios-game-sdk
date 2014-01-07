@@ -30,13 +30,13 @@ typedef void (^BOOLBlock)(BOOL b);
 // Singleton AppotaEngine
 + (id)sharedAppotaEngine;
 
-// Getter setter
--(AppotaRequestHandler) getRequestHandler;
--(NSString*) getAccessToken;
--(NSString*) getExpireDate;
--(NSString*) getRefeshToken;
--(void) setRequestToken:(NSString*) _rToken;
-- (void) updateTokenInfoAndState;
+//// Getter setter
+//-(AppotaRequestHandler) getRequestHandler;
+//-(NSString*) getAccessToken;
+//-(NSString*) getExpireDate;
+//-(NSString*) getRefeshToken;
+//-(void) setRequestToken:(NSString*) _rToken;
+//- (void) updateTokenInfoAndState;
 
 #pragma mark - InApp payment API
 /*
@@ -134,9 +134,9 @@ typedef void (^BOOLBlock)(BOOL b);
                          onComplete:(FetcherDictionary) completionBlock
                             onError:(AppotaNKErrorBlock) errorBlock;
 
--(void) getTransactionInforWithID:(NSString *) transactionID
-                       onComplete:(FetcherDictionary) completionBlock
-                          onError:(AppotaNKErrorBlock) errorBlock;
+//-(void) getTransactionInforWithID:(NSString *) transactionID
+//                       onComplete:(FetcherDictionary) completionBlock
+//                          onError:(AppotaNKErrorBlock) errorBlock;
 
 - (void) getShortLinkWithURL:(NSString*) url
                   onComplete:(FetcherBlock) completionBlock;

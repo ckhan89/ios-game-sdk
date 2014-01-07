@@ -92,5 +92,12 @@
 + (NSString *)URLStringByAppendingQueryString:(NSString *)queryString
                           withString:(NSString*) string;
 +(NSString *) urlEncoded:(NSString*) refString;
+
+#pragma mark - Device pragma
++ (CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation;
++ (NSString*) getDeviceID;
++ (NSString *)systemVersion;
++ (BOOL) isDeviceIpad;
++ (UIInterfaceOrientation) appotaGetDeviceOrientation;
 @end
 

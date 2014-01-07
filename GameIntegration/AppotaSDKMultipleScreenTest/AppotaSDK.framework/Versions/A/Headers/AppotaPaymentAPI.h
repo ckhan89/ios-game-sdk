@@ -104,7 +104,7 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
  */
 +(AppotaPaymentAPI *)shareAPI;
 
--(BOOL)handleOpenURL:(NSURL *)url;
+//-(BOOL)handleOpenURL:(NSURL *)url;
 
 #pragma mark -
 #pragma mark - SMS
@@ -224,12 +224,12 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
  @param description - string will show in detail (optional)
  @param handler - Completion block for handling return state of payment action (result detail please read AppotaPaymentHandler)
  */
-- (void) makePaypalPaymentWithListAmount:(NSArray*) listAmount
-                           withState:(NSString*) state
-                          withTarget:(NSString*) target
-                       withNoticeUrl:(NSString*) noticeUrl
-                     withDescription:(NSString*) description
-               withCompletionHandler:(AppotaPaymentHandler) handler;
+//- (void) makePaypalPaymentWithListAmount:(NSArray*) listAmount
+//                           withState:(NSString*) state
+//                          withTarget:(NSString*) target
+//                       withNoticeUrl:(NSString*) noticeUrl
+//                     withDescription:(NSString*) description
+//               withCompletionHandler:(AppotaPaymentHandler) handler;
 
 - (void) makePaypalPaymentWithListItem:(NSArray*) listPaymentItem
                              withState:(NSString*) state

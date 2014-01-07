@@ -47,8 +47,8 @@
 - (NSMutableArray*) getListPaymentController;
 
 - (void) addPaymentController:(AppotaPaymentController*) controller;
-- (void) showSMSPaymentDialog;
-- (void) showPaypalPaymentDiaglog;
+//- (void) showSMSPaymentDialog;
+//- (void) showPaypalPaymentDiaglog;
 
 - (void) showCardPaymentDialogWithDescription:(NSString*) descriptionString
                                   withHandler:(AppotaPaymentHandler) handler;
@@ -64,9 +64,9 @@
                               withNoticeUrl:(NSString*) noticeUrl
                               enableDialog:(BOOL) enableDialog
                                 withHandler:(AppotaPaymentHandler) handler;
-- (void) showPaypalPaymentDialogWithListAmount:(NSArray*) listAmount
-                         withDescriptionString:(NSString*) descriptionString
-                                   withHandler:(AppotaPaymentHandler)handler;
+//- (void) showPaypalPaymentDialogWithListAmount:(NSArray*) listAmount
+//                         withDescriptionString:(NSString*) descriptionString
+//                                   withHandler:(AppotaPaymentHandler)handler;
 
 - (void) showPaypalPaymentDialogWithListItem:(NSArray*) listAmount
                                    withState:(NSString*) state
@@ -115,7 +115,7 @@
 - (void) payCardAction:(id) sender;
 - (void) clickChooseItem:(id) sender;
 - (void) clickChooseMessage:(id) sender;
-- (void) clickChoosePaypal:(id) sender;
+//- (void) clickChoosePaypal:(id) sender;
 - (void) clickChoosePaypalWithValue:(id) sender;
 - (void) closePaymentView;
 - (void) clickChooseMobileBank:(id) sender;
