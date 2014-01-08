@@ -88,8 +88,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     
     NSString *googleClientId;
     NSString *googleClientSecret;
-    NSString *jsonConfigUrl;
+    NSString *googleAccToken;
     
+    NSString *jsonConfigUrl;
     NSString *gapotaTrackingID;
     AppotaGameSDKCHDraggingCoordinator *draggingCoordinator;
     AppotaGameSDKCHDraggableView  *draggableView;
@@ -178,7 +179,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
                  withConfigUrl:(NSString*) configUrl_
                        allowUI:(BOOL) enableUI
 ;
-
++ (void) loginGoogleWithHandler:(AppotaLoginRequestHandler) handler;
 + (void) loginFacebookWithPermission:(NSArray*) permissionArray
                          withHandler:(AppotaLoginRequestHandler) handler;
 #endif
@@ -285,5 +286,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 - (BOOL)isSignOutSession;
 
 - (void)setIsSignOutSession:(BOOL)newValue;
+
+- (NSString *)googleAccToken;
+
+- (void)setGoogleAccToken:(NSString *)newValue;
 
 @end
