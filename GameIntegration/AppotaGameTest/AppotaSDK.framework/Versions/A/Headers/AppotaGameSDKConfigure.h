@@ -89,6 +89,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     NSString *googleClientId;
     NSString *googleClientSecret;
     NSString *googleAccToken;
+    NSDictionary *googleTokenDict;
     
     NSString *jsonConfigUrl;
     NSString *gapotaTrackingID;
@@ -290,5 +291,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 - (NSString *)googleAccToken;
 
 - (void)setGoogleAccToken:(NSString *)newValue;
+
+- (NSDictionary *)googleTokenDict;
+
+- (void)setGoogleTokenDict:(NSDictionary *)newValue;
 
 @end
