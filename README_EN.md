@@ -1,26 +1,30 @@
+# Appota Game SDK
 Other languages: [Vietnamese](README.md) | [Chinese](README_CN.md)
 
-**Get Started**
+## Get Started
 
 Appota Game SDK is the simplest way to integrate user and payment for
 your game in Appota system. This SDK provides solutions for payment
 methods such as: SMS, Card. Internet Banking, Paypal and Apple Payment.
 
-**Steps to integrate SDK:**
+## Steps to integrate SDK
 
-​1. Setup Appota SDK
+* ​[Setup Appota SDK](#1-setup-appota-sdk)
 
-​2. Config SDK
+* [Config SDK - Login function](#2-config-sdk---login-function)
 
-​3. Integrate SDK
+
+* [Config SDK - Payment function](#3-config-sdk---payment-function)
  
-​4. Appota SDK flow
+* [Setup SDK variables](#4-setup-sdk-variables)
+
+* [Apppta SDK flow](#5-appota-sdk-flow)
 
 -------------------------------
 
-**1. Setup Appota SDK**
+## 1. Setup Appota SDK
 
-**Import AppotaSDK.framework into project**
+### Import AppotaSDK.framework into project
 
 Drag and drop AppotaSDK.framework and AppotaBundle.bundle into your project.
 
@@ -46,7 +50,7 @@ Import header file to source file where do you want to use SDK:
 #import <AppotaSDK/AppotaSDK.h>
 ```
 
-**Config plist with CLIENT_KEY**
+### Config plist with CLIENT_KEY
 
 Add 1 string AppotaClientId with the value is CLIENT_ID
 
@@ -57,9 +61,9 @@ schemes will be appotab804d6421df6ae7dbcd51469e4d8ee0005101f540.
 
 ![](docs/vn/step3.jpg)
  
-**2. Config SDK**
+## 2. Config SDK - Login function
 
-**Config SDK in Appdelegate:**
+### Config SDK in Appdelegate:
 
 Setup SDK in Appdelegate:
 
@@ -85,7 +89,6 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
                             withConfigUrl:@"http://filestore9.com/config.php"
      ];
 	```
-To integrate Google, FB and Twitter login please follow instruction for each SDK. For FBSDK please config Info.plist and FacebookAppID, for GoogleSDK please config googleClientId (Reference AppotaGameTest)
 	* Set delegate for AppotaGameSDKConfigure (should use AppDelegate for delegate)
 	
 	``` objective-c
@@ -94,19 +97,33 @@ To integrate Google, FB and Twitter login please follow instruction for each SDK
 	* Handle login status by protocol function callback _- (void) didFinishLogin:(NSDictionary *)userInfoDict_ (UserInfo dict can be used for verification process)
 	* Handle logout status by protocol function callback _- (void) didLogOut:(NSString*) userName_
 	* Handle payment status by protocol function callback _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error_
-	* If you are using Social Login please add handle open URL in your AppDelegate by this function :
+
+	
+###  Integration social login
+* Add handle open URL in your AppDelegate by this function :
 		
-	``` objective-c
+	```objc
 	(BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     		return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 	}
 	```
+		
+* [Integrate Facebook Login](FBLOGIN_INTEGRATION_EN.md)
+* [Integrate Google Login](GGLOGIN_INTEGRATION_EN.md)
+* [Integrate TWITTER Login](TWITTERLOGIN_INTEGRATION_EN.md)
 
-__JSON config__
+## 3. Config SDK - Payment function
 
-Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) by setting *[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl
+###  JSON Config URL
 
-**3. Integrate SDK**
+- Config jsonConfigUrl (for remote updating feature like: promotion, login setting, …) at init step (step 2) or by setting `[AppotaGameSDKConfigure sharedGameConfig].jsonConfigUrl`
+
+- Sample content of JSON config (currently used in our example) [http://developer.appota.com/config.php](http://developer.appota.com/config.php)
+
+- You can generate json content at : [https://developer.appota.com/sdktool.php](https://developer.appota.com/sdktool.php) and upload to your server
+[JSON config detail](JSON_CONFIG_EN.md)
+
+## 4. Setup SDK variables
 
 
 - Support function: Every function will be accessed via AppotaGameSDKConfigure class	
@@ -122,7 +139,7 @@ Config jsonConfigUrl (for remote updating feature like: promotion, login setting
 	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
 	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
 
-**4. Appota  SDK flow**
+## 5. Appota  SDK flow
 
 ![](docs/user_flow.png)
 
