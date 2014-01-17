@@ -9,16 +9,15 @@ methods such as: SMS, Card. Internet Banking, Paypal and Apple Payment.
 
 ## Steps to integrate SDK
 
-* ​[Setup Appota SDK](#1-setup-appota-sdk)
+* [Setup Appota SDK](#1-setup-appota-sdk)
 
 * [Config SDK - Login function](#2-config-sdk---login-function)
-
 
 * [Config SDK - Payment function](#3-config-sdk---payment-function)
  
 * [Setup SDK variables](#4-setup-sdk-variables)
 
-* [Apppta SDK flow](#5-appota-sdk-flow)
+* [Apppta SDK flow](#5-appota--sdk-flow)
 
 -------------------------------
 
@@ -86,7 +85,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
                             withInAppAPIKey:INAPP_API_KEY
                                   withState:@"YOUR_PAYMENT_STATE"                            
                             withNoticeUrl:@"http://filestore9.com/test.php"
-                            withConfigUrl:@"http://filestore9.com/config.php"
+                            withConfigUrl:@"http://developer.appota.com/config.php"
      ];
 	```
 	* Set delegate for AppotaGameSDKConfigure (should use AppDelegate for delegate)
@@ -120,7 +119,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 - Sample content of JSON config (currently used in our example) [http://developer.appota.com/config.php](http://developer.appota.com/config.php)
 
 - You can generate json content at : [https://developer.appota.com/sdktool.php](https://developer.appota.com/sdktool.php) and upload to your server
-[JSON config detail](JSON_CONFIG_EN.md)
+
 ### Payment integration
 - [Detail about payment integration (IPN, method, …)](https://github.com/appota/ios-game-sdk/wiki)
 
