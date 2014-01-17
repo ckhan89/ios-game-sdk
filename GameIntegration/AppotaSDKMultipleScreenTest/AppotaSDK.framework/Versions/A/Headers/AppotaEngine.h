@@ -229,4 +229,10 @@ typedef void (^BOOLBlock)(BOOL b);
                    httpMethod:(NSString *)method
                    onComplete:(FetcherDictionary) completionBlock
                       onError:(AppotaNKErrorBlock) errorBlock;
+-(void)startOperationWithLink:(NSString *)url
+               withParameters:(NSMutableDictionary *)params
+                   httpMethod:(NSString *)method
+                 withPTrackID:(NSString*) pTrackID
+                   onComplete:(FetcherDictionary) completionBlock
+                      onError:(AppotaNKErrorBlock) errorBlock;
 @end
