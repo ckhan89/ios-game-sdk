@@ -38,6 +38,7 @@
 		364D1FFD1824848B00187DD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFC1824848B00187DD5 /* StoreKit.framework */; };
 		364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFE182484BE00187DD5 /* AdSupport.framework */; };
 		366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B580B1831D0C0002EBEFE /* CoreMedia.framework */; };
+		369987BF188CE5A8003053AE /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369987BE188CE5A8003053AE /* AppotaSDK.framework */; };
 		36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F051831CF4500C0653F /* GoogleOpenSource.framework */; };
 		36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36E76F061831CF4500C0653F /* GooglePlus.bundle */; };
 		36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F071831CF4500C0653F /* GooglePlus.framework */; };
@@ -88,6 +89,7 @@
 		364D1FFC1824848B00187DD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		364D1FFE182484BE00187DD5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		366B580B1831D0C0002EBEFE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		369987BE188CE5A8003053AE /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
 		36E76F051831CF4500C0653F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		36E76F061831CF4500C0653F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		36E76F071831CF4500C0653F /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				364D1FFD1824848B00187DD5 /* StoreKit.framework in Frameworks */,
 				364D1FFB1824848600187DD5 /* CoreText.framework in Frameworks */,
 				364D1FF91824847E00187DD5 /* AudioToolbox.framework in Frameworks */,
+				369987BF188CE5A8003053AE /* AppotaSDK.framework in Frameworks */,
 				364D1FF71824847600187DD5 /* MobileCoreServices.framework in Frameworks */,
 				364D1FF51824846C00187DD5 /* libxml2.dylib in Frameworks */,
 				364D1FEF1824844F00187DD5 /* MessageUI.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		364D1FB41824827600187DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				369987BE188CE5A8003053AE /* AppotaSDK.framework */,
 				36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */,
 				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,
 				36E76F061831CF4500C0653F /* GooglePlus.bundle */,
@@ -388,7 +392,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Volumes/Data/Work/Deployment/ios-game-sdk/GameIntegration/AppotaGameTest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
@@ -420,7 +425,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kien Ha (545WAPR6LK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Volumes/Data/Work/Deployment/ios-game-sdk/GameIntegration/AppotaGameTest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";

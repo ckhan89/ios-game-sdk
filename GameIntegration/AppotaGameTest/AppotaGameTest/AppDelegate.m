@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <AppotaAdsSDK/AppotaAdsSDK.h>
 #import "ViewController.h"
 
 #define CLIENT_ID           @"c144a4da61cd83e7b90298fd6dca6e5a052945a17"
