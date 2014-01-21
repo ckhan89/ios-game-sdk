@@ -122,7 +122,6 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 
 ### Payment integration
 - [Server IPN payment implementation](https://github.com/appota/ios-game-sdk/wiki)
-## 4. Setup SDK variables and function
 - Variables will define detail of your login and payment GUI, how your app will look like with AppotaSDK [Appota SDK variables](VAR_EN.md)
 - Support function: Every function will be accessed via AppotaGameSDKConfigure class (remember all function must be called after initing SDK)
 	* +*showPaymentView*: Manualy show payment view from your game, can be implemented your button click
