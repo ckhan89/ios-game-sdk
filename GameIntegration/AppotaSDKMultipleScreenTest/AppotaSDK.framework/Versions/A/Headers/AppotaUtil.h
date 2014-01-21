@@ -10,11 +10,16 @@
 #import "AppotaPayment.h"
 #import "AppotaPaymentAPI.h"
 
+
 @class AppotaPaymentController;
 @class AppotaPaymentLoginDialog;
 @class AppotaGamePaymentDialogView;
 @class AppotaGameView;
-@interface AppotaUtil : NSObject
+@protocol GPPSignInDelegate;
+@interface AppotaUtil : NSObject<GPPSignInDelegate> {
+    
+}
++(AppotaUtil *)sharedUtil;
 + (UIWindow*) getKeyWindow;
 + (NSBundle *)frameworkBundle;
 +(UIImage *)imageWithNamed:(NSString *)imgName ofType:(NSString *)extension;
