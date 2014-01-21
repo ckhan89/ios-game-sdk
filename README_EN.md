@@ -121,23 +121,20 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 - You can generate json content at : [https://developer.appota.com/sdktool.php](https://developer.appota.com/sdktool.php) and upload to your server
 
 ### Payment integration
-- [Detail about payment integration (IPN, method, …)](https://github.com/appota/ios-game-sdk/wiki)
-
-## 4. Setup SDK variables
-This part will define detail of your login and payment GUI
-
-- Support function: Every function will be accessed via AppotaGameSDKConfigure class	
-	* +showSDKView: Manualy show SDK view ( with payment and account button) from your game, can be implemented your button click
-	* +logOut: Manualy show logout popup in your game
+- [Server IPN payment implementation](https://github.com/appota/ios-game-sdk/wiki)
+## 4. Setup SDK variables and function
+- Variables will define detail of your login and payment GUI, how your app will look like with AppotaSDK [Appota SDK variables](VAR_EN.md)
+- Support function: Every function will be accessed via AppotaGameSDKConfigure class (remember all function must be called after initing SDK)
+	* +*showPaymentView*: Manualy show payment view from your game, can be implemented your button click
+	* +*showLoginView*: Manualy show login view from your game, can be implemented your button click
+	* +*showSwitchUserView*: Manualy show switchuser view from your game, can be implemented your button click	
+	* *showPaymentButton, hidePaymentButton*: Show and hide floating button (like headchat) of AppotaSDK in your game
+	* *setPaymentState*: Set alternative payment state before you showPaymentView, so you can handle more user info (server name, game status, …) in your IPN
+	* +*sharedGameConfig*: Singleton shared instance of AppotaGameSDKConfigure
 	* +(NSDictionary): getUserInfo* Return userinfo (acces_token, username, email, …) in NSDictionary
 	* +(NSString): getUserName return username
 	* +(NSString): getUserId return userid
 	* +(NSString): getAccessToken return access token	
-	* +showPaymentView: Manualy show payment view from your game, can be implemented your button click
-	* +showLoginView: Manualy show login view from your game, can be implemented your button click
-	* +showSwitchUserView: Manualy show switchuser view from your game, can be implemented your button click	
-	* showPaymentButton, hidePaymentButton: Show and hide floating button of AppotaSDK in your game
-	* +sharedGameConfig: Singleton shared instance of AppotaGameSDKConfigure
 
 ## 5. Appota  SDK flow
 
