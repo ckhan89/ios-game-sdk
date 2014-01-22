@@ -69,11 +69,6 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL autoShowLoginDialog;
     BOOL enableLogoutDialog;
     
-    NSMutableArray *listPayment;
-    NSString *noticeUrl;
-    NSString *paymentState;
-    id session;
-    
     BOOL enableSocialLogin;
     BOOL enableAppotaLogin;
     BOOL enableQuickLogin;
@@ -85,6 +80,12 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL isUsingPrivateUserSystem;
     BOOL isUsingWebLoginSystem;
     BOOL isSignOutSession;
+    
+    NSMutableArray *listPayment;
+    NSString *noticeUrl;
+    NSString *paymentState;
+    id session;
+
     
     NSString *googleClientId;
     NSString *googleClientSecret;
