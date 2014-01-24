@@ -1,7 +1,7 @@
 ## Integrate FacebookSDK with AppotaSDK
 
 ### Setup FacebookSDK
-- Download FacebookSDK from [https://github.com/facebook/facebook-ios-sdk](https://github.com/facebook/facebook-ios-sdk) or from [AppotaSDK example](GameIntegration/AppotaGameTest/FacebookSDK.framework/)
+- Download FacebookSDK from [https://developers.facebook.com/resources/facebook-ios-sdk-current.pkg](https://developers.facebook.com/resources/facebook-ios-sdk-current.pkg) or from [AppotaSDK example](GameIntegration/AppotaGameTest/FacebookSDK.framework/)
 - Drag and drop FacebookSDK.framework into your project.
 
 - Tick on checkbox: “Copy items into destination group's folder (if needed)”.
