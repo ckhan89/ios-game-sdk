@@ -9,7 +9,8 @@
 #ifndef AppotaSDK_AppotaAPIConstant_h
 #define AppotaSDK_AppotaAPIConstant_h
 
-#define NOUI_LOGIN NO
+//#define NOUI_LOGIN NO
+
 
 #define APPOTA_SCHEMA @"appota"
 #define APPOTA_DRAGVIEW_TAG 1428
@@ -94,4 +95,5 @@
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 #define DEBUG_MODE NO
+
 #endif
