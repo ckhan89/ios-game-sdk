@@ -9,9 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-#define CLIENT_ID           @"c144a4da61cd83e7b90298fd6dca6e5a052945a17"
-#define CLIENT_SECRET       @"e9f468821c4e4816ddce3f2441a0fd17052945a17"
-#define INAPP_API_KEY       @"ac383fa652834d9094e865dc4867c72b0529d3e61"
+#define CLIENT_ID           @"e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc"
+#define CLIENT_SECRET       @"060f9c20e5259e2462f1cc00c15c6f93051f0a4fc"
+#define INAPP_API_KEY       @"1e1aa54ce3c646d8f6456558434d9475051f74156"
 
 /*
  * SANDBOX_ID will be used when app's not been published yet
@@ -47,7 +47,7 @@
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
     
-    [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"242204253141.apps.googleusercontent.com";
+    [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com";
     [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
     [AppotaGameSDKConfigure sharedGameConfig].isShowCloseLoginView = YES;
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
