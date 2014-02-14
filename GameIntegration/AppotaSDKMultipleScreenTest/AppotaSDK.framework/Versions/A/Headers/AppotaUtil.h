@@ -52,6 +52,7 @@
 + (void) deleteLinkedDeviceUserInfo:(NSDictionary*) userInfoDict;
 + (NSDictionary*) getRemoteConfigDict;
 + (NSDictionary*) getLoginDictFromDefault;
++ (BOOL) getFirstLoginState;
 + (NSString*) getPTrackingID;
 + (NSString*) getAppVersion;
 + (NSDictionary *) getDeviceDictionary;
