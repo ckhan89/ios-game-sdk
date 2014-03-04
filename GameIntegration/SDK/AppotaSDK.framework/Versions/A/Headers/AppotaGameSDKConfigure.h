@@ -159,6 +159,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 + (void) hidePaymentButton;
 
++ (void) closePaymentView;
 /*
  * Log out
  */
