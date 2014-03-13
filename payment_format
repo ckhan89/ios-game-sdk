@@ -1,3 +1,5 @@
+Payment failed will return error_code != 0 and a messsage
+
 Apple:
 {
 	data =     {
