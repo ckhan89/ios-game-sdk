@@ -93,10 +93,13 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 	``` objective-c
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;	
 	```		
-	* Handle login status by protocol function callback _- (void) didFinishLogin:(NSDictionary *)userInfoDict_ (UserInfo dict can be used for verification process)
-	* Handle logout status by protocol function callback _- (void) didLogOut:(NSString*) userName_
-	* Handle payment status by protocol function callback _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error_
-
+	* **Handle login status by protocol function callback** _- (void) didFinishLogin:(NSDictionary *)userInfoDict_ (UserInfo dict can be used for verification process)
+		* [UserInfo format] (user_format)
+	* **Handle logout status by protocol function callback** _- (void) didLogOut:(NSString*) userName_
+	* **Handle payment status by protocol function callback** _- (void) didFinishPaymentWithDictionary:(NSDictionary*)paymentDict withState:(AppotaPaymentState)status withError:(NSError*) error_
+		* [Payment format] (payment_format)
+	* **Handle switch user by protocol function callback** _- (void) - (void) didFinishSwitchUser:(NSDictionary*) userInfoDict_;
+		* [UserInfo format] (user_format)
 	
 ###  Integration social login
 * Add handle open URL in your AppDelegate by this function :
