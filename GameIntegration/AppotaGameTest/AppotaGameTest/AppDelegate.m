@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#define NOUI_LOGIN YES
 #define CLIENT_ID           @"e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc"
 #define CLIENT_SECRET       @"060f9c20e5259e2462f1cc00c15c6f93051f0a4fc"
 #define INAPP_API_KEY       @"1e1aa54ce3c646d8f6456558434d9475051f74156"
@@ -41,7 +41,7 @@
                                   withInAppAPIKey:INAPP_API_KEY
                                         withState:@""
                                     withNoticeUrl:@"http://filestore9.com/test.php"
-                                    withConfigUrl:@"http://plat.center.ffcai.com/user/mobvista_PaymentConfig.php?classify=ios"
+                                    withConfigUrl:@"http://developer.appota.com/config.php"
      ];
 #warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
@@ -100,6 +100,7 @@
 
 - (void) didFinishPaymentWithDictionary:(NSDictionary *)paymentDict withState:(AppotaPaymentState)status withError:(NSError *)error {
     NSLog(@"Payment result");
+    [AppotaGameSDKConfigure logOut];
 }
 
 - (void) didCloseLoginView {

@@ -96,6 +96,4 @@
 
 #define DEBUG_MODE NO
 
-#define APPOTA_CLOSE_PUSH_KEY @"appota_post_close_notification"
-
 #endif
