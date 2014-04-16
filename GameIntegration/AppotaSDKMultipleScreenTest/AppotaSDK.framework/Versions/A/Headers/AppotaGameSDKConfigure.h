@@ -164,10 +164,6 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
  */
 + (void) logOut;
 
-/*
- Force close all payment view
- */
-+ (void) closePaymentView;
 #pragma mark - Push notification
 + (NSString*) configurePushNotificationWithTokenData:(NSData*) deviceTokenData;
 + (void) registerPushNotification;
