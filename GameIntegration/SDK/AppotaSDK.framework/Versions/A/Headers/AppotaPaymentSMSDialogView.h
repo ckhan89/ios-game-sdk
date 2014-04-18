@@ -11,7 +11,8 @@
 #import "AppotaPaymentDialogView.h"
 
 @class AppotaPaymentDialog;
-
+static NSString *ChargingSMSKey = @"charing_sms_key";
+static NSString *ChangeSMSDict = @"change_sms_dict_key";
 @interface AppotaPaymentSMSDialogView : AppotaPaymentDialogView
 {
     // SMS variable
@@ -21,6 +22,10 @@
     MFMessageComposeViewController *viewController;
     NSString *inAppId;
 }
+
+@property (nonatomic, strong) NSString *noticeURL;
+@property (nonatomic, strong) NSString *state;
+@property (nonatomic, strong) NSString *target;
 
 //- (void) setupViewWithSMSStructureDict:(NSDictionary*) smsDict;
 - (void) setupViewWithSMSStructureDict:(NSDictionary*) smsDict
