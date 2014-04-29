@@ -39,9 +39,9 @@
     [AppotaGameSDKConfigure configureWithClientID:CLIENT_ID
                                  withClientSecret:CLIENT_SECRET
                                   withInAppAPIKey:INAPP_API_KEY
-                                        withState:@""
-                                    withNoticeUrl:@"http://filestore9.com/test.php"
-                                    withConfigUrl:@"http://developer.appota.com/config.php"
+                                        withState:@"game_state"
+                                    withNoticeUrl:@"http://api.appota.com/notice_url"
+                                    withConfigUrl:@"http://api.appota.com/config_file/config.json"
      ];
 #warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
 //    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
@@ -51,6 +51,7 @@
     [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
     [AppotaGameSDKConfigure sharedGameConfig].isShowCloseLoginView = YES;
     [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
+//    [[AppotaGameSDKConfigure sharedGameConfig] setJsonConfigUrl:@"http://pay.thienha.mobi/YNGameSDK/Android.html"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -86,9 +87,6 @@
  */
 - (void) didFinishLogin:(NSDictionary *)userInfoDict {
 #warning Insert your verify action here
-    NSLog(@"Login token %@: Username:%@ UserID: %@", [AppotaGameSDKConfigure getAccessToken], [AppotaGameSDKConfigure getUserName], [AppotaGameSDKConfigure getUserID]);
-    
-    // Update viewcontroller login state
     [self.viewController handleLogin];
 }
 
@@ -100,13 +98,15 @@
 
 - (void) didFinishPaymentWithDictionary:(NSDictionary *)paymentDict withState:(AppotaPaymentState)status withError:(NSError *)error {
     NSLog(@"Payment result");
-    [AppotaGameSDKConfigure logOut];
 }
 
 - (void) didCloseLoginView {
     NSLog(@"Close login view");
 }
 
+- (void) didFinishSwitchUser:(NSDictionary*) userInfoDict{
+    
+}
 #warning Insert your handle open URL here
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [AppotaGameSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];

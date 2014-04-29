@@ -255,6 +255,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Appota;
+				TargetAttributes = {
+					364D1FB11824827600187DD5 = {
+						DevelopmentTeam = V2467X77A4;
+					};
+				};
 			};
 			buildConfigurationList = 364D1FAD1824827600187DD5 /* Build configuration list for PBXProject "AppotaGameTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -384,8 +389,8 @@
 		364D1FD61824827600187DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -407,9 +412,11 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7C30A1DA-6438-4D46-B136-C652C8DC8EC6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7C30A1DA-6438-4D46-B136-C652C8DC8EC6";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -417,8 +424,8 @@
 		364D1FD71824827600187DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ha Trung K (7FQAA2SUYJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -440,9 +447,11 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7C30A1DA-6438-4D46-B136-C652C8DC8EC6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7C30A1DA-6438-4D46-B136-C652C8DC8EC6";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
