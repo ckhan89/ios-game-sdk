@@ -36,7 +36,7 @@ typedef enum {
 typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 #endif
-typedef void(^AppotaShareHandler)(BOOL shareResult, NSError *error);
+
 
 @protocol AppotaGameSDKConfigureDelegate <NSObject>
 @required
@@ -80,6 +80,7 @@ typedef void(^AppotaShareHandler)(BOOL shareResult, NSError *error);
     BOOL isUsingPrivateUserSystem;
     BOOL isUsingWebLoginSystem;
     BOOL isSignOutSession;
+    BOOL isIphoneOnly;
     
     NSMutableArray *listPayment;
     NSString *noticeUrl;
@@ -297,11 +298,8 @@ typedef void(^AppotaShareHandler)(BOOL shareResult, NSError *error);
 
 - (void)setGoogleTokenDict:(NSDictionary *)newValue;
 
-#pragma mark - Share FB function
-+ (void) shareFacebookWithLink:(NSString*) link
-                      withName:(NSString*) name
-                   withCaption:(NSString*) caption
-                   withMessage:(NSString*) message
-               withDescription:(NSString*) description
-                  withHandler:(AppotaShareHandler) handler;
+- (BOOL)isIphoneOnly;
+
+- (void)setIsIphoneOnly:(BOOL)newValue;
+
 @end

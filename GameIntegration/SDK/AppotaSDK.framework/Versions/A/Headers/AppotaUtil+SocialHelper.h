@@ -10,14 +10,6 @@
 #import "AppotaUtil.h"
 
 @interface AppotaUtil (SocialHelper)
-+ (void) shareFacebookWithLink:(NSString*) link
-                      withName:(NSString*) name
-                   withCaption:(NSString*) caption
-                   withMessage:(NSString*) message
-               withDescription:(NSString*) description
-           withCompletionBlock:(BOOLBlock) completionBlock
-                withErrorBlock:(AppotaNKErrorBlock) errorBlock;
-
 + (void) getFacebookTokenWithPermission:(NSArray*) permissionList
                          withHandler:(AppotaResultHandler) handler;
 + (void) loginWithFacebookToken:(NSString*) fbToken
