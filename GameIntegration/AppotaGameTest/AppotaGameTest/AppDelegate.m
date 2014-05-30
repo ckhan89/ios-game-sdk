@@ -98,8 +98,8 @@
 
 - (void) didFinishPaymentWithDictionary:(NSDictionary *)paymentDict withState:(AppotaPaymentState)status withError:(NSError *)error {
     NSLog(@"Payment result");
+    [[AppotaGameSDKConfigure sharedGameConfig] setPaymentState:@"TestPaymentState"];
 }
-
 - (void) didCloseLoginView {
     NSLog(@"Close login view");
 }

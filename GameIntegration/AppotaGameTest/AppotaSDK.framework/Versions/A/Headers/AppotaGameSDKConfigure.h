@@ -302,4 +302,5 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 - (void)setIsIphoneOnly:(BOOL)newValue;
 
++ (void) closePaymentView;
 @end
