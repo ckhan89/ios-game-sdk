@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface AppotaSettingManager : NSObject
++ (AppotaSettingManager *)sharedInstance;
+- (NSString*) getPIDFromTrackDictionary;
 - (NSString*) getLocationInfo;
 - (void) setTrackDictionary:(NSDictionary*) dict;
 - (NSDictionary*) getTrackDictionary;
++ (NSString*) getForcedSetLanguage;
++ (void) setForcedLanguage:(NSString*) l;
 @end

@@ -9,15 +9,16 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    PAYMENT_SMS,
-    PAYMENT_PREMIUM_SMS,
-    PAYMENT_CARD,
-    PAYMENT_INTERNET_BANKING,
-    PAYMENT_PAYPAL,
-    PAYMENT_MOL,
-    PAYMENT_BAOKIM,
-    PAYMENT_UNIPIN,
-    PAYMENT_APPLE
+    PAYMENT_SMS = 0,
+    PAYMENT_PREMIUM_SMS = 1,
+    PAYMENT_CARD = 2,
+    PAYMENT_INTERNET_BANKING = 3,
+    PAYMENT_PAYPAL = 4,
+    PAYMENT_MOL = 5,
+    PAYMENT_BAOKIM = 6,
+    PAYMENT_UNIPIN = 7,
+    PAYMENT_APPLE = 8,
+    PAYMENT_EWALLET = 9,
 } PAYMENT_METHOD;
 
 @interface AppotaPayment : NSObject {
@@ -82,5 +83,13 @@ typedef enum {
 - (NSString *)productId;
 
 - (void)setProductId:(NSString *)newValue;
+
 - (void) printItem;
+
++ (NSString*) paymentMethodConfigToString:(PAYMENT_METHOD) paymentMethod;
+
++ (PAYMENT_METHOD) stringConfigToPaymentMethod:(NSString*) string;
+
+-(NSString*) getPaymentMethodString;
+
 @end

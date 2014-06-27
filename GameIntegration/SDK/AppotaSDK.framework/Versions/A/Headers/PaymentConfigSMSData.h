@@ -6,13 +6,13 @@
 //
 //
 
-#import "ObjectData.h"
+#import "AppotaObjectData.h"
 
 typedef enum {
     APPOTA_SMS_DIRECT = 0,
     APPOTA_SMS_MOMT = 1,
     APPOTA_SMS_OTP = 2
 } AppotaConfigSMSType;
-@interface PaymentConfigSMSData : ObjectData
+@interface PaymentConfigSMSData : AppotaObjectData
 - (AppotaConfigSMSType) getConfigSMSType;
 @end

@@ -80,7 +80,6 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL isUsingPrivateUserSystem;
     BOOL isUsingWebLoginSystem;
     BOOL isSignOutSession;
-    BOOL isIphoneOnly;
     
     NSMutableArray *listPayment;
     NSString *noticeUrl;
@@ -137,6 +136,13 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
  * Show payment view popup in game view
  */
 + (void) showPaymentView;
+
+/**
+ *  Close payment view function
+ *
+ *  @return void
+ */
++ (void) closePaymentView;
 
 /*
  * Show login view popup in game view
@@ -298,9 +304,4 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 - (void)setGoogleTokenDict:(NSDictionary *)newValue;
 
-- (BOOL)isIphoneOnly;
-
-- (void)setIsIphoneOnly:(BOOL)newValue;
-
-+ (void) closePaymentView;
 @end

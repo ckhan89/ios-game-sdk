@@ -75,7 +75,6 @@
 + (NSDictionary*) getUserDictFromLoginDict:(NSDictionary*) loginDict_;
 + (void) saveLoginDict:(NSDictionary*) loginDict;
 +(PAYMENT_METHOD) getPaymentMethodFromString:(NSString*) pMethod;
-+(NSString*) getPaymentMethodString:(PAYMENT_METHOD) pMethod;
 +(NSString*) getDescriptionStringFromListItem:(NSArray*) listPaymentItem;
 + (NSDictionary*) getPaymentCallBackDictFromState:(AppotaPaymentState) pMethod
                                   withPaymentDict:(NSDictionary*) paymentDict

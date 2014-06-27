@@ -6,9 +6,9 @@
 //
 //
 
-#import "ObjectData.h"
+#import "AppotaObjectData.h"
 
-@interface PaymentConfigCardData : ObjectData
+@interface PaymentConfigCardData : AppotaObjectData
 - (NSString*) getCardCodeString;
 - (NSString*) getSerialString;
 - (NSString*) getVendorString;

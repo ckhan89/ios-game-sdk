@@ -38,22 +38,13 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb435546253225772</string>
-				<string>appotab804d6421df6ae7dbcd51469e4d8ee0005101f540</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>com.appstorevn.sdkexample2</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.appstorevn.sdkexample</string>
-				<string>appotae8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
 				<string>fb435546253225772</string>
+				<string>appotabe8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
+				<string>com.appstorevn.sdkexample</string>
 			</array>
 		</dict>
 	</array>

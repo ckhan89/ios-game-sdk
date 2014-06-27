@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AppotaGamePaymentCell : UITableViewCell {
-    NSArray *paymentDictList;
+//    NSArray *paymentDictList;
     NSDictionary *userInfoDict;
 }
 @property (unsafe_unretained, nonatomic) id gamePayTable;
@@ -22,6 +22,6 @@
 
 - (IBAction)deleteAccountClick:(id)sender;
 
-- (void) setUpGamePaymentWithDict:(NSArray*) pDictArray;
+- (void) setUpGamePaymentWithObject:(id) pObject;
 - (void) setUpChooseUserWithDict:(NSDictionary*) uDictInfo;
 @end

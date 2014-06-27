@@ -20,6 +20,7 @@
 + (void) checkAutoLoginAndShowLoginView;
 + (void) checkAutoLoginAndShowChooseUserView;
 + (void) showLoginView;
++ (void) showRegisterView;
 + (void) showLoginViewFromChooseUser:(AppotaGameView*) v;
 + (void) showLoginViewFromChooseUser:(AppotaGameView*) v withHideQuickLoginView:(BOOL) hideQuickLogin;
 + (void) showChooseUserView;

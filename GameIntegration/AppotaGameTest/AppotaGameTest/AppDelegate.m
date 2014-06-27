@@ -20,7 +20,6 @@
 #define SANDBOX_CLIENT_SECRET @"SANDBOX_CLIENT_SECRET"
 #define SANDBOX_INAPP_API_KEY @"SANDBOX_INAPP_API_KEY"
 
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

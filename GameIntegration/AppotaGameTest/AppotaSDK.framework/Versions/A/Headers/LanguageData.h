@@ -6,8 +6,8 @@
 //
 //
 
-#import "ObjectData.h"
+#import "AppotaObjectData.h"
 
-@interface LanguageData : ObjectData
+@interface LanguageData : AppotaObjectData
 
 @end
