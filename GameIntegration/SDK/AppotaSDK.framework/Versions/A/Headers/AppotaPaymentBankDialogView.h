@@ -7,9 +7,9 @@
 //
 
 #import "AppotaPaymentDialogView.h"
-#import "AppotaGameDropDown.h"
+#import "AppotaDropDown.h"
 
-@interface AppotaPaymentBankDialogView : AppotaPaymentDialogView <AppotaGameDropDownDelegate> {
+@interface AppotaPaymentBankDialogView : AppotaPaymentDialogView <AppotaDropDownDelegate> {
     
     __unsafe_unretained IBOutlet UIButton *chooseBankButton;
     __unsafe_unretained IBOutlet UIImageView *coinImageView;
@@ -17,8 +17,8 @@
     __unsafe_unretained IBOutlet UIButton *choseAmountButton;
     __unsafe_unretained IBOutlet UIButton *dropDownChooseAmountButton;
 
-    AppotaGameDropDown *chooseBankDropDown;
-    AppotaGameDropDown *chooseAmountDropDown;    
+    AppotaDropDown *chooseBankDropDown;
+    AppotaDropDown *chooseAmountDropDown;    
     
     __unsafe_unretained IBOutlet UIButton *payMobileButton;
     __unsafe_unretained IBOutlet UIButton *payPCButton;

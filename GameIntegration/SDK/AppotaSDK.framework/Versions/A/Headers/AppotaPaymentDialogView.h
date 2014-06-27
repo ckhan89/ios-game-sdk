@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "AppotaPopoverView.h"
 #import "AppotaPaymentInfoDetailView.h"
-#import "AppotaPaymentAPI.h"
 @class AppotaPaymentDialog;
 @class AppotaPaymentLoginDialog;
 
@@ -42,16 +41,6 @@
 - (void) setupViewWithListItem:(NSArray*) listPaymentItem
                withDescription:(NSString*) description
                     withDialog:(AppotaPaymentDialog*) paymentDialog;
-
-- (void) setupViewWithPaymentObject:(id) paymentObject
-                          withState:(NSString*) state
-                         withTarget:(NSString*) target
-                      withNoticeURL:(NSString*) noticeUrl
-                    withDescription:(NSString*) description
-                         withDialog:(AppotaPaymentDialog*) paymentDialog
-                        withHandler:(AppotaObjectHandler) handler;
-;
-
 - (void) closePaymentView;
 - (AppotaPaymentLoginDialog*) getDialog;
 

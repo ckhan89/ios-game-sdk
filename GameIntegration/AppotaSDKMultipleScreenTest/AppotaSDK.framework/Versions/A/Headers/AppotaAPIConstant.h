@@ -10,7 +10,7 @@
 #define AppotaSDK_AppotaAPIConstant_h
 
 //#define NOUI_LOGIN NO
-#define APPOTA_GAME_TEST YES
+
 
 #define APPOTA_SCHEMA @"appota"
 #define APPOTA_DRAGVIEW_TAG 1428
@@ -46,8 +46,6 @@
 #define PAYMENT_DETAIL @"https://pay.appota.com/payment/detail?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_CONFIRM @"https://api.appota.com/payment/confirm?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define PAYMENT_RESEND @"https://api.appota.com/paypal/resend_mail?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
-#define PAYMENT_INAPP_EWALLET @"https://api.appota.com/payment/inapp_ewallet?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
-#define PAYMENT_VERIFY_OPT @"https://api.appota.com/payment/verify?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 
 #define CHECK_UPDATE_URL @"https://api.appota.com/client/check_version?api_key=<ACCESS_TOKEN>"
 
@@ -56,8 +54,8 @@
 
 #define AVAIABLE_STORE_URL @"http://api.appota.com/client/checkavaionstore"
 
-#define APPOTA_SDK_VERSION @"4.0"
-#define APPOTA_SDK_BUILD 40
+#define APPOTA_SDK_VERSION @"1.0"
+#define APPOTA_SDK_BUILD 23
 
 #define ITEM_INAPP_LIST @"https://api.appota.com/item/get_list?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"
 #define ITEM_INAPP_CHECKBOUGHT_LIST @"https://api.appota.com/item/bought?access_token=<ACCESS_TOKEN>&lang=<LANG_SETTING>"

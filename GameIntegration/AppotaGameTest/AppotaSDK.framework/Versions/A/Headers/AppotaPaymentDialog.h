@@ -64,6 +64,9 @@
                               withNoticeUrl:(NSString*) noticeUrl
                               enableDialog:(BOOL) enableDialog
                                 withHandler:(AppotaPaymentHandler) handler;
+//- (void) showPaypalPaymentDialogWithListAmount:(NSArray*) listAmount
+//                         withDescriptionString:(NSString*) descriptionString
+//                                   withHandler:(AppotaPaymentHandler)handler;
 
 - (void) showPaypalPaymentDialogWithListItem:(NSArray*) listAmount
                                    withState:(NSString*) state
@@ -106,10 +109,6 @@
                               withNoticeUrl:(NSString*) noticeUrl
                       withDescriptionString:(NSString*) descriptionString
                                 withHandler:(AppotaPaymentHandler)handler;
-
-#pragma mark - View function
-- (void) setAppPaymentFrame;
-- (void) addPaymentViewToDiaglog:(UIView*) paymentView;
 #pragma mark - IBAction
 - (void) resendPaypal:(id) sender;
 - (void) confirmPaypal:(id) sender;

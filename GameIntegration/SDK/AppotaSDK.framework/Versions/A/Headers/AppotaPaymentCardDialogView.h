@@ -7,10 +7,10 @@
 //
 
 #import "AppotaPaymentDialogView.h"
-#import "AppotaGameDropDown.h"
+#import "AppotaDropDown.h"
 #import "AppotaPaymentInfoDetailView.h"
 
-@interface AppotaPaymentCardDialogView : AppotaPaymentDialogView <AppotaGameDropDownDelegate, UITextFieldDelegate>
+@interface AppotaPaymentCardDialogView : AppotaPaymentDialogView <AppotaDropDownDelegate, UITextFieldDelegate>
 {
     __unsafe_unretained IBOutlet UIView *paymentDetailBackGroundView;
     __unsafe_unretained IBOutlet UITextField *serialTextField;
@@ -20,7 +20,9 @@
     __unsafe_unretained IBOutlet UIImageView *codeTextFieldImageView;
     __unsafe_unretained IBOutlet UIButton *payButton;
     
-    AppotaGameDropDown *chooseVendorDropdown;
+    AppotaDropDown *chooseVendorDropdown;
+    NSArray *listPhoneCard;
+    NSArray *listPhoneCardVendor;
 }
 
 

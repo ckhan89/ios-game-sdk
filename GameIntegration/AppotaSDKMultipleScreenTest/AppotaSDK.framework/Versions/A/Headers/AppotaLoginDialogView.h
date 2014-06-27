@@ -39,6 +39,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *usernameImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *passwordTextField;
-
+- (void) showRegisterView;
 - (void) googleLoginWithToken:(NSString*) ggToken;
 @end

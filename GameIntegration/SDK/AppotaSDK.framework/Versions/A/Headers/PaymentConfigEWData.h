@@ -6,8 +6,8 @@
 //
 //
 
-#import "AppotaObjectData.h"
+#import "ObjectData.h"
 
-@interface PaymentConfigEWData : AppotaObjectData
+@interface PaymentConfigEWData : ObjectData
 
 @end

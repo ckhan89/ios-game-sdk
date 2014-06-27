@@ -58,10 +58,6 @@ typedef enum {
 } AppotaTopupErrorCode;
 
 /*
- Event handler trả về giá trị của object
- */
-typedef void (^AppotaObjectHandler) (id object);
-/*
  * Event handler cho kết quả trả về của Appota API
  */
 typedef void(^AppotaPaymentHandler)(NSDictionary *apiDict, AppotaPaymentState status, NSError *error);

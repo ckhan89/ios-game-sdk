@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppotaOHAttributedLabel.h"
+#import "OHAttributedLabel.h"
 
 @class AppotaPayment;
 @interface AppotaSMSDialogCell : UIButton {
@@ -20,8 +20,8 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *sendLabel;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *smsNumberLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet AppotaOHAttributedLabel *smsMoneyLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet AppotaOHAttributedLabel *smsCoinLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet OHAttributedLabel *smsMoneyLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet OHAttributedLabel *smsCoinLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *coinImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *backGroundImageView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *coinBackGroundImageView;

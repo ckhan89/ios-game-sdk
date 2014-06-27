@@ -38,6 +38,7 @@
 		364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFE182484BE00187DD5 /* AdSupport.framework */; };
 		366B517618EA9A1700D6D980 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B517518EA9A1700D6D980 /* AppotaSDK.framework */; };
 		366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B580B1831D0C0002EBEFE /* CoreMedia.framework */; };
+		369FD209195D33FD002544B2 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369FD208195D33FD002544B2 /* Twitter.framework */; };
 		36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F051831CF4500C0653F /* GoogleOpenSource.framework */; };
 		36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36E76F061831CF4500C0653F /* GooglePlus.bundle */; };
 		36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F071831CF4500C0653F /* GooglePlus.framework */; };
@@ -88,6 +89,7 @@
 		364D1FFE182484BE00187DD5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		366B517518EA9A1700D6D980 /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
 		366B580B1831D0C0002EBEFE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		369FD208195D33FD002544B2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		36E76F051831CF4500C0653F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		36E76F061831CF4500C0653F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		36E76F071831CF4500C0653F /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369FD209195D33FD002544B2 /* Twitter.framework in Frameworks */,
 				366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */,
 				364D1FF11824845C00187DD5 /* CoreVideo.framework in Frameworks */,
 				366B517618EA9A1700D6D980 /* AppotaSDK.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		364D1FB41824827600187DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				369FD208195D33FD002544B2 /* Twitter.framework */,
 				366B517518EA9A1700D6D980 /* AppotaSDK.framework */,
 				36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */,
 				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,

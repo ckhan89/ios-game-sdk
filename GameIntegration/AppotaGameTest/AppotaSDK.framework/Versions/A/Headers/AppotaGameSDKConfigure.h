@@ -37,8 +37,14 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 #endif
 
+typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
+
 
 @protocol AppotaGameSDKConfigureDelegate <NSObject>
+
+@optional
+- (void) didFinishRegister:(NSDictionary*) userInfoDict;
+
 @required
 /*
  * Callback after login
@@ -80,6 +86,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     BOOL isUsingPrivateUserSystem;
     BOOL isUsingWebLoginSystem;
     BOOL isSignOutSession;
+    BOOL isIphoneOnly;
     
     NSMutableArray *listPayment;
     NSString *noticeUrl;
@@ -100,6 +107,7 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
     NSArray *appotaInitPaymentMethod;
 }
 
+@property (nonatomic, strong) AppotaLoginRequestHandler loginHandler;
 @property (nonatomic, unsafe_unretained) id<AppotaGameSDKConfigureDelegate> delegate;
 
 #pragma mark - Public method
@@ -137,17 +145,11 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
  */
 + (void) showPaymentView;
 
-/**
- *  Close payment view function
- *
- *  @return void
- */
-+ (void) closePaymentView;
-
 /*
  * Show login view popup in game view
  */
 + (void) showLoginView;
++ (void) showRegisterView;
 
 /*
  * Show switch user popup in game view
@@ -304,4 +306,9 @@ typedef void(^AppotaLoginRequestHandler)(NSDictionary *apiDict, NSError *error);
 
 - (void)setGoogleTokenDict:(NSDictionary *)newValue;
 
+- (BOOL)isIphoneOnly;
+
+- (void)setIsIphoneOnly:(BOOL)newValue;
+
++ (void) closePaymentView;
 @end

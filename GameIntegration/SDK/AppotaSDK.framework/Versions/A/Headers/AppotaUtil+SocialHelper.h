@@ -16,6 +16,7 @@
                     withHandler:(AppotaResultHandler) handler;
 + (void) loginWithGoogleToken:(NSString*) googleToken
                   withHandler:(AppotaResultHandler) handler;
++ (NSString*) getFacebookTokenFromSession:(id) session;
 #ifdef NOUI_LOGIN
 + (void) loginWithGoogleWebWithHandler:(AppotaLoginRequestHandler) handler;
 #endif

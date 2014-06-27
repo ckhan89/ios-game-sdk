@@ -13,5 +13,4 @@
 + (void) loginAppotaWithGoogleHandler:(AppotaResultHandler) handler;
 + (void) loginAppotaWithFacebookPermission:(NSArray*) permissionList
                                withHandler:(AppotaResultHandler) handler;
-+ (void) loginQuickWithHandler:(AppotaLoginRequestHandler) handler;
 @end
