@@ -38,6 +38,7 @@
 		364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFE182484BE00187DD5 /* AdSupport.framework */; };
 		364F7D171986007B005DF03E /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F7D161986007B005DF03E /* AppotaSDK.framework */; };
 		366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B580B1831D0C0002EBEFE /* CoreMedia.framework */; };
+		369E30EB19B05F1500FE8EC8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369E30EA19B05F1500FE8EC8 /* FacebookSDK.framework */; };
 		369FD209195D33FD002544B2 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369FD208195D33FD002544B2 /* Twitter.framework */; };
 		36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F051831CF4500C0653F /* GoogleOpenSource.framework */; };
 		36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36E76F061831CF4500C0653F /* GooglePlus.bundle */; };
@@ -88,6 +89,7 @@
 		364D1FFE182484BE00187DD5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		364F7D161986007B005DF03E /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
 		366B580B1831D0C0002EBEFE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		369E30EA19B05F1500FE8EC8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		369FD208195D33FD002544B2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		36E76F051831CF4500C0653F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		36E76F061831CF4500C0653F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				364D1FF51824846C00187DD5 /* libxml2.dylib in Frameworks */,
 				364D1FEF1824844F00187DD5 /* MessageUI.framework in Frameworks */,
 				364D1FED1824843D00187DD5 /* libsqlite3.dylib in Frameworks */,
+				369E30EB19B05F1500FE8EC8 /* FacebookSDK.framework in Frameworks */,
 				364D1FEB1824842C00187DD5 /* Security.framework in Frameworks */,
 				364D1FE91824842800187DD5 /* SystemConfiguration.framework in Frameworks */,
 				364D1FE71824842300187DD5 /* CFNetwork.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		364D1FB41824827600187DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				369E30EA19B05F1500FE8EC8 /* FacebookSDK.framework */,
 				364F7D161986007B005DF03E /* AppotaSDK.framework */,
 				369FD208195D33FD002544B2 /* Twitter.framework */,
 				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,
@@ -395,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"/Users/tuent/Work/Deployment/ios-game-sdk/GameIntegration/AppotaGameTest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
@@ -430,6 +435,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"/Users/tuent/Work/Deployment/ios-game-sdk/GameIntegration/AppotaGameTest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
