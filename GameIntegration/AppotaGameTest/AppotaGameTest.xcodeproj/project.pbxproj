@@ -42,7 +42,6 @@
 		36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F051831CF4500C0653F /* GoogleOpenSource.framework */; };
 		36E76F091831CF4500C0653F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 36E76F061831CF4500C0653F /* GooglePlus.bundle */; };
 		36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F071831CF4500C0653F /* GooglePlus.framework */; };
-		36E76F0C1831CF5F00C0653F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */; };
 		36E76F0E1831CF8D00C0653F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0D1831CF8D00C0653F /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		36E76F101831CF9E00C0653F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0F1831CF9E00C0653F /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		36E76F121831CFAE00C0653F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F111831CFAE00C0653F /* AssetsLibrary.framework */; };
@@ -93,7 +92,6 @@
 		36E76F051831CF4500C0653F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		36E76F061831CF4500C0653F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		36E76F071831CF4500C0653F /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
-		36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		36E76F0D1831CF8D00C0653F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		36E76F0F1831CF9E00C0653F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		36E76F111831CFAE00C0653F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -138,7 +136,6 @@
 				364D1FBA1824827600187DD5 /* CoreGraphics.framework in Frameworks */,
 				36E76F081831CF4500C0653F /* GoogleOpenSource.framework in Frameworks */,
 				36E76F0A1831CF4500C0653F /* GooglePlus.framework in Frameworks */,
-				36E76F0C1831CF5F00C0653F /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +174,6 @@
 			children = (
 				364F7D161986007B005DF03E /* AppotaSDK.framework */,
 				369FD208195D33FD002544B2 /* Twitter.framework */,
-				36E76F0B1831CF5F00C0653F /* FacebookSDK.framework */,
 				36E76F051831CF4500C0653F /* GoogleOpenSource.framework */,
 				36E76F061831CF4500C0653F /* GooglePlus.bundle */,
 				36E76F071831CF4500C0653F /* GooglePlus.framework */,

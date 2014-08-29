@@ -131,7 +131,7 @@ Config AppotaGameSDK after setting up windows in Appdelegate (Reference *AppotaG
 	* +*showLoginView*: Manualy show login view from your game, can be implemented your button click
 	* +*showSwitchUserView*: Manualy show switchuser view from your game, can be implemented your button click	
 	* *showPaymentButton, hidePaymentButton*: Show and hide floating button (like headchat) of AppotaSDK in your game
-	* *setPaymentState*: Set alternative payment state before you showPaymentView, so you can handle more user info (server name, game status, …) in your IPN
+	* *setPaymentState*: Set alternative payment state before you showPaymentView, so you can handle more user info (server name, game status, …) in your IPN, for example you have a player name "appota", play in serve 1, level 100 => you can call: *[AppotaGameSDKConfigure sharedGameConfig] setPaymentState:@"appota_1_100"]* , state will be passed to your [IPN server](https://github.com/appota/ios-game-sdk/wiki) to make a suitable charge for player "appota" level 100 server 1
 	* +*sharedGameConfig*: Singleton shared instance of AppotaGameSDKConfigure
 	* +(NSDictionary): getUserInfo* Return userinfo (acces_token, username, email, …) in NSDictionary
 	* +(NSString): getUserName return username

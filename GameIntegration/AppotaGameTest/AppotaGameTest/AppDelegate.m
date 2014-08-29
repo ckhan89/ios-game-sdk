@@ -42,15 +42,29 @@
                                     withNoticeUrl:@"http://api.appota.com/notice_url"
                                     withConfigUrl:@"http://api.appota.com/config_file/config.json"
      ];
-#warning Set up auto show payment button and login dialog here, by default autoShowPaymentButton and autoShowLoginDialog are YES
-//    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
-//    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
+    /**
+     *  Automatically login dialog will show after config
+     *  If you want to show login manually you can set
+     *  [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
+     *  And then call [AppotaGameSDKConfigure showLoginView] at suitable circumstance
+     */
+    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = YES;
+    
+    /**
+     *  Automatically floating payment button will show after config
+     *  If you want to hide you can set
+     *  [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = NO;
+     *  Or call [AppotaGameSDKConfigure hidePaymentButton] at suitable circumstance
+     */
+    [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = YES;
+    
+    [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
     
     [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com";
-    [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
+    
     [AppotaGameSDKConfigure sharedGameConfig].isShowCloseLoginView = YES;
-    [AppotaGameSDKConfigure sharedGameConfig].delegate = self;
-//    [[AppotaGameSDKConfigure sharedGameConfig] setJsonConfigUrl:@"http://pay.thienha.mobi/YNGameSDK/Android.html"];
+    
+    [AppotaGameSDKConfigure sharedGameConfig].delegate = self;    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
