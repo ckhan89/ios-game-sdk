@@ -8,12 +8,10 @@
 
 #import <AppotaSDK/AppotaSDK.h>
 #import <MessageUI/MessageUI.h>
-#import "PayPalMobile.h"
 
 @class AppotaPaymentDialogView;
 @class AppotaPaymentController;
-@interface AppotaPaymentDialog : AppotaPaymentSDKDialog <PayPalPaymentDelegate> {
-    PayPalPaymentViewController *pppViewController;
+@interface AppotaPaymentDialog : AppotaPaymentSDKDialog {
     AppotaPaymentDialogView *appotaPaymentView;
     NSMutableArray *listPaymentController;
     AppotaPaymentHandler paymentHandler;
@@ -30,7 +28,6 @@
     NSString *paymentInAppID;
     BOOL enableDialog;
 }
-@property(nonatomic, strong, readwrite) PayPalPayment *completedPaypalPayment;
 
 - (UIViewController*) getSMSContentViewController;
 
