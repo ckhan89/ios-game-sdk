@@ -149,3 +149,4 @@ User login flow using Appota SDK
 Payment flow using Appota SDK
 
 For more detail about this flow, please refer to Wiki: https://github.com/appota/ios-game-sdk/wiki
+For more detail about User Integration and Sandbox mode please visit: https://developer.appota.com/docs/integrated_user.html
