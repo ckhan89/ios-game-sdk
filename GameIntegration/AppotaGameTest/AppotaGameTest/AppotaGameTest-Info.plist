@@ -22,7 +22,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.appstorevn.sdkexample2</string>
+	<string>com.appstorevn.sdkexample</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -39,7 +39,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.appstorevn.sdkexample2</string>
+			<string>com.appstorevn.sdkexample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb435546253225772</string>
