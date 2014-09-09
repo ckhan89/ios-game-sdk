@@ -11,7 +11,7 @@
 #define NOUI_LOGIN YES
 #define CLIENT_ID           @"e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc"
 #define CLIENT_SECRET       @"060f9c20e5259e2462f1cc00c15c6f93051f0a4fc"
-#define INAPP_API_KEY       @"1e1aa54ce3c646d8f6456558434d9475051f74156"
+#define INAPP_API_KEY       @"3784f361d29f4a175d0877aac7ed8280053ae30a2"
 
 /*
  * SANDBOX_ID will be used when app's not been published yet
@@ -40,7 +40,7 @@
                                   withInAppAPIKey:INAPP_API_KEY
                                         withState:@"game_state"
                                     withNoticeUrl:@"http://api.appota.com/notice_url"
-                                    withConfigUrl:@"http://api.appota.com/config_file/config.json"
+                                    withConfigUrl:@"https://developer.appota.com/config.php"
      ];
     /**
      *  Automatically login dialog will show after config
