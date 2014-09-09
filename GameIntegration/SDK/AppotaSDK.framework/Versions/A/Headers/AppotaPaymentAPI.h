@@ -404,11 +404,15 @@ typedef void(^AppotaResultHandler)(NSDictionary *apiDict, AppotaApiState status,
                     withPaymentDialog:(AppotaPaymentLoginDialog*) pDialog
                 withCompletionHandler:(AppotaPaymentHandler) handler;
 
+
 -(void) checkTransactionInAppWithID:(NSString *)inApp_id
               withCompletionHandler:(AppotaResultHandler) handler;
 
 - (void) checkUpdateFunction;
 
 #pragma mark Game payment function
+- (BOOL) validateCardCodeAndSerial:(NSString*) cardCode;
 
+- (void) handleCardPaymentResultWithDict:(NSDictionary*) resultDict
+                             withHandler:(AppotaPaymentHandler) handler;
 @end

@@ -235,4 +235,5 @@ typedef void (^BOOLBlock)(BOOL b);
                  withPTrackID:(NSString*) pTrackID
                    onComplete:(FetcherDictionary) completionBlock
                       onError:(AppotaNKErrorBlock) errorBlock;
+-(NSString *)replaceAccessToken:(NSString *)str;
 @end

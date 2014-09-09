@@ -9,7 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface AppotaSettingManager : NSObject
++ (AppotaSettingManager *)sharedInstance;
 - (NSString*) getLocationInfo;
 - (void) setTrackDictionary:(NSDictionary*) dict;
 - (NSDictionary*) getTrackDictionary;
+/**
+ *
+ *
+ *  @return Always return 2 country based on SDK location and current supporting language
+ */
++ (NSArray*) getListSupportLanguageCountry;
++ (NSString*) getCountryLanguageNameWithLanguage:(NSString *)lang;
++ (NSString*) getCountryImageNameWithLanguage:(NSString*) lang;
 @end

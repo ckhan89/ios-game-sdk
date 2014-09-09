@@ -48,6 +48,7 @@
 + (NSDictionary*) getAttributeFontDictionaryWithFontSize:(float) fontSize
                                                 fontName:(NSString*) fontName;
 
++ (void) setLanguageForView:(UIView*) v enablePrevBundle:(BOOL) enablePrevBundle;
 + (void) setLanguageForView:(UIView*) v;
 + (void) deleteLinkedDeviceUserInfo:(NSDictionary*) userInfoDict;
 + (NSDictionary*) getRemoteConfigDict;

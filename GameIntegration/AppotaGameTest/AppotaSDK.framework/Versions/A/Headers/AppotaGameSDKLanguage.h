@@ -11,8 +11,10 @@
 @interface AppotaGameSDKLanguage : NSObject
 
 +(void)initialize;
++ (void) setLanguage:(NSString *)l fromLang:(NSString*) fromLang;
 +(void)setLanguage:(NSString *)l;
 +(NSString *)get:(NSString *)key alter:(NSString *)alternate;
 +(NSString *)get:(NSString *)key;
 +(NSString*) getLanguage;
++(NSString *)get:(NSString *)key enablePreviousBundle:(BOOL) enablePreviousBundle;
 @end

@@ -8,10 +8,12 @@
 
 #import <AppotaSDK/AppotaSDK.h>
 #import <MessageUI/MessageUI.h>
+//#import "PayPalMobile.h"
 
 @class AppotaPaymentDialogView;
 @class AppotaPaymentController;
-@interface AppotaPaymentDialog : AppotaPaymentSDKDialog {
+@interface AppotaPaymentDialog : AppotaPaymentSDKDialog{
+//    PayPalPaymentViewController *pppViewController;
     AppotaPaymentDialogView *appotaPaymentView;
     NSMutableArray *listPaymentController;
     AppotaPaymentHandler paymentHandler;
@@ -28,6 +30,7 @@
     NSString *paymentInAppID;
     BOOL enableDialog;
 }
+//@property(nonatomic, strong, readwrite) PayPalPayment *completedPaypalPayment;
 
 - (UIViewController*) getSMSContentViewController;
 
@@ -46,6 +49,9 @@
 - (void) addPaymentController:(AppotaPaymentController*) controller;
 //- (void) showSMSPaymentDialog;
 //- (void) showPaypalPaymentDiaglog;
+
+- (void) showUnPINPaymentDialogWithDescription:(NSString*) descriptionString
+                                   withHandler:(AppotaPaymentHandler) handler;
 
 - (void) showCardPaymentDialogWithDescription:(NSString*) descriptionString
                                   withHandler:(AppotaPaymentHandler) handler;
@@ -109,6 +115,7 @@
 #pragma mark - IBAction
 - (void) resendPaypal:(id) sender;
 - (void) confirmPaypal:(id) sender;
+- (void) payUnPINAction:(id) sender;
 - (void) payCardAction:(id) sender;
 - (void) clickChooseItem:(id) sender;
 - (void) clickChooseMessage:(id) sender;
