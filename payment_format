@@ -23,7 +23,7 @@ Apple:
 
 Card, Bank, SMS::
 {
-	"status":true,
+	"status":1,
 	"error_code":0,
 	"data":{
 		"transaction_id":"7852299B79BB6E8",
