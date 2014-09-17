@@ -394,7 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: APPOTA CORPORATION";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: APPOTA CORPORATION";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -406,7 +406,7 @@
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AppotaGameTest/Library\"",
@@ -431,7 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: APPOTA CORPORATION";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: APPOTA CORPORATION";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -443,7 +443,7 @@
 				GCC_PREFIX_HEADER = "AppotaGameTest/AppotaGameTest-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "AppotaGameTest/AppotaGameTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AppotaGameTest/Library\"",

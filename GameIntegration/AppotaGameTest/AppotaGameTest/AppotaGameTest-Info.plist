@@ -52,8 +52,14 @@
 	<string>1.0</string>
 	<key>FacebookAppID</key>
 	<string>435546253225772</string>
+	<key>GOOGLE_CLIENT_ID</key>
+	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>TWITTER_CONSUMER_KEY</key>
+	<string>z7C0vyxg4mIg5RQyoifEiQ</string>
+	<key>TWITTER_CONSUMER_SECRET</key>
+	<string>h02yv8NfVgxzpc5ZgO8PoppGEibL4KB8tYPjivZzYQ</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -62,12 +68,7 @@
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>TWITTER_CONSUMER_KEY</key>
-	<string>z7C0vyxg4mIg5RQyoifEiQ</string>
-	<key>TWITTER_CONSUMER_SECRET</key>
-	<string>h02yv8NfVgxzpc5ZgO8PoppGEibL4KB8tYPjivZzYQ</string>
-	<key>GOOGLE_CLIENT_ID</key>
-	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
 </dict>
 </plist>
