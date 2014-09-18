@@ -48,7 +48,7 @@
      *  [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
      *  And then call [AppotaGameSDKConfigure showLoginView] at suitable circumstance
      */
-    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = YES;
+    [AppotaGameSDKConfigure sharedGameConfig].autoShowLoginDialog = NO;
     
     /**
      *  Automatically floating payment button will show after config

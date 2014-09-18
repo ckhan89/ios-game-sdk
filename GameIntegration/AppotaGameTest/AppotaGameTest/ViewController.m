@@ -18,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *loginTitle = [AppotaGameSDKConfigure checkUserLogin] ? @"Logout" : @"Login";
+    [self.logInOutButon setTitle:loginTitle forState:UIControlStateNormal];    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
