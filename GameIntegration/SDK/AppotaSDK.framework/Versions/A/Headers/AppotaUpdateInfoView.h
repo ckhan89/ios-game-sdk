@@ -22,6 +22,8 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *emailTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *updateButton;
+@property (strong, nonatomic) IBOutlet UITextField *ocPasswordTextField;
+@property (strong, nonatomic) IBOutlet UIImageView *ocPasswordBackgroundImageView;
 - (void) updateUIWithResult:(NSDictionary*) loginDict;
 - (IBAction)updateButtonClick:(id)sender;
 @property (unsafe_unretained, nonatomic) IBOutlet UITextView *warningTextView;

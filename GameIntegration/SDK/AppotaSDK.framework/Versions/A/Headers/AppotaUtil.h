@@ -38,6 +38,8 @@
                           withSMSStructureDict:(NSDictionary*) smsDict;
 + (NSArray*) getListSMSOptionWithSMSPayment:(NSArray*) listSMSPayment
                        withSMSStructureDict:(NSDictionary*) smsDict;
++ (BOOL) verifyPhoneNumber:(NSString*) phoneNumber
+                 withAlert:(BOOL) enableAlert;
 +(void) alertWithTitle:(NSString*) alertTitle
            withMessage:(NSString*) alertMessage;
 + (UIView*) getSMSViewWithText:(NSString*) smsText
