@@ -15,8 +15,7 @@
 @class AppotaPaymentLoginDialog;
 @class AppotaGamePaymentDialogView;
 @class AppotaGameView;
-@protocol GPPSignInDelegate;
-@interface AppotaUtil : NSObject<GPPSignInDelegate> {
+@interface AppotaUtil : NSObject{
     
 }
 +(AppotaUtil *)sharedUtil;

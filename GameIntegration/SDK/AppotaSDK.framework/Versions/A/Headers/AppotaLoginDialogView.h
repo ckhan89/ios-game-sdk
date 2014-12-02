@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AppotaGameView.h"
 
-@protocol GPPSignInDelegate;
 @class AppotaRegisterDialogView;
 
-@interface AppotaLoginDialogView : AppotaGameView <UITextFieldDelegate, GPPSignInDelegate> {
+@interface AppotaLoginDialogView : AppotaGameView <UITextFieldDelegate> {
     AppotaRegisterDialogView *registerView;
 }
 
