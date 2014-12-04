@@ -82,7 +82,7 @@ Sử dụng class AppotaGameSDKConfigure để cấu hình SDK.
     ];
 ```
 
-Để tích hợp cho phép đăng nhập bằng tài khoản Facebook, Google, Twitter vui lòng theo các chỉ dẫn của từng SDK. Đối với FacebookSDK cấu hình Info.plist và *FacebookAppId*, đối với Google SDK cấu hình *GOOGLE_CLIENT_ID* và *GOOGLE_CLIENT_SECRET* (tham khảo [AppotaGameTest](GameIntegration/AppotaGameTest)).
+Để tích hợp cho phép đăng nhập bằng tài khoản Facebook, Google, Twitter vui lòng theo các chỉ dẫn của từng SDK. Đối với FacebookSDK cấu hình Info.plist và *FacebookAppID*, đối với Google SDK cấu hình *GOOGLE_CLIENT_ID* và *GOOGLE_CLIENT_SECRET* (tham khảo [AppotaGameTest](GameIntegration/AppotaGameTest)).
 Thông tin chi tiết cấu hình Facebook login, Google login tại
 * [Cấu hình Facebook Login](FBLOGIN_INTEGRATION_EN.md)
 * [Cấu hình Google Login](GGLOGIN_INTEGRATION.md)
