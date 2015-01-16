@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GOOGLE_CLIENT_ID</key>
-	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
-	<key>GOOGLE_CLIENT_SECRET</key>
-	<string>pm9A54oKzsqLMOWZBzichjCL</string>
+	<key>AppotaClientId</key>
+	<string>e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -35,8 +33,6 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>AppotaClientId</key>
-	<string>e8a1ffd03bfe5d401d875df633cd43eb051f0a4fc</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -56,12 +52,12 @@
 	<string>1.0</string>
 	<key>FacebookAppID</key>
 	<string>435546253225772</string>
+	<key>GOOGLE_CLIENT_ID</key>
+	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
+	<key>GOOGLE_CLIENT_SECRET</key>
+	<string>pm9A54oKzsqLMOWZBzichjCL</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>TWITTER_CONSUMER_KEY</key>
-	<string>z7C0vyxg4mIg5RQyoifEiQ</string>
-	<key>TWITTER_CONSUMER_SECRET</key>
-	<string>h02yv8NfVgxzpc5ZgO8PoppGEibL4KB8tYPjivZzYQ</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
