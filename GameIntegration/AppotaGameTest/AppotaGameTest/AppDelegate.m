@@ -58,9 +58,7 @@
      */
     [AppotaGameSDKConfigure sharedGameConfig].autoShowPaymentButton = YES;
     
-    [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;
-    
-    [AppotaGameSDKConfigure sharedGameConfig].googleClientId = @"381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com";
+    [AppotaGameSDKConfigure sharedGameConfig].isOnlyOpenProfile = YES;    
     
     [AppotaGameSDKConfigure sharedGameConfig].isShowCloseLoginView = YES;
     
