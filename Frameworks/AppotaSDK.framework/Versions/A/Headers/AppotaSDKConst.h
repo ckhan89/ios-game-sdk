@@ -11,13 +11,8 @@
 
 
 #define AppotaSDK_DEBUG NO
-
-//#ifdef AppotaSDK_DEBUG
-//#define OCLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-//#ifndef AppotaSDK_DEBUG
-//#define OCLog(fmt, ...)
-//#endif
-//#endif
+//#define APPOTA_BUILD_UNITY
+//#define APPOTA_BUILD_ANE
 
 typedef void (^AppotaSDKStringBlock)(NSString *returnString);
 typedef void (^AppotaSDKArrayBlock)(NSArray *list);
@@ -86,7 +81,6 @@ typedef void (^AppotaSDKObjectHandler) (id object, NSError *error);
 #define DEBUG_APPOTA_RESOURCE NO
 
 #define APPOTA_LOG NO
-//#define APPOTA_BUILD_UNITY
 
 // Device Macro"Giao dịch thất bại" = "Transaction failed";
 
@@ -115,8 +109,6 @@ typedef void (^AppotaSDKObjectHandler) (id object, NSError *error);
 #define IS_LANDSCAPE ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft)
 #define LANDSCAPE_RIGHT ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight)
 #define LANDSCAPE_LEFT ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft)
-
-
 
 
 
