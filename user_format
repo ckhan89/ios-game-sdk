@@ -1,0 +1,12 @@
+UserInfo format (JSON - NSDictionary)
+{
+        token =     {
+                    "access_token" = 657fe1b91d56f821239231c862053200a62;
+                    "expires_in" = "2015-03-12 20:18:58 GMT+7";
+                    "refresh_token" = 621809d22fa77940a5c198b7b053200a62;
+                    "token_type" = Bearer;
+                      };
+            "user_id" = 9999;
+            username = appota0;
+}
+

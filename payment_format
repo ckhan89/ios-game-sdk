@@ -1,0 +1,46 @@
+Format JSON - NSDictionary
+Payment failed will return error_code != 0 and a messsage
+
+Apple:
+{
+	data =     {
+		        "product_id" = "apple_product_id";
+	};
+	"error_code" = 0;
+    status = 1;
+    transaction =     {
+        inapp =         {
+            amount = "0.99";
+            currency = USD;
+            method = APPLE;
+        };
+        status = 1;
+        time = "11:27:32 02/12/2014";
+        "transaction_id" = 7452FAF834A4E0D;
+        type = INAPP;
+    };
+}
+
+Card, Bank, SMS::
+{
+	"status":1,
+	"error_code":0,
+	"data":{
+		"transaction_id":"7852299B79BB6E8",
+		"type":"CARD",
+		"amount":10000,
+		"currency":"VND",
+		"country_code":"VN",
+		"target":"TARGET",
+		"state":"TARGET",
+		"time":1365044645,
+        "sandbox":0
+	},
+	"message":"Successful!",
+}
+
+
+
+
+
+
