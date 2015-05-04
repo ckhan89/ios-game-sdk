@@ -1,0 +1,582 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Version 4 of the Appta Game SDK for iOS</title>
+
+</head>
+<body>
+<h1>Version 4 of the Appta Game SDK for iOS</h1>
+
+<p><b> Version 4 of the Appota Game for iOS has been published in this reposity and in Developer Preview. Version 3 will continue to be available in our <a href="https://github.com/appota/ios-game-sdk3">appota-ios-game-sdk3</a> repository. If you upgrade from SDK3 to SDK4 please check our <a href="Upgrade.md">Upgrade Document</a> </b></p>
+
+<h2>Highlights</h2>
+
+<ul>
+<li><strong>Appota Login</strong> Support multiple login methods Appota, Google, Facebook, Twitter, Guest.</li>
+<li><strong>Appota Payment</strong> Support mutiple payment methos SMS, Card, E-Bank, Apple Payment.</li>
+<li><strong>Appota Analytics</strong> A service for collecting, visualizing, and understanding user and app data (session, active, error log, ...) at scale.</li>
+<li><strong>Push Notification</strong> on multiple platforms (iOS, Android, WP).</li>
+</ul>
+
+
+<h2>Overview</h2>
+
+<ol>
+<li><a href="#head1-integrate-sdk">Integrate SDK</a></li>
+<li><a href="#head1-client-api">Client API</a>
+
+<ul>
+<li><a href="#head2-init-sdk">Init and setup SDK</a></li>
+<li><a href="#head2-user-function">User function</a></li>
+<li><a href="#head2-payment-function">Payment function</a></li>
+<li><a href="#head2-analytic-function">Analytic function</a></li>
+<li><a href="#head2-push-notification-function">Push notification function</a></li>
+</ul>
+</li>
+<li><a href="#head1-class-document">Class document</a></li>
+<li><a href="#head1-faq">FAQ and Glossary</a></li>
+</ol>
+
+
+<h2>1. Integrate SDK <a name = "head1-integrate-sdk"> </a></h2>
+
+<p>The <a href="Sample/">sample apps</a> are standalone projects that are already set up for you. You can also integrate the SDK for iOS with an existing application.</p>
+
+<h3>1.1. Prerequisites <a name = "head2-prerequisites">  </a></h3>
+
+<p>To get started with the Appota Game SDK for iOS, you can set up the SDK and start building a new project, or you can integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.</p>
+
+<p>The Appota Game SDK for iOS supports the following versions of software:</p>
+
+<ul>
+<li>Xcode 6 and later</li>
+<li>iOS 5.1.1 and later</li>
+</ul>
+
+
+<h3>1.2. Obtain app api key and client key <a name="head2-obtain-app-api-key-and-client-key"> </a></h3>
+
+<ul>
+<li>Retreive Appota app information <code>ClientKey</code>, <code>APIKey</code>, <code>ClientSecret</code> from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should <a href="https://developer.appota.com/manage-content.html">create a new app</a> then retreive app information from developer dashboard.</li>
+<li>Retreive Facebook Application ID.   <a name="head3-facebook-appid"> </a><br/>
+<a href="https://developers.facebook.com/docs/ios/getting-started">Detail about how to create ,retreive and setup Facebook app info for iOS</a>. If you can not access Facebook Developer page, please contact our support (sale@appota.com) to get the application id.</li>
+<li>Retreive Google Client ID and Client Secret. <a name="head3-google-appid"> </a> <br/>
+Create new project from <a href="https://console.developers.google.com">https://console.developers.google.com</a>, in <code>API &amp; Auth-Credentials</code> add iOS support and get ClientID and ClientSecret. If you can not access Google Developer page, please contact our support (sale@appota.com) to get the application id and secret.</li>
+</ul>
+
+
+<h3>1.3. Configure your XCode Project <a name="head2-configure-your-xcode-project"> </a></h3>
+
+<h4>1.3.1. Add the Appota iOS SDK</h4>
+
+<p> Open <a href="Frameworks/">ios-game-sdk/Frameworks</a> and add <a href="Frameworks/AppotaSDK.framework">AppotaSDK.framework</a>, <a href="Frameworks/AppotaBundle.bundle">AppotaBundle.bundle</a>, <a href="Frameworks/Facebook.framework">Facebook.framework</a> to your project. (Remember to choose <strong>Create groups for any added folders</strong> and select <strong>Copy items into destination group's folder (if needed)</strong>)  <br/>
+<img src="images/add_framework.gif" alt="" /></p>
+
+<h4>1.3.2. Add framework dependencies and setting</h4>
+
+<p>Select your project from the Project Navigator, and choose your application's target.<br/>
+Open <strong>Build Phases</strong> tab, within <strong>Link Binary with Libraries</strong>, add the following frameworks:</p>
+
+<ul>
+<li><code>StoreKit.framework</code></li>
+<li><code>Accounts.framework</code></li>
+<li><code>Social.framework</code></li>
+<li><code>Twitter.framework</code></li>
+<li><code>Adsupport.framework</code></li>
+<li><code>ImageIO.framework</code></li>
+</ul>
+
+
+<p>Open <strong>Build Settings</strong>, find <strong>Other Linker Flags</strong>, add <code>-ObjC</code> then check if <strong>Link Frameworks Automatically</strong>, <strong>Enable Modules (C and Objectivce-C))</strong> are set to <code>YES</code></p>
+
+<h4>1.3.3. Configure the Info <code>.plist</code></h4>
+
+<ul>
+<li>Open Info <code>plist</code> section add <code>FacebookAppID</code> key with value is your <a href="#head3-facebook-appid">Facebook AppID</a>.</li>
+<li>Open Info <code>plist</code> section add <code>GOOGLE_CLIENT_ID</code> and <code>GOOGLE_CLIENT_SECRET</code> key with value is your <a href="#head3-google-appid">Google Client Id and Sceret</a>.</li>
+<li>Open Info <code>plist</code> section add <code>AppotaAPIKey</code> key with value is your <a href="#head3-appota-appid">Appota APIKey</a>.</li>
+<li>Add url schemes:
+
+<ul>
+<li>Identifier Appota, URL Schemes: <code>appotaYOUR_CLIENT_KEY</code>, <a href="#head3-appota-appid">Appota Client Key</a> can be retreived from developer portal</li>
+<li>Identifier Facebook, URL Schemes: <code>fbYOUR_FACEOOK_APP_ID</code>, <a href="#head3-facebook-appid">Facebook AppID</a> can be retreived from Facebook App Dashboard</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The finished <code>.plist</code> should look like this or check the <a href="Sample/AppotaGameSDKV4Test/AppotaGameSDKV4Test/Info.plist">sample apps</a> for plist configuration</p>
+
+<p><img src="images/plist.png" height="250" width="500" alt="" /></p>
+
+<h3>1.4. Upgrade SDK3 to SDK4</h3>
+
+<p>There are some API and flow change in SDK4 with SDK3. Please review our <a href="Upgrade.md">Upgrade Document</a> to upgrade your app</p>
+
+<h2>2. Client API <a name="head1-client-api"> </a></h2>
+
+<h3>2.1 Init and setup SDK <a name = "head2-init-sdk"> </a></h3>
+
+<p>Related class and function:<br/>
+<a href="class-documents/AppotaGameSDK-class">AppotaGameSDK clas - init function</a><br/>
+Appota SDK init must be called once when application start via <a href="SDK">AppotaGameSDK</a> class call <code>[AppotaGameSDK configure]</code> so most of the time it will be placed in <code>AppDelegate's</code> method <code>application:didFinishLaunchingWithOptions:</code><br/>
+In <code>AppDelegate.h</code> add import <code>#import &lt;AppotaSDK/AppotaSDK.h&gt;</code> use <code>AppDelegate</code> as protocol:</p>
+
+<pre><code>@interface AppDelegate : UIResponder &lt;UIApplicationDelegate, AppotaGameSDKCallback&gt;
+</code></pre>
+
+<p>In <code>AppDelegate.m</code>:</p>
+
+<pre><code>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{       
+    // Your code is placed above
+    [AppotaGameSDK configure];
+    [AppotaGameSDK sharedInstance].delegate = self; 
+ }
+</code></pre>
+
+<p><strong> Add Appota handle open URL in function</strong>  <code>application:openURL:sourceApplication:annotation:</code></p>
+
+<pre><code>- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [AppotaGameSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+</code></pre>
+
+<p>There are 2 functions to control SDK flows:</p>
+
+<ul>
+<li><code>setKeepLoginSession:(BOOL)</code> <a name="set-keep-login-session"> </a> this function will control the Appota Login Session will be kept or deleted at app lauching (when deleted user has to login again when app start). <br/>
+<strong>Note</strong> If this function is not called, login session will be kept by default.</li>
+<li><code>setAutoShowLoginDialog:(BOOL)</code> <a name="set-auto-show-login-dialog"> </a> this function will control the Appota Login View will be automatically show at app lauching (when user's not logged in) or you have to call <a href="#show-login-view">showLoginView</a> function to show the LoginView.
+<strong>Note</strong> If this function is not called, login view will automatically show at app lauching (when user's not logged in)</li>
+</ul>
+
+
+<h3>2.2. User function <a name="head2-user-function"> </a></h3>
+
+<p>Related class and function:</p>
+
+<ul>
+<li><a href="class-document/AppotaGameSDK-class.html#init-function">AppotaGameSDK- user function</a></li>
+<li><a href="class-document/AppotaUserLoginResult-class.html">AppotaUserLoginResult</a></li>
+<li><a href="class-document/AppotaGameSDKCallback-class.html/user-function">AppotaGameSDKCallback - user function</a></li>
+</ul>
+
+
+<p>Once you've implemented init SDK function, start using login features.</p>
+
+<h4>2.2.1. Show login view <a name = "head2-show-login-view"> </a></h4>
+
+<p>As mentioned above login dialog flow can be controled by function <a href="#set-auto-show-login-dialog">setAutoShowLoginDialog:</a>. Automatically show login view at app launching or manual call <code>showLoginView</code> when you need:</p>
+
+<pre><code>[AppotaGameSDK showLoginView]
+</code></pre>
+
+<p><a name="show-login-view"> </a>
+Appota Login Dialog contains 5 authorization methods: <strong>Facebook</strong>, <strong>Google</strong>, <strong>Twitter</strong>, <strong>Appota User</strong> and <strong>Quick Login</strong>. (For <strong>Quick Login</strong> users have to update their email and password to proceed payment)</p>
+
+<p><img src="images/login_dialog.png" alt="" /></p>
+
+<p>Follow this mechanism for login function, please implement <a href="#did-login-succeed"><code>didLoginSucceed</code></a> callback to authenticate your in-game user.
+<img src="images/login_user_sequence.png" alt="Appota Login Mechanism" /></p>
+
+<h4>2.2.2. User and SDK flow function <a name ="head2-user-flow-sdk-function"> </a></h4>
+
+<p><strong> Check user login </strong> <br/>
+This function return user login status</p>
+
+<pre><code>[AppotaGameSDK checkUserLogin];
+</code></pre>
+
+<hr />
+
+<p><strong> Switch account </strong></p>
+
+<p>Call this function when user logged in will show a login view and allow to login other account. When switch account succeed <code>didLoginSucceed</code> callback will be called again, so please logout your game account and reauthenticate with new switched account.</p>
+
+<pre><code>[AppotaGameSDK switchAccount]
+</code></pre>
+
+<p><img src="images/switch_user_sequence.png" alt="Appota Switch Account Mechanism" /></p>
+
+<p>Follow this mechanism for switch account function, please implement <a href="#did-login-succeed"><code>didLoginSucceed</code></a> to re-authenticate your in-game user with new switched user.</p>
+
+<hr />
+
+<p><strong> Logout </strong><br/>
+When logout succeed <code>didLogout:</code> callback will be called, please logout your game account and call <code>showLoginView</code> to login other account</p>
+
+<pre><code>[AppotaGameSDK logOut]
+</code></pre>
+
+<h4>2.2.3. Handle authentication callbacks <a name = "login-handle-login-response"> </a></h4>
+
+<p>AppotaSDK provide 4 callbacks delegate for login defined in <a href="AppotaGameSDKCallback-class"><code>AppotaGameSDKCallback</code></a>, please implement these functions to <code>Appdelegate.m</code></p>
+
+<p><strong> Note 4 callbacks are all <code>@required</code> to implement </strong></p>
+
+<hr />
+
+<p><strong>Login succeed callback</strong>   <a name="did-login-succeed"> </a><br/>
+Retreive Appota user info from <code>AppotaUserLoginResult</code> then post to your server to verify and create game user. For more detail about user integration on server - <a href="https://github.com/appota/ios-game-sdk/wiki/Integrate-user-system">User Integration</a> and above flow diagrams.</p>
+
+<p><strong>Note</strong> Remember verify Appota UserID, UserName and Access token on your server before procceeding game user integration</p>
+
+<pre><code>- (void) didLoginSucceed:(AppotaUserLoginResult*) userLoginResult
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userLoginResult</td>
+<td><code>userLoginResult</code> is <a href="class-document/AppotaUserLoginResult-class.html">AppotaUserLoginResult</a> object of user information (<code>username</code>, <code>user_id</code>, <code>access_token</code>)</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<p><strong>Login fail callback</strong><br/>
+Callback when login have problems</p>
+
+<pre><code>- (void) didLoginFail;
+</code></pre>
+
+<hr />
+
+<p><strong>Logout callback</strong><br/>
+Callback after user logout with user name, please logout your game account and call <code>showLoginView</code> to login other account</p>
+
+<pre><code>- (void) didLogout:(NSString*) userName
+</code></pre>
+
+<hr />
+
+<p><strong>Close login view callback</strong><br/>
+Callback when user close login view at app launching</p>
+
+<pre><code>- (void) didCloseLoginView;
+</code></pre>
+
+<h3>2.2. Payment function <a name="head2-payment-function"> </a></h3>
+
+<p>Related class and function:</p>
+
+<ul>
+<li><a href="class-document/AppotaGameSDK-class.html#payment-function">AppotaGameSDK - payment function</a></li>
+<li><a href="class-document/AppotaGameSDKCallback-class.html">AppotaGameSDKCallback</a></li>
+<li><a href="class-documents/AppotaUserLoginResult-class.html">AppotaPaymentResult</a></li>
+</ul>
+
+
+<p>Before using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at <a href="https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN">Appota Payment Document</a> and payment configuration at <a href="https://developer.appota.com/manage-content.html">Appota Developer Portal</a>.</p>
+
+<h4>2.2.1. Show payment view <a name="head3-show-payment-view"> </a></h4>
+
+<hr />
+
+<p>You have some methods to show payment view. Each payment view represents one or list of payment package. Each package contains information of game coin amount or in-game package. Find out more about payment package at <a href="#head1-faq">Appota Payment Package</a></p>
+
+<p><strong> Show default list payment view </strong></p>
+
+<p>You can show payment view with default list payment packages (which is configured on <a href="">Appota Developer Portal</a>). This payment view list can show from SDK floating button also.</p>
+
+<pre><code>[AppotaGameSDK showPaymentView]
+</code></pre>
+
+<p><img src="images/list_item.gif" alt="" /></p>
+
+<hr />
+
+<p><strong> Show payment view for a specific package </strong></p>
+
+<p>You can show a specific package depends on your in-game mechanism</p>
+
+<pre><code>[AppotaGameSDK showPaymentViewWithPackageID:];
+</code></pre>
+
+<p><img src="images/one_item.gif" alt="" /></p>
+
+<h4>2.2.2 Handle payment callback <a name="head3-handle-payment-callback"> </a></h4>
+
+<hr />
+
+<p>Every payment success will callback in <code>AppotaGameSDK</code> delegate (setup in <a href="#head2-init-sdk">init function</a>). The callback functions should be in <code>AppDelegate.m</code>
+There are 2 <code>@required</code> callback function defined in <a href="AppotaGameSDKCallback-class">AppotaGameSDKCallback</a></p>
+
+<p><strong> Callback after a successful payment </strong></p>
+
+<p>Depends on your payment machenism, proceed payment verification or alert payment success for user</p>
+
+<pre><code>- (void) didPaymentSuccessWithResult:(AppotaPaymentResult*) paymentResult withPackage:(NSString *) packageID;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>paymentResult</code></td>
+<td><code>paymentResult</code> is <a href="class-documents/AppotaUserLoginResult-class">AppotaPaymentResult</a> object of payment information (transaction id, amount, ...)</td>
+</tr>
+<tr>
+<td><code>packageID</code></td>
+<td><code>packageID</code> is id of the package has been bought, <code>packageID</code> is defined during payment configuration process</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<p><strong> Callback for payment state </strong></p>
+
+<p><strong>PAYMENT_STATE</strong> is required for our SDK to make correct payment with package. Depends on your payment package implement this function and return a correct payment state. <a href="">Detail about payment state</a>.<br/>
+For example packageID: com.gold.package1 - (defined in your developer page) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : 1000_gold_X_Y (depends on your format).</p>
+
+<pre><code>-(NSString*) getPaymentStateWithPackageID:(NSString*) packageID;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>packageID</code></td>
+<td><code>packageID</code> is id of the package has been bought, <code>packageID</code> is defined during payment configuration process</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong> YOU HAVE TO IMPLEMENT THIS FUNCTION TO ENSURE GOLD CHARING CORRECTLY </strong></p>
+
+<h3>2.3. Analytic function <a name="head2-analytic-function"> </a></h3>
+
+<p>Related class:<br/>
+- <a href="class-document/AppotaGameSDK-class.html#tracking-function">AppotaGameSDK- tracking function</a></p>
+
+<p>Appota SDK support calling track for view and event. These track information is very useful for game advertisement and tracking.</p>
+
+<p><strong> View tracking function </strong><br/>
+When enter a view send view for tracking</p>
+
+<pre><code>+ (void) sendViewWithName:(NSString*) viewName;
+</code></pre>
+
+<p><strong> Event tracking function </strong><br/>
+When user perform an event send event for tracking</p>
+
+<pre><code>+ (void) sendEventWithCategory:withEventAction:withLabel:withValue:;
+</code></pre>
+
+<p>Define <code>category</code>, <code>action</code>, <code>label</code>, <code>value</code> detail of the action</p>
+
+<h3>2.3. Push notification function <a name="head2-push-notification-function"> </a></h3>
+
+<p>Related class:<br/>
+- <a href="class-document/AppotaGameSDK-class.html#push-notification-function">AppotaGameSDK - push notification function</a></p>
+
+<p><strong> Register push notification with groupname </strong><br/>
+Register push notification (currenly only support iOS). Use group name to choose user group for easy pushing (for example only push user in server 1 then groupName = "server 1").</p>
+
+<pre><code>+ (void) registerPushNotificationWithGroupName:;
+</code></pre>
+
+<p>Call this function when you want to register notification</p>
+
+<p><strong> Upload device token data </strong></p>
+
+<pre><code>+ (NSString*) configurePushNotificationWithTokenData:;
+</code></pre>
+
+<p>Call this function in <code>AppDelegate.m</code>, <code>application:didRegisterForRemoteNotificationsWithDeviceToken:</code> to register device token data for push notification</p>
+
+<h2>3. Class Document <a name="head1-class-document"> </a></h2>
+
+<ul>
+<li><a href="class-document/AppotaGameSDK-class.html">AppotaGameSDK</a></li>
+<li><a href="class-document/AppotaGameSDKCallback-class.html">AppotaGameSDKCallback</a></li>
+<li><a href="class-document/AppotaUserLoginResult-class.html">AppotaUserLoginResult</a></li>
+<li><a href="class-document/AppotaPaymentResult-class.html">AppotaPaymentResult</a></li>
+</ul>
+
+
+<h2>4. FAQ and Glossary <a name="head1-faq"></a></h2>
+
+<ul>
+<li><code>IPN</code> is payment machenism used by Appota System to increase gold for game user. Detail in <a href="https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN">IPN</a></li>
+<li><code>PackageID</code> each payment package in game should be defined along with a package ID (provided by SDKTool) to identify package.</li>
+<li><code>PaymentState</code> payment state must be implemented in <code>GetPaymentState</code> function. And use <code>PackageID</code> and game server information to build up <code>PaymentState</code>. <br/>
+For example packageID: <code>com.gold.package1</code> - (defined in integration process) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : com.gold.package1_1000_gold_X_Y (depends on your format).</li>
+</ul>
+
+</body>
+</html>
