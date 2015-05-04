@@ -38,6 +38,7 @@
 		364D1FFF182484BE00187DD5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D1FFE182484BE00187DD5 /* AdSupport.framework */; };
 		364F7D171986007B005DF03E /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364F7D161986007B005DF03E /* AppotaSDK.framework */; };
 		366B580C1831D0C0002EBEFE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366B580B1831D0C0002EBEFE /* CoreMedia.framework */; };
+		3675AEAA1AD773BD001AA836 /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3675AEA91AD773BD001AA836 /* Test.mm */; };
 		369E30EB19B05F1500FE8EC8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369E30EA19B05F1500FE8EC8 /* FacebookSDK.framework */; };
 		369FD209195D33FD002544B2 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369FD208195D33FD002544B2 /* Twitter.framework */; };
 		36E76F0E1831CF8D00C0653F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E76F0D1831CF8D00C0653F /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -81,6 +82,8 @@
 		364D1FFE182484BE00187DD5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		364F7D161986007B005DF03E /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
 		366B580B1831D0C0002EBEFE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3675AEA91AD773BD001AA836 /* Test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
+		3675AEAB1AD77416001AA836 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		369E30EA19B05F1500FE8EC8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		369FD208195D33FD002544B2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		36E76F0D1831CF8D00C0653F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -181,6 +184,8 @@
 				364D1FCE1824827600187DD5 /* ViewController.m */,
 				364D1FD01824827600187DD5 /* ViewController.xib */,
 				364D1FBC1824827600187DD5 /* Supporting Files */,
+				3675AEA91AD773BD001AA836 /* Test.mm */,
+				3675AEAB1AD77416001AA836 /* Test.h */,
 			);
 			path = AppotaGameTest;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				364D1FC21824827600187DD5 /* main.m in Sources */,
+				3675AEAA1AD773BD001AA836 /* Test.mm in Sources */,
 				364D1FC61824827600187DD5 /* AppDelegate.m in Sources */,
 				364D1FCF1824827600187DD5 /* ViewController.m in Sources */,
 			);
