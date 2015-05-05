@@ -4,7 +4,7 @@ AppotaGameSDK
 
 Class method will support 4 features:
 
-**Init function**<a name="init-function"></a>  
+### 1. Init function <a name="init-function"></a>  
 All init function will be called in `Appdelegate.m`
  
 
@@ -36,15 +36,25 @@ Set callback for `AppotaGameSDK`
 
 ----
 
-**Login feature**<a name="class-method-login-feature"></a>  
-
->`showLoginView`
-
-```c
-
-[AppotaGameSDK showLoginView]
+```
 
 ```
+
+----
+### 2. User function <a name = "user-function"> </a>
+
+* `ShowLoginView()`: Show login view function (when user's not logged in)
+* `Logout()`: Logout function
+* `SwitchAccount()`: Call this function when you want to switch logged in user to other Appota User. Remember to check callback after switching successful (it'll be called in `OnLoginSuccess()` again)
+* `ShowUserInfo()`: This function will show user profile view  
+* `IsUserLogin()`: This function will return user logged in state
+* `GetAppotaSession()`: Return `AppotaSession` if logged in
+* `SetCharacter(string name, string server, string characterID)`: Set character function to support character management on web
+
+### 3. Payment functions: <a name = "payment-function"> </a>
+
+* `MakePayment()`: Show payment view with default list payment packages
+* `MakePayment(string packageID)`: Show a specific package depends on your in-game mechanism
 
 -----
 

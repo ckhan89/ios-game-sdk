@@ -126,7 +126,7 @@ There are 2 functions to control SDK flows:
 ###2.2. User function <a name="head2-user-function"> </a>
 Related class and function:
 
-- [AppotaGameSDK- init function](class-document/AppotaGameSDK-class#user-function)
+- [AppotaGameSDK- user function](class-document/AppotaGameSDK-class#user-function)
 - [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class)
 
 Once you've implemented init SDK function, start using login features.
@@ -134,27 +134,64 @@ Once you've implemented init SDK function, start using login features.
 ####2.2.1. Show login view <a name = "head2-show-login-view"> </a>
 As mentioned above login dialog flow can be control by function [setAutoShowLoginDialog:](#set-auto-show-login-dialog). Automatically show login view at app launching or manual call `showLoginView` when you need:  
 
-```
-[AppotaGameSDK showLoginView]
+- **Show Login View**
 
+```
+[AppotaGameSDK showLoginView];
 ```
 <a name="show-login-view"> </a>
 Appota Login Dialog contains 5 authorization methods: **Facebook**, **Google**, **Twitter**, **Appota User** and **Quick Login**  
 
 ![Appota Login Dialog](images/login_dialog.png)
 
-<!--####2.2.2 Configure login method <a name = "configure-login-method"> </a>
-Appota SDK support 4 login methods: Quick login, Facebook login, Google login, Twitter Logins (all is enabled by default)  
-Each method can be disabled or enabled by calling these functions:
+Follow this mechanism for login function, please implement [`didLoginSuccess`](#did-login-succeed) callback to authenticate your in-game user.
+![Appota Login Mechanism](images/ios_login_sequence.png)
+
+
+- **Logout function**
+ 
+```
+[AppotaGameSDK logOut];
+```
+
+- **Switch account function**
+
+Call this function when user logged in will show a login view and allow to login other account. When switch account succeed `didLoginSuccess` callback will be called again, so please logout your game account and reauthenticate with new switched account.
 
 ```
-[AppotaGameSDK setFacebookLoginEnable:(BOOL)]
-[AppotaGameSDK setGoogleLoginEnable:(BOOL)]
-[AppotaGameSDK setTwitterLoginEnable:(BOOL)]
-[AppotaGameSDK setQuickLoginEnable:(BOOL)]
+[AppotaGameSDK switchAccount];
+```
+
+![Appota Switch Account Mechanism](images/ios_switch_user_sequence.png)
+
+- ** Show or hide floating sdk button **
 
 ```
--->
+[AppotaGameSDK setSDKButonVisible:BOOL]
+```
+
+- **Show Profile Info function**
+
+This function will show user profile view  
+
+```
+[AppotaGameSDK showProfileView];
+
+```
+- **Check user login**
+This function will return user logged in state
+
+```
+[AppotaGameSDK checkUserLogin];
+```
+
+- **Get Logged in user info**
+Return AppotaUserLoginresult (`nil` if user not logged in)
+
+```
+[AppotaGameSDK getUserInfo];
+```
+
 ####2.2.2. Handle authenticaiton callbacks <a name = "login-handle-login-response"> </a>
 
 AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](AppotaGameSDKCallback-class) , please implement these functions to `Appdelegate.m`
@@ -168,7 +205,7 @@ Retreive Appota user info from `AppotaUserLoginResult` then post to your server 
 **Note** Remember verify Appota UserID, UserName and Access token on your server before procceeding game user integration
 
 ```
-- (void) didLoginSucceed:(AppotaUserLoginResult*) userLoginResult
+- (void) didLoginSuccess:(AppotaUserLoginResult*) userLoginResult
 
 ```
 |Parameter|Description|  
