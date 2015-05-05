@@ -2,65 +2,39 @@ AppotaGameSDK
 ===========
 `AppotaGameSDK` is the one and only class used to manage every action in `AppotaSDK`.
 
-
-Inherits from:	`NSObject`
-Declared in:	[AppotaGameSDK.h](./AppotaGameSDK.h)
-
-Properties <a name="AppotaGameSDK-properties"> </a>
-======
-
-> `autoShowPaymentButton`  
-Flag to show Appota floating button
-```c
-@property (readwrite) autoShowPaymentButton
-```
-Default value : `YES`  
-Declared in:	[AppotaGameSDK.h](./AppotaGameSDK.h)     
-
---
- 
-> `autoShowLoginDialog`  <a name="properties-login-feature"></a>  
-Flag to auto show Appota Login View
-```c
-@property (readwrite) autoShowLoginDialog
-```
-Default value : `YES`  
-Declared in:	[AppotaGameSDK.h](./AppotaGameSDK.h)
-
---
-
-Class method <a name="appotagamesdk-classmethod"> </a>
-====
-
 Class method will support 4 features:
 
-**Init feature**<a name="class-method-init-feature"></a>  
+**Init function**<a name="init-function"></a>  
 All init function will be called in `Appdelegate.m`
+ 
 
-> `configure`  
-Appota SDK init must be called once when application start
-
-```c
+```
 	[AppotaGameSDK configure];		
 ```
 
+Appota SDK init (configure) must be called once when application start
+
 ----
 
-> Set callback for `AppotaGameSDK`
-```c
+
+```
 [AppotaGameSDK sharedInstance].delegate = self;
 ```
+Set callback for `AppotaGameSDK`
 
-> `handleOpenURL:sourceApplication:annotation:` 
-Will be called in `AppDelegate.m` handle openURL function
+----
 
-```c
+`handleOpenURL:sourceApplication:annotation:` Will be called in `AppDelegate.m` handle openURL function
+
+```
 
 [AppotaGameSDK handleOpenURL:url
 	     sourceApplication:sourceApplication
             annotation:annotation];
             
 ```
+
+----
 
 **Login feature**<a name="class-method-login-feature"></a>  
 

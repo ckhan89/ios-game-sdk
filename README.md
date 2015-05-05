@@ -86,7 +86,7 @@ When we release a new version of the SDK, you can pick up the changes as describ
 
 ###2.1 Init and setup SDK <a name = "head2-init-sdk"> </a>
 Related class and function:
-[AppotaGameSDK clas - init function](class_references/AppotaGameSDK-class)  
+[AppotaGameSDK clas - init function](class-document/AppotaGameSDK-class#init-function)  
 Appota SDK init must be called once when application start via [AppotaGameSDK](SDK) class call `[AppotaGameSDK configure]` so most of the time it will be placed in `AppDelegate's` method `application:didFinishLaunchingWithOptions:`  
 In `AppDelegate.h` add import `#import <AppotaSDK/AppotaSDK.h>` use `AppDelegate` as protocol:
 
@@ -126,8 +126,8 @@ There are 2 functions to control SDK flows:
 ###2.2. User function <a name="head2-user-function"> </a>
 Related class and function:
 
-- [AppotaGameSDK- init function](class_references/AppotaGameSDK-class)
-- [AppotaUserLoginResult](class_references/AppotaUserLoginResult-class)
+- [AppotaGameSDK- init function](class-document/AppotaGameSDK-class#user-function)
+- [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class)
 
 Once you've implemented init SDK function, start using login features.
 
@@ -173,7 +173,7 @@ Retreive Appota user info from `AppotaUserLoginResult` then post to your server 
 ```
 |Parameter|Description|  
 |-------|-----------|  
-|userLoginResult|`userLoginResult` is [AppotaUserLoginResult](class_references/AppotaUserLoginResult-class) object of user information (username, user_id, access token)|
+|userLoginResult|`userLoginResult` is [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class) object of user information (username, user_id, access token)|
 
 ----
 **Login fail callback**  
@@ -205,9 +205,9 @@ Callback when user close login view at app launching
 
 Related class and function:
 
-- [AppotaGameSDK - payment function](class_references/AppotaGameSDK-class)
-- [AppotaGameSDKCallback](class_reference/AppotaGameSDKCallback-class)
-- [AppotaPaymentResult](class_references/AppotaUserLoginResult-class)
+- [AppotaGameSDK - payment function](class-document/AppotaGameSDK-class#payment-function)
+- [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
 
 Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document]() and payment configuration at [Appota Developer Portal]().
 
@@ -255,7 +255,7 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 
 |Parameter|Description|  
 |-------|-----------|  
-|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class_references/AppotaUserLoginResult-class) object of payment information (transaction id, amount, ...)|
+|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class-document/AppotaPaymentResult-class) object of payment information (transaction id, amount, ...)|
 |`packageID`|`packageID` is id of the package has been bought, `packageID` is defined during payment configuration process|
 
 ----
@@ -280,14 +280,14 @@ Appota SDK support calling track for view and event. These track information is 
 When enter a view send view for tracking
 
 ```
-public void SendView(string name);
++ (void) sendViewWithName:(NSString*) viewName;
 ```
 
 ** Event tracking function **  
 When user perform an event send event for tracking
 
 ```
-public void SendEvent(string category,string action,string label)
++ (void) sendEventWithCategory:(NSString*) categoryName withEventAction:(NSString*) action withLabel:(NSString*) label withValue:(NSNumber*) value;
 ```
 Define `category`, `action`, `label` detail of the action
 
@@ -297,13 +297,14 @@ Define `category`, `action`, `label` detail of the action
 Register push notification (currenly only support iOS). Use group name to choose user group for easy pushing (for example only push user in server 1 then groupName = "server 1").
 
 ```
-public void setPushGroup(string groupName)
++ (void) registerPushNotificationWithGroupName:(NSString*) groupName;
+
 ```
 ##3. Class Document <a name="head1-class-document"> </a>
-- [AppotaSDKHandler](class-document/UnityClasses.html#init-function)
-- [AppotaSDKReceiver](class-document/UnityClasses.html#appota-sdk-receiver)
-- [AppotaSession](class-document/UnityClasses.html#appota-session)
-- [AppotaPaymentResult](class-document/UnityClasses.html#appota-payment-result)
+- [AppotaGameSDK-class](class-document/AppotaGameSDK-class)
+- [AppotaGameSDKCallback-class](class-document/AppotaGameSDKCallback-class)
+- [AppotaUserLoginResult-class](class-document/AppotaUserLoginResult-class)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
 
 ##4. FAQ and Glossary <a name="head1-faq"></a>
 - `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN
