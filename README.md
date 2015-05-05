@@ -41,7 +41,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 ###1.3. Configure your XCode Project <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. Add the Appota iOS SDK
- Open [ios-game-sdk/SDK](SDK/) and add [AppotaSDK.framework](SDK/AppotaSDK.framework), [AppotaBundle.bundle](SDK/AppotaBundle.bundle), [Facebook.framework](SDK/Facebook.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
+ Open [ios-game-sdk/Frameworks](Frameworks/) and add [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [Facebook.framework](Frameworks/Facebook.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
 ![](images/add_framework.gif)
 
 ####1.3.2. Add framework dependencies and setting
