@@ -95,7 +95,7 @@ When we release a new version of the SDK, you can pick up the changes as describ
 
 ###2.1 Init and configure SDK <a name = "head2-init-sdk"> </a>
 Related class and function:
-[AppotaGameSDK class - init function](class-document/AppotaGameSDK-class#init-function)  
+[AppotaGameSDK class - init function](class-document/AppotaGameSDK-class.md#init-function)  
 Appota SDK init must be called once when application start via [AppotaGameSDK](SDK) class call `[AppotaGameSDK configure]` so most of the time it will be placed in `AppDelegate's` method `application:didFinishLaunchingWithOptions:`  
 In `AppDelegate.h` add import `#import <AppotaSDK/AppotaSDK.h>` use `AppDelegate` as protocol:
 
@@ -136,8 +136,8 @@ There are 4 functions to control SDK follow:
 ###2.2. User functions <a name="head2-user-function"> </a>
 Related class and function:
 
-- [AppotaGameSDK- user function](class-document/AppotaGameSDK-class#user-function)
-- [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class)
+- [AppotaGameSDK- user function](class-document/AppotaGameSDK-class.md#user-function)
+- [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class.md)
 
 
 Once you've implemented init SDK function, start using login features.
@@ -222,7 +222,7 @@ Return AppotaUserLoginresult (`nil` if user not logged in)
 
 ####2.2.9. Handle authenticaiton callbacks <a name = "login-handle-login-response"> </a>
 
-AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](AppotaGameSDKCallback-class) , please implement these functions to `Appdelegate.m`
+AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](class-document/AppotaGameSDKCallback-class.md) , please implement these functions to `Appdelegate.m`
 
 **Note** 2 callbacks are  `@required` : `-didLoginSuccess:` and `-didLogOut:`
 
@@ -237,7 +237,7 @@ Retreive Appota user info from `AppotaUserLoginResult` then post to your server 
 ```
 |Parameter|Description|  
 |-------|-----------|  
-|userLoginResult|`userLoginResult` is [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class) object of user information (username, user_id, access token)|
+|userLoginResult|`userLoginResult` is [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class.md) object of user information (username, user_id, access token)|
 
 ----
 **Login fail callback**  
@@ -275,9 +275,9 @@ Callback when user close login view at app launching
 
 Related class and function:
 
-- [AppotaGameSDK - payment function](class-document/AppotaGameSDK-class#payment-function)
-- [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class)
-- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
+- [AppotaGameSDK - payment function](class-document/AppotaGameSDK-class.md#payment-function)
+- [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
 Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document]() and payment configuration at [Appota Developer Portal]().
 
@@ -319,7 +319,7 @@ You can close payment view by use this function:
 
 ---------
 Every payment success will callback in `AppotaGameSDK` delegate (setup in [init function](#head2-init-sdk)). The callback functions should be in `AppDelegate.m`
-There are 2 `@required` callback function defined in [AppotaGameSDKCallback](AppotaGameSDKCallback-class)
+There are 2 `@required` callback function defined in [AppotaGameSDKCallback](AppotaGameSDKCallback-class.md)
 
 ** Callback after a successful payment **
 
@@ -439,7 +439,7 @@ server name, server ID , character name, character ID.
              onErrorBlock:(AppotaSDKErrorBlock ) errorBlock;
 ```
 ###2.7. Advance function <a name="head2-advance-function"> </a>
-All advance function is locate in [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class).
+All advance function is locate in [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md).
 
 **Invite facebook friends**
 
@@ -447,7 +447,7 @@ Call [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; to invite friends 
 (you must login to use this function).
 
 ```
-+ (void)inviteFacebookFriends;
++ (void)inviteFacebookFriendsWithCompleteBlock:(AppotaInviteFriendBlock) inviteBlock;
 ```
 **Show Facebook Login**
 
@@ -473,11 +473,11 @@ Call [AppotaGameSDK showTwitterLogin]; to show Twitter Login without Appota Logi
 ```
 
 ##3. Class Document <a name="head1-class-document"> </a>
-- [AppotaGameSDK-class](class-document/AppotaGameSDK-class)
-- [AppotaGameSDKCallback-class](class-document/AppotaGameSDKCallback-class)
-- [AppotaUserLoginResult-class](class-document/AppotaUserLoginResult-class)
-- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
-- [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class)
+- [AppotaGameSDK-class](class-document/AppotaGameSDK-class.md)
+- [AppotaGameSDKCallback-class](class-document/AppotaGameSDKCallback-class.md)
+- [AppotaUserLoginResult-class](class-document/AppotaUserLoginResult-class.md)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
+- [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md)
 
 ##4. FAQ and Glossary <a name="head1-faq"></a>
 - `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN
