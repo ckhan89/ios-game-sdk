@@ -29,7 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)logoutAction:(id)sender {
-    if ([AppotaGameSDK checkUserLogin]) {
+    if ([AppotaGameSDK isUserLoggedIn]) {
         [AppotaGameSDK logOut];
     }
     else {
@@ -41,10 +41,10 @@
 }
 
 - (IBAction)showPaymentWithPackage:(id)sender {
-    [AppotaGameSDK showPaymentViewWithPackage:@"com.ruby.test"];
+    [AppotaGameSDK showPaymentViewWithPackageID:@"sdk4.50"];
 }
 - (IBAction)showProfileView:(id)sender {
-    [AppotaGameSDK showProfileView];
+    [AppotaGameSDK showUserInfoView];
     
 }
 

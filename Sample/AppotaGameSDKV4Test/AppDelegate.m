@@ -20,20 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [AppotaGameSDK configure];
-    [[AppotaGameSDK sharedInstance] setAutoShowLoginDialog:NO];
+    [[AppotaGameSDK sharedInstance] setAutoShowLoginDialog:YES];
     [[AppotaGameSDK sharedInstance] setIsHideWelcomeView:NO];
     [[AppotaGameSDK sharedInstance] setKeepLoginSession:YES];
-    [[AppotaGameSDK sharedInstance] setSDKButtonVisible:YES];
+    [[AppotaGameSDK sharedInstance] setSDKButtonVisibility:YES];
     [[AppotaGameSDK sharedInstance] setDelegate:self];
     [AppotaGameSDK  registerPushNotificationWithGroupName:@"IOS"];
-    CTTelephonyNetworkInfo *netinfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier *carrier = [netinfo subscriberCellularProvider];
-    NSLog(@"Carrier Name: %@", [carrier carrierName]);
-    NSLog(@"Mobile Country Code: %@", [carrier mobileCountryCode]);
-    NSLog(@"Mobile Network Code: %@", [carrier mobileNetworkCode]);
-    NSLog(@"Mobile IOS countryCode %@",[carrier isoCountryCode]);
-    NSString *carry = [[[AppotaGameSDK sharedInstance] trackObject] getCarrierNameFromCountryCodeType];
-    NSLog(@"carry ==%@",carry);
     return YES;
 }
 
@@ -76,6 +68,10 @@
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
     
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [AppotaGameSDK handlePushNotification:userInfo];
 }
 
 #pragma mark - SDK callback

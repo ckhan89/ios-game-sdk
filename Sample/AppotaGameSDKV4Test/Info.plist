@@ -31,14 +31,14 @@
 			<string>com.hieutt.testapp</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1578154935736950</string>
+				<string>fb789057937844518</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1578154935736950</string>
+	<string>789057937844518</string>
 	<key>FacebookDisplayName</key>
 	<string>AppotaSDK4Application</string>
 	<key>GOOGLE_CLIENT_ID</key>
