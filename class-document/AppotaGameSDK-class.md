@@ -1,5 +1,11 @@
 AppotaGameSDK  
 ===========
+
+## Overview
+1. [Init function](#init-function)
+2. [User function](#user-function)
+3. [Payment function](#payment-function)
+
 `AppotaGameSDK` is the one and only class used to manage every action in `AppotaSDK`.
 
 Class method will support 4 features:
@@ -27,34 +33,52 @@ Set callback for `AppotaGameSDK`
 `handleOpenURL:sourceApplication:annotation:` Will be called in `AppDelegate.m` handle openURL function
 
 ```
-
 [AppotaGameSDK handleOpenURL:url
 	     sourceApplication:sourceApplication
             annotation:annotation];
-            
 ```
+There are 4 functions to control SDK flows:
 
-----
+- `setKeepLoginSession:(BOOL)` <a name="set-keep-login-session"> </a> this function will control the Appota Login Session will be kept or deleted at app lauching (when deleted user has to login again when app start).   
+**Note** If this function is not called, login session will be kept by default.
+- `setAutoShowLoginDialog:(BOOL)` <a name="set-auto-show-login-dialog"> </a> this function will control the Appota Login View will be automatically show at app lauching (when user's not logged in) or you have to call [showLoginView](#show-login-view) function to show the LoginView. 
+**Note** If this function is not called, login view will automatically show at app lauching (when user's not logged in).
+- `setSDKButtonVisibility:(BOOL)` <a name = "set-sdk-button-visible"> </a> call this function to setting hide or show SDK floating button.
+**Note** If this function is not called, the SDK floating button will automatically show at app lauching.
 
-```
+- `setHideWelcomeView:(BOOL)` <a name = "set-hide-wellcome-view"> </a> call this function to setting hide or show Wellcome View.
+**Note** If this function is not called, the Wellcome View will automatically show at app lauching.
 
-```
 
 ----
 ### 2. User function <a name = "user-function"> </a>
 
-* `ShowLoginView()`: Show login view function (when user's not logged in)
-* `Logout()`: Logout function
-* `SwitchAccount()`: Call this function when you want to switch logged in user to other Appota User. Remember to check callback after switching successful (it'll be called in `OnLoginSuccess()` again)
-* `ShowUserInfo()`: This function will show user profile view  
-* `IsUserLogin()`: This function will return user logged in state
-* `GetAppotaSession()`: Return `AppotaSession` if logged in
-* `SetCharacter(string name, string server, string characterID)`: Set character function to support character management on web
+* `showLoginView`: Show login view function (when user's not logged in).
+
+* `showRegisterView`: Show register view function (when user's not logged in).
+
+* `logOut`: Logout function.
+
+* `switchAccount`: Call this function when you want to  switch logged in user to other Appota User. Remember to check callback after switching successful (it'll be called in `didLoginSuccess:` again).
+
+* `showUserInfoView`: This function will show user info view.
+
+* `isUserLoggedIn`: This function will return user logged in state.
+
+* ` setCharacterWithCharacterName: characterID:
+               serverName: serverID:
+          onCompleteBlock:
+             onErrorBlock: ;
+`: Set character function to support character management on web.
+
+* `getUserInfo`: Return AppotaUserLoginresult (`nil` if user not logged in).
+
+* `showTransactionHistory`: show history of transaction.
 
 ### 3. Payment functions: <a name = "payment-function"> </a>
 
-* `MakePayment()`: Show payment view with default list payment packages
-* `MakePayment(string packageID)`: Show a specific package depends on your in-game mechanism
+* `showPaymentView()`: Show payment view with default list payment packages
+* `showPaymentViewWithPackageID:(NSString *)packageID`: Show a specific package depends on your in-game mechanism
 
 -----
 
@@ -62,46 +86,31 @@ Set callback for `AppotaGameSDK`
 
 >`showPaymentView`
 
-```c
-
+```
 [AppotaGameSDK showPaymentView]
-
 ```
 
 -----
+>`showPaymentViewWithPackageID:`
 
-
->`showPaymentViewWithPackage:`
-
-```c
-
-[AppotaGameSDK showPaymentViewWithPackage:(AppotaPaymentPackage*) package]
-
+```
+[AppotaGameSDK showPaymentViewWithPackageID:(AppotaPaymentPackage*) package]
 ```
 |Parameter|Description|  
 |-------|-----------|  
-|package|AppotaPaymentPackage contains price, package id of game package about to be bought|
+|package|AppotaPaymentPackage contains price, package id of game package about to be bought. If packageId = nil the result of this function like when call `[AppotaGameSDK showPaymentView]`|
 
 ----
 
->`setPaymentState:` <a name = "AppotaGameSDK-setpaymentstate"> </a>
-```
-[][AppotaGameSDK shareConfig] setPaymentState:(NSString*) paymentState];
-```
-|Parameter|Description|  
-|-------|-----------|  
-|paymentState|String to define correct character, server, ... to procceed correct payment payment package|
-
 **Tracking method**<a name="class-tracking-method"> </a>
 
-```c
-
+```
 + (void) sendEventWithCategory:(NSString*) categoryName
                       withEventAction:(NSString*) action
 		                      withLabel:(NSString*) label
 		                      withValue:(NSNumber*) value
-
 ```
+
 |Parameter|Required|Description|  
 |-------|-----------|----------|
 |categoryName|YES|The event category|
@@ -109,11 +118,19 @@ Set callback for `AppotaGameSDK`
 |label|NO|The event action|
 |value|NO|The event value|
 
-```c
-
-+ (void) sendViewWithName:(NSString*) viewName
+```
++ (void)sendEventWithCategory:(NSString *)categoryName withEventAction:(NSString *)action withLabel:(NSString *)label;
+```
+|Parameter|Required|Description|  
+|-------|-----------|----------|
+|categoryName|YES|The event category|
+|action|YES|The event action|
+|label|NO|The event action|
 
 ```
++ (void) sendViewWithName:(NSString*) viewName
+```
+
 |Parameter|Required|Description|  
 |-------|-----------|----------|
 |viewName|YES|NSString view name|
@@ -121,52 +138,43 @@ Set callback for `AppotaGameSDK`
 **Push notification method**<a name="push-notification-method"> </a>
 
 >Register push notification
-```c
+
+```
 + (void) registerPushNotificationWithGroupName:(NSString*) groupName;
 ```
+
 |Parameter|Description|  
 |-------|-----------|  
-|groupName|Push group name is defined by you and will be recorded on `Appota Push Notification` system. 
-(`"all"` for default)|
-
-
+|groupName|Push group name is defined by you and will be recorded on `Appota Push Notification` system.(`"all"` for default)|
 
 Register push device token data with Appota system (should be called in `application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devTokenData` in `AppDelegate.m`)
 
-```c
+>Configure Push notification
+
+```
 + (NSString*) configurePushNotificationWithTokenData:(NSData*) deviceTokenData
 ```
-
-**Other method**<a name="class-method-other-method"> </a>
->`showProfileView`  
-
-```c
-
-[AppotaGameSDK showProfileView]
+Configure push notification with data call after you register push notification. You push this function in :
 
 ```
-Show user profile
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    [AppotaGameSDK configurePushNotificationWithTokenData:deviceToken];
+}
+```
+of your application delegate.
 
------
-
->`showTransactionHistory`  
-
-```c
-
-[AppotaGameSDK showTransactionHistory]
+>Handle push notification
 
 ```
-Show user transction history
++ (void) handlePushNotification:(NSDictionary *)receiveDictionary;
+``` 
+You push this function in :
 
------
-
-> `setCharacterWithName:withServer:`
-Function for support advance web-interface payment 
-```c
-+ (void) setCharacterWithName:(NSString*) name
-					withServer:(NSString*) server
 ```
-|Parameter|Description|  
-|-------|-----------|  
-|name|Charater in game name - please don't confuse it with AppotaID|
-|server|Server name where character are in|
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [AppotaGameSDK handlePushNotification:userInfo];
+}
+```
+of application delegate.
+
