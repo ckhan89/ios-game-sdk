@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04C1780A1B18036E00DCFB76 /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04C178071B18036E00DCFB76 /* AppotaBundle.bundle */; };
-		04C1780B1B18036E00DCFB76 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178081B18036E00DCFB76 /* AppotaSDK.framework */; };
 		04C1780C1B18036E00DCFB76 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178091B18036E00DCFB76 /* FacebookSDK.framework */; };
+		04C880951B18109000627355 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178081B18036E00DCFB76 /* AppotaSDK.framework */; };
 		1C607E761AB2A7FC00C5C8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E751AB2A7FC00C5C8EC /* main.m */; };
 		1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E781AB2A7FC00C5C8EC /* AppDelegate.m */; };
 		1C607E7C1AB2A7FC00C5C8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E7B1AB2A7FC00C5C8EC /* ViewController.m */; };
@@ -138,6 +138,7 @@
 				1C607EC21AB2A97200C5C8EC /* Accounts.framework in Frameworks */,
 				1C607EC01AB2A95F00C5C8EC /* AdSupport.framework in Frameworks */,
 				1C607EBE1AB2A95600C5C8EC /* Social.framework in Frameworks */,
+				04C880951B18109000627355 /* AppotaSDK.framework in Frameworks */,
 				1C607EBC1AB2A94500C5C8EC /* QuartzCore.framework in Frameworks */,
 				1C607EBA1AB2A93900C5C8EC /* MessageUI.framework in Frameworks */,
 				1C607EB81AB2A92100C5C8EC /* CoreMedia.framework in Frameworks */,
@@ -147,7 +148,6 @@
 				1C607EAE1AB2A8B600C5C8EC /* AVFoundation.framework in Frameworks */,
 				1C9805DB1ADBA167003B85B3 /* FacebookSDK.framework in Frameworks */,
 				1C607EAC1AB2A8A700C5C8EC /* libxml2.dylib in Frameworks */,
-				04C1780B1B18036E00DCFB76 /* AppotaSDK.framework in Frameworks */,
 				1C607EAA1AB2A89800C5C8EC /* MobileCoreServices.framework in Frameworks */,
 				1C607EA81AB2A88A00C5C8EC /* AudioToolbox.framework in Frameworks */,
 				1C607EA61AB2A87600C5C8EC /* StoreKit.framework in Frameworks */,
@@ -517,6 +517,9 @@
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 				);
 				INFOPLIST_FILE = AppotaGameSDKV4Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -541,6 +544,9 @@
 					"$(PROJECT_DIR)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/AppotaSDK-envkxwyjhenwnkbvijhqlpwuuetl/Build/Products/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/AppotaSDK-envkxwyjhenwnkbvijhqlpwuuetl/Build/Products/Debug-iphonesimulator",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
