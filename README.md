@@ -352,6 +352,9 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 **PAYMENT_STATE** is required for our SDK to make correct payment with package. Depends on your payment package implement this function and return a correct payment state. [Detail about payment state]().  
 For example packageID: com.gold.package1 - (defined in your developer page) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : 1000_gold_X_Y (depends on your format).
 
+**Note** :Length of **PAYMENT_STATE** does not exceed 150 characters
+
+
 ```
 - (NSString*) getPaymentStateWithPackageID:(NSString *) packageID;
 ```

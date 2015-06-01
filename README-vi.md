@@ -351,6 +351,8 @@ Tuỳ thuộc vào cơ chế thanh toán (APN or IPN, hãy tham khảo thêm t�
 
 Ví dụ packageID: com.gold.package1 - (được định nghĩa trên trang developer ) tương ứng với một package của 1000 gold và user game hiện tại là X đang chơi trong server Y. Theo đó payment state có thể có dạng : 1000_gold_X_Y (Phụ thuộc vào định dạng của bạn).
 
+**Chú ý** :Độ dài của **PAYMENT_STATE** không được vượt quá 150 ký tự.
+
 ```
 - (NSString*) getPaymentStateWithPackageID:(NSString *) packageID;
 ```
