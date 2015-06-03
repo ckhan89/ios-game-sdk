@@ -332,7 +332,7 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 
 |Parameter|Description|  
 |-------|-----------|  
-|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class-document/AppotaPaymentResult-class) object of payment information (transaction id, amount, ...)|
+|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md) object of payment information (transaction id, amount, ...)|
 |`packageID`|`packageID` is id of the package has been bought, `packageID` is defined during payment configuration process|
 
 ----

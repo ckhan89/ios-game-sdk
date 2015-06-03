@@ -218,7 +218,7 @@ Hàm này sẽ show lên lịch sử các giao dịch user đã thực hiện (k
 ```
 ####2.2.9. Handle authenticaiton callbacks <a name = "login-handle-login-response"> </a>
 
-AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](AppotaGameSDKCallback-class.md) , please implement these functions to `Appdelegate.m`
+AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](class-document/AppotaGameSDKCallback-class.md) , please implement these functions to `Appdelegate.m`
 
 **Note** 2 callbacks là `@required` : `@required` và `@required`.
 
@@ -318,7 +318,7 @@ Bạn có thể close payment view bằng cách sử dụng hàm sau:
 ####2.3.5 Xử lý payment callback <a name="head3-handle-payment-callback"> </a>
 
 ---------
-Mọi thanh toán thành công callback trong `AppotaGameSDK` delegate (cài đặt trong [init function](#head2-init-sdk)).  Các hàm callback  phải đặt trọng `AppDelegate.m`. Có 1 hàm callback `@required`  được định nghĩa trong [AppotaGameSDKCallback](AppotaGameSDKCallback-class.md)
+Mọi thanh toán thành công callback trong `AppotaGameSDK` delegate (cài đặt trong [init function](#head2-init-sdk)).  Các hàm callback  phải đặt trọng `AppDelegate.m`. Có 1 hàm callback `@required`  được định nghĩa trong [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 
 
 **Callback khi thanh toán thành công**
