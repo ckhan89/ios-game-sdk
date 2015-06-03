@@ -48,7 +48,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 ###1.3. Configure your XCode Project <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. Add the Appota iOS SDK
- Open [ios-game-sdk/Frameworks](Frameworks/) and add [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [Facebook.framework](Frameworks/Facebook.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
+ Open [ios-game-sdk/Frameworks](Frameworks/) and add [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FacebookSDK.framework](Frameworks/FacebookSDK.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
 ![](images/add_framework.gif)
 
 ####1.3.2. Add framework dependencies and setting
@@ -96,7 +96,7 @@ When we release a new version of the SDK, you can pick up the changes as describ
 ###2.1 Init and configure SDK <a name = "head2-init-sdk"> </a>
 Related class and function:
 [AppotaGameSDK class - init function](class-document/AppotaGameSDK-class.md#init-function)  
-Appota SDK init must be called once when application start via [AppotaGameSDK](SDK) class call `[AppotaGameSDK configure]` so most of the time it will be placed in `AppDelegate's` method `application:didFinishLaunchingWithOptions:`  
+Appota SDK init must be called once when application start via [AppotaGameSDK](class-document/AppotaGameSDK-class.md) class call `[AppotaGameSDK configure]` so most of the time it will be placed in `AppDelegate's` method `application:didFinishLaunchingWithOptions:`  
 In `AppDelegate.h` add import `#import <AppotaSDK/AppotaSDK.h>` use `AppDelegate` as protocol:
 
 ```
@@ -227,7 +227,8 @@ AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallb
 **Note** 2 callbacks are  `@required` : `-didLoginSuccess:` and `-didLogOut:`
 
 ----
-**Login succeed callback**  
+**Login succeed callback**  <a name = "did-login-succeed"> </a>
+
 Retreive Appota user info from `AppotaUserLoginResult` then post to your server to verify and create game user. For more detail about user integration on server: [User Integration](https://github.com/appota/ios-game-sdk/wiki/Integrate-user-system)  
 
 **Note** Remember verify Appota UserID, UserName and Access token on your server before procceeding game user integration
@@ -279,12 +280,12 @@ Related class and function:
 - [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 - [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
-Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document]() and payment configuration at [Appota Developer Portal]().
+Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki) and payment configuration at [Appota Developer Portal]().
 
 ####2.3.1. Show payment view <a name="head3-show-payment-view"> </a>
 
 ---------
-You have 3 methods to show payment view. Each payment view represents one or list of payment package. Each package contains information of game coin amount or in-game package. Find out more about payment package at [Appota Payment Package]()
+You have 3 methods to show payment view. Each payment view represents one or list of payment package. Each package contains information of game coin amount or in-game package. 
 
 ** Show default list payment view **
 
@@ -319,7 +320,7 @@ You can close payment view by use this function:
 
 ---------
 Every payment success will callback in `AppotaGameSDK` delegate (setup in [init function](#head2-init-sdk)). The callback functions should be in `AppDelegate.m`
-There are 2 `@required` callback function defined in [AppotaGameSDKCallback](AppotaGameSDKCallback-class.md)
+There are 2 `@required` callback function defined in [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 
 ** Callback after a successful payment **
 
@@ -349,7 +350,8 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 ----
 ** Callback for payment state **
 
-**PAYMENT_STATE** is required for our SDK to make correct payment with package. Depends on your payment package implement this function and return a correct payment state. [Detail about payment state]().  
+**PAYMENT_STATE** is required for our SDK to make correct payment with package. Depends on your payment package implement this function and return a correct payment state. [Detail about payment state](#head3-payment-state).  
+
 For example packageID: com.gold.package1 - (defined in your developer page) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : 1000_gold_X_Y (depends on your format).
 
 **Note** :Length of **PAYMENT_STATE** does not exceed 150 characters
@@ -362,7 +364,7 @@ For example packageID: com.gold.package1 - (defined in your developer page) corr
 |-------|-----------|  
 |`packageID`|`packageID` is id of the package has been bought, `packageID` is defined during payment configuration process|
 
-###2.4. Analytic function <a name="head2-analytic-function"> </a>
+###2.4. Analytic function <a name= "head2-analytic-function"> </a>
 
 Appota SDK support calling track for view and event. These track information is very useful for game advertisement and tracking.
 
@@ -392,7 +394,7 @@ Define `category`, `action`, `label` detail of the action
 
 
 
-###2.5. Push notification function <a name="head2-push-notification-function"> </a>
+###2.5. Push notification function <a name= "head2-push-notification-function"> </a>
 
 **Register push notification with groupname**  
 
@@ -485,5 +487,5 @@ Call [AppotaGameSDK showTwitterLogin]; to show Twitter Login without Appota Logi
 ##4. FAQ and Glossary <a name="head1-faq"></a>
 - `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN
 - `PackageID` each payment package in game should be defined along with a package ID (provided by SDKTool) to identify package.
-- `PaymentState` payment state must be implemented in `getPaymentStateWithPackageID:` function. And use `PackageID` and game server information to build up `PaymentState`.   
+- `PaymentState` <a name = "head3-payment-state"> </a> payment state must be implemented in `getPaymentStateWithPackageID:` function. And use `PackageID` and game server information to build up `PaymentState`.   
 For example packageID: `com.gold.package1` - (defined in integration process) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : com.gold.package1_1000_gold_X_Y (depends on your format).

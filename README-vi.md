@@ -15,13 +15,13 @@
 	* 1.3. [Cấu hình Xcode Project của bạn](#head2-configure-your-xcode-project) 
 	* 1.4. [Update version mới hơn của SDK](#head2-update-the-sdk-to-a-newer-version)
 2. [Các APIs phía Client](#head1-client-api)
- 	* [Khởi tạo và cấu hình SDK](#head2-init-sdk)
- 	* [Các hàm cho user](#head2-user-function)
- 	* [Các hàm thanh toán](#head2-payment-function)
- 	* [Các hàm phân tích, thống kê](#head2-analytic-function)
- 	* [Các hàm liên quan tới Push Notification](#head2-push-notification-function)
- 	* [Hàm cài đặt Nhân vật trong game](#head2-set-game-character)
- 	* [Các hàm khác](#head2-advance-function)
+ 	* 2.1 [Khởi tạo và cấu hình SDK](#head2-init-sdk)
+ 	* 2.2 [Các hàm cho user](#head2-user-function)
+ 	* 2.3[Các hàm thanh toán](#head2-payment-function)
+ 	* 2.4 [Các hàm phân tích, thống kê](#head2-analytic-function)
+ 	* 2.5 [Các hàm liên quan tới Push Notification](#head2-push-notification-function)
+ 	* 2.6 [Hàm cài đặt Nhân vật trong game](#head2-set-game-character)
+ 	* 2.7 [Các hàm khác](#head2-advance-function)
 3. [Tài liệu các lớp liên quan](#head1-class-document)
 4. [FAQ and Glossary](#head1-faq)
 
@@ -42,8 +42,10 @@ Appota Game SDK cho iOS hỗ trợ những phiên bản phần mềm sau:
 ###1.3. Cấu hình XCode Project của bạn <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. Thêm vào Xcode Project của bạn Appota iOS SDK.
-Mở [ios-game-sdk/Frameworks](Frameworks/) và thêm [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [Facebook.framework](Frameworks/Facebook.framework) vào project của bạn. (Chú ý chọn **Create groups for any added folders** và chọn **Copy items into destination group's folder (if needed)**)
+Mở [ios-game-sdk/Frameworks](Frameworks/) và thêm [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FacebookSDK.framework](Frameworks/FacebookSDK.framework) vào project của bạn. (Chú ý chọn **Create groups for any added folders** và chọn **Copy items into destination group's folder (if needed)**)
+
 ![](images/add_framework.gif)
+
 ####1.3.2. Thêm các framework phụ thuộc và cài đặt.
 
 Chọn project của bạn từ Project Navigator, và chọn tiếp Target của ứng dụng của bạn.
@@ -85,9 +87,9 @@ Khi chúng tôi release một version mới của SDK, bạn có thể nhận c�
 
 Các class và function liên quan:
 
-[AppotaGameSDK class - hàm khởi tạo](class-document/AppotaGameSDK-class#init-function)  
+[AppotaGameSDK class - hàm khởi tạo](class-document/AppotaGameSDK-class.md#init-function)  
 
-Appota SDK khởi tạo phải được gọi một lần khi khi ứng dụng bắt đầu chạy qua [AppotaGameSDK](SDK) class gọi `[AppotaGameSDK configure]` hầu hết các trường hợp nó được gọi trong phương thức `AppDelegate's` `application:didFinishLaunchingWithOptions:`  
+Appota SDK khởi tạo phải được gọi một lần khi khi ứng dụng bắt đầu chạy qua [AppotaGameSDK](class-document/AppotaGameSDK-class.md) class gọi `[AppotaGameSDK configure]` hầu hết các trường hợp nó được gọi trong phương thức `AppDelegate's` `application:didFinishLaunchingWithOptions:`  
 trong file `AppDelegate.h` thêm import `#import <AppotaSDK/AppotaSDK.h>` sử dụng `AppDelegate` như là protocol:
 
 ```
@@ -118,7 +120,7 @@ Có 4 function để control SDK follow:
 	**Chú ý** :Nếu function này không được gọi, mặc định Login session sẽ được giữ lại.
 	
 ------
-- `setAutoShowLoginDialog:(BOOL)` <a name="set-auto-show-login-dialog"> </a> function này sẽ control Appota Login View tự động show khi app chạy (Khi user chưa đăng nhập) hoặc bạn phải gọi hàm [AppotaGameSDK showLoginView](#show-login-view) để show Login View.
+- `setAutoShowLoginDialog:(BOOL)` <a name="set-auto-show-login-dialog"> </a> function này sẽ control Appota Login View tự động show khi app chạy (Khi user chưa đăng nhập) hoặc bạn phải gọi hàm [[AppotaGameSDK showLoginView]](#show-login-view) để show Login View.
 
   **Chú ý** :Nếu function này không được gọi, mặc định Login View sẽ tự động show khi app chạy (Khi user chưa đăng nhập).
   
@@ -138,8 +140,8 @@ Có 4 function để control SDK follow:
 
 Class và function liên quan:
 
-- [AppotaGameSDK- user function](class-document/AppotaGameSDK-class#user-function)
-- [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class)
+- [AppotaGameSDK- user function](class-document/AppotaGameSDK-class.md#user-function)
+- [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class.md)
 
 Khi bạn đã thực thi hàm khởi tạo SDK, hãy bắt đầu sử dụng tính năng login.
 
@@ -216,12 +218,12 @@ Hàm này sẽ show lên lịch sử các giao dịch user đã thực hiện (k
 ```
 ####2.2.9. Handle authenticaiton callbacks <a name = "login-handle-login-response"> </a>
 
-AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](AppotaGameSDKCallback-class) , please implement these functions to `Appdelegate.m`
+AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](AppotaGameSDKCallback-class.md) , please implement these functions to `Appdelegate.m`
 
 **Note** 2 callbacks là `@required` : `@required` và `@required`.
 
 -----
-**Login succeed callback** 
+**Login succeed callback** <a name = "did-login-succeed"> </a>
 
 - Nhận Appota user info từ `AppotaUserLoginResult` sau đó post lên sever của bạn để verify và tạo game user. Cụ thể hơn về việc tích hợp user trên sever [Tích hợp user](https://github.com/appota/ios-game-sdk/wiki/Integrate-user-system)
 
@@ -232,7 +234,7 @@ AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallb
 ```
 |Tham số|Miêu tả|  
 |-------|-----------|  
-|userLoginResult|`userLoginResult` là [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class) object chứa user information (username, user_id, access token)|
+|userLoginResult|`userLoginResult` là [AppotaUserLoginResult](class-document/AppotaUserLoginResult-class.md) object chứa user information (username, user_id, access token)|
 
 ------
 **Login fail callback**
@@ -272,16 +274,16 @@ AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallb
 
 Các Class và function liên quan :
 
-- [AppotaGameSDK - payment function](class-document/AppotaGameSDK-class#payment-function)
-- [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class)
-- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
+- [AppotaGameSDK - payment function](class-document/AppotaGameSDK-class.md#payment-function)
+- [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
 Do sử dụng tính năng thanh toán của Appota SDK bạn phải hiểu cơ chế thanh toán của Appota và cấu hình. Hãy tham khảo cơ chế thanh toán tại [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN) và và cấu hình thanh toán tại [Appota Developer Portal]().
 
 ####2.3.1. Hiển thị payment view <a name="head3-show-payment-view"> </a>
 
 -----
-Bạn có 3 phương thức để show payment view. Mỗi payment view biểu diễn một hoặc một list các payment package. Mỗi package chứa thông tin của game coin, amount hay package trong game. Bạn có thể tìm hiểu thêm về payment package tại [Appota Payment Package]()
+Bạn có 3 phương thức để show payment view. Mỗi payment view biểu diễn một hoặc một list các payment package. Mỗi package chứa thông tin của game coin, amount hay package trong game. 
 
 **Show default list payment view**
 
@@ -316,7 +318,7 @@ Bạn có thể close payment view bằng cách sử dụng hàm sau:
 ####2.3.5 Xử lý payment callback <a name="head3-handle-payment-callback"> </a>
 
 ---------
-Mọi thanh toán thành công callback trong `AppotaGameSDK` delegate (cài đặt trong [init function](#head2-init-sdk)).  Các hàm callback  phải đặt trọng `AppDelegate.m`. Có 1 hàm callback `@required`  được định nghĩa trong [AppotaGameSDKCallback](AppotaGameSDKCallback-class)
+Mọi thanh toán thành công callback trong `AppotaGameSDK` delegate (cài đặt trong [init function](#head2-init-sdk)).  Các hàm callback  phải đặt trọng `AppDelegate.m`. Có 1 hàm callback `@required`  được định nghĩa trong [AppotaGameSDKCallback](AppotaGameSDKCallback-class.md)
 
 
 **Callback khi thanh toán thành công**
@@ -328,7 +330,7 @@ Tuỳ thuộc vào cơ chế thanh toán (APN or IPN, hãy tham khảo thêm t�
 ```
 |Tham số|Miêu tả|  
 |-------|-----------|  
-|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class-document/AppotaPaymentResult-class) đối tượng chưa thông tin thanh toán (transaction id, amount, ...)|
+|`paymentResult`|`paymentResult` is [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md) đối tượng chưa thông tin thanh toán (transaction id, amount, ...)|
 |`packageID`|`packageID` là id của package đã được thanh toán, `packageID` được định nghĩa trong quá trình cấu hình thanh toán|
 
 ----
@@ -347,7 +349,7 @@ Tuỳ thuộc vào cơ chế thanh toán (APN or IPN, hãy tham khảo thêm t�
 ----
 **Callback cho payment state**
 
-**PAYMENT_STATE** được yêu cầu SDK của chúng tôi để tạo một thanh toán đúng với package. Tuỳ thuộc vào payment package của bạn ,implement hàm này và trả về một payment state đúng. [Tìm hiểu thêm về Payment state]().  
+**PAYMENT_STATE** được yêu cầu SDK của chúng tôi để tạo một thanh toán đúng với package. Tuỳ thuộc vào payment package của bạn ,implement hàm này và trả về một payment state đúng. [Tìm hiểu thêm về Payment state](#head3-payment-state).  
 
 Ví dụ packageID: com.gold.package1 - (được định nghĩa trên trang developer ) tương ứng với một package của 1000 gold và user game hiện tại là X đang chơi trong server Y. Theo đó payment state có thể có dạng : 1000_gold_X_Y (Phụ thuộc vào định dạng của bạn).
 
@@ -438,7 +440,7 @@ server name, server ID , character name, character ID.
 
 ###2.7. Các hàm khác <a name="head2-advance-function"> </a>
 
-Tất cả các hàm cần dùng khác đều nằm ở [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class).
+Tất cả các hàm cần dùng khác đều nằm ở [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md).
 
 **Mời bạn trên facebook tham gia chơi game**
 
@@ -474,15 +476,15 @@ Gọi [AppotaGameSDK showTwitterLogin]; để show Twitter Login không có Appo
 ```
 
 ##3. Tài liệu về các  Class liên quan  <a name="head1-class-document"> </a>
-- [AppotaGameSDK-class](class-document/AppotaGameSDK-class)
-- [AppotaGameSDKCallback-class](class-document/AppotaGameSDKCallback-class)
-- [AppotaUserLoginResult-class](class-document/AppotaUserLoginResult-class)
-- [AppotaPaymentResult](class-document/AppotaPaymentResult-class)
-- [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class)
+- [AppotaGameSDK-class](class-document/AppotaGameSDK-class.md)
+- [AppotaGameSDKCallback-class](class-document/AppotaGameSDKCallback-class.md)
+- [AppotaUserLoginResult-class](class-document/AppotaUserLoginResult-class.md)
+- [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
+- [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md)
 
 ##4. FAQ and Glossary <a name="head1-faq"></a>
 - `IPN` là cơ chế thanh toán được Appota sử dụng để cộng gold cho game user. Cụ thể tham khảo tại [IPN](https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN)
 - `PackageID` mỗi một payment package trong game có thể được định nghĩa gắn với nó một package ID (được cung cấp SDKTool) để định danh package.
-- `PaymentState` payment state phải được thực thi trong  hàm `getPaymentStateWithPackageID:`. Và sử dụng `PackageID` và thông tin game server để tạo nên `PaymentState`.   
+- `PaymentState` <a name = "head3-payment-state"> </a> payment state phải được thực thi trong  hàm `getPaymentStateWithPackageID:`. Và sử dụng `PackageID` và thông tin game server để tạo nên `PaymentState`.   
 Ví dụ packageID: `com.gold.package1` - (được định nghĩa trong quá trình tạo payment config) tương ứng với một package của 1000 gold và game user hiện tại là X đang chơi trong server Y. Khi đó payment state sẽ có cấu trúc như sau : com.gold.package1_1000_gold_X_Y (tuỳ thuộc vào định dạng của bạn).
 
