@@ -22,7 +22,7 @@
     [AppotaGameSDK configure];
     [[AppotaGameSDK sharedInstance] setAutoShowLoginDialog:YES];
     [[AppotaGameSDK sharedInstance] setIsHideWelcomeView:NO];
-    [[AppotaGameSDK sharedInstance] setKeepLoginSession:YES];
+    [[AppotaGameSDK sharedInstance] setKeepLoginSession:NO];
     [[AppotaGameSDK sharedInstance] setSDKButtonVisibility:YES];
     [[AppotaGameSDK sharedInstance] setDelegate:self];
     [AppotaGameSDK  registerPushNotificationWithGroupName:@"IOS"];
@@ -78,12 +78,6 @@
 
 -(void)didLoginSuccess:(AppotaUserLoginResult *)userLoginResult{
       NSLog(@"USerInfor Dict ==%@",userLoginResult.objectDict);
-    [AppotaGameSDK setCharacterWithCharacterName:@"hieutt" characterID:@"htt" serverName:@"server4" serverID:@"sv4" onCompleteBlock:^(NSDictionary *dict) {
-        NSLog(@"dictionary==%@",dict);
-    } onErrorBlock:^(NSError *error) {
-        NSLog(@"Erorr= %@",error);
-    }];
-
 }
 - (void)didLogOut:(NSString *)userName{
     
@@ -98,7 +92,7 @@
 }
 
 -(NSString *)getPaymentStateWithPackageID:(NSString *)packageID{
-    return @"Test_game_state";
+    return [NSString stringWithFormat:@"%@_1000_gold_hieutt_server2",packageID];
 }
 
 - (void)didLoginErrorWithMessage:(NSString *)message withError:(NSError *)error{
