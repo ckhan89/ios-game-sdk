@@ -61,6 +61,10 @@ Open **Build Phases** tab, within **Link Binary with Libraries**, add the follow
 - `Twitter.framework`
 - `ImageIO.framework`
 - `CoreTelephony.framework`
+- `AdSupport.framework`
+- `SystemConfiguration.framework`
+- `MessageUI.framework`
+- `CoreMotion.framework`
 
 Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if **Link Frameworks Automatically**, **Enable Modules (C and Objectivce-C))** are set to `YES`
 

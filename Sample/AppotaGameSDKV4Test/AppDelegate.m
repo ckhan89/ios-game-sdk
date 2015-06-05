@@ -22,7 +22,7 @@
     [AppotaGameSDK configure];
     [[AppotaGameSDK sharedInstance] setAutoShowLoginDialog:YES];
     [[AppotaGameSDK sharedInstance] setIsHideWelcomeView:NO];
-    [[AppotaGameSDK sharedInstance] setKeepLoginSession:NO];
+    [[AppotaGameSDK sharedInstance] setKeepLoginSession:YES];
     [[AppotaGameSDK sharedInstance] setSDKButtonVisibility:YES];
     [[AppotaGameSDK sharedInstance] setDelegate:self];
     [AppotaGameSDK  registerPushNotificationWithGroupName:@"IOS"];
