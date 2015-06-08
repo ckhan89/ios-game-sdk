@@ -291,7 +291,7 @@ Because using AppotaSDK payment function you should understand Appota Payment me
 ---------
 You have 3 methods to show payment view. Each payment view represents one or list of payment package. Each package contains information of game coin amount or in-game package. 
 
-** Show default list payment view **
+**Show default list payment view**
 
 You can show payment view with default list payment packages (which is configured on [Appota Developer Portal]())
 
@@ -326,7 +326,7 @@ You can close payment view by use this function:
 Every payment success will callback in `AppotaGameSDK` delegate (setup in [init function](#head2-init-sdk)). The callback functions should be in `AppDelegate.m`
 There are 2 `@required` callback function defined in [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 
-** Callback after a successful payment **
+**Callback after a successful payment**
 
 Depends on your payment machenism (APN or IPN, please readmore about [Appota Payment](https://github.com/appota/ios-game-sdk/wiki/Integrate-payment-system), proceed payment verification or alert payment succeed for user
 
@@ -340,7 +340,7 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 |`packageID`|`packageID` is id of the package has been bought, `packageID` is defined during payment configuration process|
 
 ----
-** Callback when payment have problems **
+**Callback when payment have problems**
 
 ```
 - (void) didPaymentErrorWithMessage:(NSString *)message withError:(NSError *)error;
@@ -352,7 +352,7 @@ Depends on your payment machenism (APN or IPN, please readmore about [Appota Pay
 |`error`|`error` the error payment problems|
 
 ----
-** Callback for payment state **
+**Callback for payment state**
 
 **PAYMENT_STATE** is required for our SDK to make correct payment with package. Depends on your payment package implement this function and return a correct payment state. [Detail about payment state](#head3-payment-state).  
 
@@ -372,14 +372,14 @@ For example packageID: com.gold.package1 - (defined in your developer page) corr
 
 Appota SDK support calling track for view and event. These track information is very useful for game advertisement and tracking.
 
-** View tracking function **  
+**View tracking function**  
 When enter a view send view for tracking
 
 ```
 + (void) sendViewWithName:(NSString*) viewName;
 ```
 
-** Event tracking function **  
+**Event tracking function**  
 When user perform an event send event for tracking
 
 ```
@@ -387,7 +387,7 @@ When user perform an event send event for tracking
 ```
 Define `category`, `action`, `label` detail of the action
 
-** Event tracking function **  
+**Event tracking function**  
 When user perform an event send event for tracking
 
 ```
