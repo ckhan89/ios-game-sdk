@@ -452,7 +452,7 @@ Gọi [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; để mời bạn
 (user phải login mới sử dụng được tính năng này).
 
 ```
-+ (void)inviteFacebookFriends;
+- (void)inviteFacebookFriendsWithCompleteBlock:(AppotaInviteFriendBlock) inviteBlock;
 ```
 
 **Hiển thị Facebook Login**
