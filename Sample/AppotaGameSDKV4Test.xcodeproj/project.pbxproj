@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0419535D1B215EB1003CA424 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */; };
 		042887F91B1EF9C800555C4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C607E741AB2A7FC00C5C8EC /* Info.plist */; };
 		047D24301B1EFCD400C0BDAF /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 047D242E1B1EFCD400C0BDAF /* AppotaBundle.bundle */; };
+		04998F611B2A9E020021EDB1 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */; };
 		04C1780C1B18036E00DCFB76 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178091B18036E00DCFB76 /* FacebookSDK.framework */; };
 		1C607E761AB2A7FC00C5C8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E751AB2A7FC00C5C8EC /* main.m */; };
 		1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E781AB2A7FC00C5C8EC /* AppDelegate.m */; };
@@ -139,7 +139,7 @@
 				1C607EC21AB2A97200C5C8EC /* Accounts.framework in Frameworks */,
 				1C607EC01AB2A95F00C5C8EC /* AdSupport.framework in Frameworks */,
 				1C607EBE1AB2A95600C5C8EC /* Social.framework in Frameworks */,
-				0419535D1B215EB1003CA424 /* AppotaSDK.framework in Frameworks */,
+				04998F611B2A9E020021EDB1 /* AppotaSDK.framework in Frameworks */,
 				1C607EBC1AB2A94500C5C8EC /* QuartzCore.framework in Frameworks */,
 				1C607EBA1AB2A93900C5C8EC /* MessageUI.framework in Frameworks */,
 				1C607EB81AB2A92100C5C8EC /* CoreMedia.framework in Frameworks */,
@@ -531,6 +531,9 @@
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 				);
 				INFOPLIST_FILE = AppotaGameSDKV4Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -552,6 +555,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
