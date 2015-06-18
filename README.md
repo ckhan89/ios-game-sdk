@@ -492,5 +492,21 @@ Call [AppotaGameSDK showTwitterLogin]; to show Twitter Login without Appota Logi
 ##4. FAQ and Glossary <a name="head1-faq"></a>
 - `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN
 - `PackageID` each payment package in game should be defined along with a package ID (provided by SDKTool) to identify package.
-- `PaymentState` <a name = "head3-payment-state"> </a> payment state must be implemented in `getPaymentStateWithPackageID:` function. And use `PackageID` and game server information to build up `PaymentState`.   
-For example packageID: `com.gold.package1` - (defined in integration process) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : com.gold.package1_1000_gold_X_Y (depends on your format).
+- `PaymentState` <a name = "head3-payment-state"> </a> 
+Use payment state to increase gold for game user.
+Payment state must be implemented in `getPaymentStateWithPackageID:` function in AppotaGameSDKCallback.m . And use `PackageID` and game server information to build up `PaymentState`.   
+For example packageID: `com.gold.package1` - (defined in integration process) corresponds with a package of 1000 gold and current game user is X in server Y. Then payment state can be constructed : com.gold.package1_1000_gold_X_Y (depends on your format). Detail:
+in `AppDelegate.m` implements :
+
+```
+- (NSString *) getPaymentStateWithPackageID:(NSString *)packageID{
+	//username :X, server Y, package of 1000 gold
+	// payment state can be set:
+	//Note :Length of Payment State does not exceed 150 	//characters
+	
+	NSString *userName = @"X";
+    NSString *server = @"Y";
+    return [NSString stringWithFormat:@"%@_1000_gold_%@_%@",packageID,userName,server];
+
+}
+```
