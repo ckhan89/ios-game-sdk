@@ -31,6 +31,10 @@ typedef void (^AppotaSDKUserLoginResultObjectBlock) (AppotaUserLoginResult *obje
 
 + (void) showFacebookLoginWithCompleteBlock:(AppotaSDKUserLoginResultObjectBlock) completeBlock
                               andErrorBlock:(AppotaSDKErrorBlock) errorBlock;
+
++ (void) showFacebookLoginWithPermissions:(NSArray *)permissions
+                     andWithCompleteBlock:(AppotaSDKUserLoginResultObjectBlock) completeBlock
+                            andErrorBlock:(AppotaSDKErrorBlock) errorBlock;
 /**
  *  show google login
  */
@@ -44,8 +48,4 @@ typedef void (^AppotaSDKUserLoginResultObjectBlock) (AppotaUserLoginResult *obje
 + (void) showTwitterLogin;
 + (void) showTwitterLoginWithCompleteBlock:(AppotaSDKUserLoginResultObjectBlock) completeBlock
                              andErrorBlock:(AppotaSDKErrorBlock) errorBlock;
-
-+ (void) showFacebookLoginWithPermissions:(NSArray *)permissions
-                              andWithCompleteBlock:(AppotaSDKUserLoginResultObjectBlock) completeBlock
-                            andErrorBlock:(AppotaSDKErrorBlock) errorBlock;
 @end
