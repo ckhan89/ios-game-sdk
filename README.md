@@ -41,14 +41,17 @@ The Appota Game SDK for iOS supports the following versions of software:
 
 ###1.2. Obtain app api key and client key <a name="head2-obtain-app-api-key-and-client-key"> </a>
 * Retreive Appota app information `ClientKey`, `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/manage-content.html):  
-* Retreive Facebook Application ID. <a name="head3-facebook-appid"> </a> [Detail about how to create ,retreive and setup Facebook app info for iOS](https://developers.facebook.com/docs/ios/getting-started).  
+* Retreive Facebook Application ID. <a name="head3-facebook-appid"> </a> [Detail about how to create ,retreive and setup Facebook app info for iOS](https://developers.facebook.com/docs/ios/getting-started).
+* Create Facebook App Link. <a name = "head3-facebook-app-link"> </a>  [ Detail about how to create app link ](https://developers.facebook.com/docs/app-invites/ios) 
 * Retreive Google Client ID and Client Secret. <a name="head3-google-appid"> </a> [Detail about create, retreive and setup Google app for iOS](https://developers.google.com/+/mobile/ios/getting-started)
 * Retreive Twitter Consumer Key and Twitter Consumer Secret Key. <a name= "head3-twitter-appid"> </a> [Detail about create, retreive and setup Twitter app for iOS](https://apps.twitter.com/)
 
 ###1.3. Configure your XCode Project <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. Add the Appota iOS SDK
- Open [ios-game-sdk/Frameworks](Frameworks/) and add [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FacebookSDK.framework](Frameworks/FacebookSDK.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
+ Open [ios-game-sdk/Frameworks](Frameworks/)  and add  [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FBSDKCoreKit.framework](Frameworks/FBSDKCoreKit.framework),
+ [FBSDKLoginKit.framework](Frameworks/FBSDKLoginKit.framework), 
+[FBSDKShareKit.framework](Frameworks/FBSDKShareKit.framework) to your project. (Remember to choose **Create groups for any added folders** and select **Copy items into destination group's folder (if needed)**)
 ![](images/add_framework.gif)
 
 ####1.3.2. Add framework dependencies and setting
@@ -65,7 +68,7 @@ Open **Build Phases** tab, within **Link Binary with Libraries**, add the follow
 - `SystemConfiguration.framework`
 - `MessageUI.framework`
 - `CoreMotion.framework`
--  `Security.framework`
+- `Security.framework`
 
 Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if **Link Frameworks Automatically**, **Enable Modules (C and Objectivce-C))** are set to `YES`
 
@@ -73,6 +76,7 @@ Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if 
 ####1.3.3. Configure the Info `.plist`
 
 - Open Info `plist` section add `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
+- Open Info `plist` section add `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
 - Open Info `plist` section add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` key with value is your [Google Client Id and Sceret](#head3-google-appid).
 - Open Info `plist` section add `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` key with value is your [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - Open Info `plist` section add `AppotaAPIKey` key with value is your [Appota APIKey](#head3-appota-appid).
@@ -90,8 +94,10 @@ When we release a new version of the SDK, you can pick up the changes as describ
 * In Xcode select the following frameworks, bundle and hit **delete** on your keyboard. Then select **Move to Trash**:
 
     * `ApppotaFramework.framework`
-    * `FacebookFramework.framework`
     * `AppotaBundle.bundle`
+    * `FBSDKCoreKit.framework`
+    * `FBSDKLoginKit.framework`
+    * `FBSDKShareKit.framework`
     
 * Follow the installation process [above](#head1-integrate-sdk) to include the new version of the SDK.
 

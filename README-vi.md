@@ -36,13 +36,16 @@ Appota Game SDK cho iOS hỗ trợ những phiên bản phần mềm sau:
 ###1.2. Nhận app api key và client key.<a name = ""head2-obtain-app-api-key-and-client-key"> </a>
 * Truy xuất Appota app information `ClientKey`, `APIKey`, `ClientSecret` từ app dashboard <a name="head3-appota-appid"> </a>. Nếu bạn chưa đăng ký ứng dụng của bạn với Appota bằng cách tạo một ứng dụng Appota. Bạn phải [tạo một ứng dụng mới](https://developer.appota.com/manage-content.html):
 * Nhận Facebook Application ID <a name = "head3-facebook-appid"> </a>. [Cụ thể về cách làm sao để tạo, nhận và cài đặt Facebook app info cho iOS tham khảo tại đây](https://developers.facebook.com/docs/ios/getting-started).
+*  Nhận Facebook App Link <a name = "head3-facebook-app-link"> </a>. [Cụ thể về cách làm sao để tạo Facebook app link cho iOS tham khảo tại đây](https://developers.facebook.com/docs/app-invites/ios).
 * Nhận Google Client ID và Client Secret <a name = "head3-google-appid"> </a>. [Cụ thể về cách làm sao để tạo, nhận và cài đặt Google app cho iOS tham khảo tại đây](https://developers.google.com/+/mobile/ios/getting-started).
 * Nhận Twitter Consumer Key và Twitter Consumer Secret Key <a name= "head3-twitter-appid"> </a>. [Cụ thể về việc tạo, nhận và cài đặt Twitter app cho iOS tham khảo tại đây](https://apps.twitter.com/).
 
 ###1.3. Cấu hình XCode Project của bạn <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. Thêm vào Xcode Project của bạn Appota iOS SDK.
-Mở [ios-game-sdk/Frameworks](Frameworks/) và thêm [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FacebookSDK.framework](Frameworks/FacebookSDK.framework) vào project của bạn. (Chú ý chọn **Create groups for any added folders** và chọn **Copy items into destination group's folder (if needed)**)
+Mở [ios-game-sdk/Frameworks](Frameworks/) và thêm [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FBSDKCoreKit.framework](Frameworks/FBSDKCoreKit.framework),
+[FBSDKLoginKit.framework](Frameworks/FBSDKLoginKit.framework),
+[FBSDKShareKit.framework](Frameworks/FBSDKShareKit.framework)  vào project của bạn. (Chú ý chọn **Create groups for any added folders** và chọn **Copy items into destination group's folder (if needed)**)
 
 ![](images/add_framework.gif)
 
@@ -67,6 +70,7 @@ Mở **Build Settings**, tìm **Other Linker Flags**, thêm vào cờ `-ObjC` sa
 
 ####1.3.3. Cấu hình file Info `.plist`
 - Mở Info `plist` thêm vào `FacebookAppID` key với value là [Facebook AppID](#head3-facebook-appid) của bạn.
+- Mở Info `plist` thêm vào `FacebookAppLinkUrl` key với value là [Facebook App Link](#head3-facebook-app-link) của bạn.
 - Mở Info `plist` thêm vào `GOOGLE_CLIENT_ID` và `GOOGLE_CLIENT_SECRET` key với value là [Google Client Id and Sceret](#head3-google-appid) của bạn.
 - Mở Info `plist` thêm vào `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` key với value là [Twitter consumer key and twitter consumer secret](#head3-twitter-appid) của bạn.
 - Mở Info `plist` thêm vào `AppotaAPIKey` key với value là [Appota APIKey](#head3-appota-appid) của bạn.
@@ -81,8 +85,10 @@ Khi chúng tôi release một version mới của SDK, bạn có thể nhận c�
 
 * Trong Xcode chọn các framework, bundle sau đây và gõ **delete** trên bàn phím của bạn. Sau đó chọn **Move to Trash**:
  	* `ApppotaFramework.framework`
-    * `FacebookFramework.framework`
-    * `AppotaBundle.bundle` 
+ 	* `AppotaBundle.bundle`
+    * `FBSDKCoreKit.framework`
+    * `FBSDKLoginKit.framework`
+    * `FBSDKShareKit.framework` 
 
 * Làm theo quá trình cài đặt [ở trên](#head1-integrate-sdk) để include version mới của SDK.
 
