@@ -10,6 +10,8 @@
 #import <AppotaSDK/AppotaSDK.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 @interface AppDelegate ()
 
 @end
@@ -26,7 +28,7 @@
     [[AppotaGameSDK sharedInstance] setSDKButtonVisibility:YES];
     [[AppotaGameSDK sharedInstance] setDelegate:self];
     [AppotaGameSDK  registerPushNotificationWithGroupName:@"IOS"];
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -45,6 +47,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -52,7 +55,7 @@
 }
 
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [AppotaGameSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+    return [AppotaGameSDK application:application handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
