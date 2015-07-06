@@ -121,7 +121,7 @@ Thêm handle open URL trong function: `application:openURL:sourceApplication:ann
 
 ```
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [AppotaGameSDK handleOpenURL:url 						   sourceApplication:sourceApplication 							  annotation:annotation];
+    return [AppotaGameSDK  application:application handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 ```
 Có 4 function để control SDK follow:
@@ -459,7 +459,8 @@ Gọi [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; để mời bạn
 (user phải login mới sử dụng được tính năng này).
 
 ```
-- (void)inviteFacebookFriendsWithCompleteBlock:(AppotaInviteFriendBlock) inviteBlock;
++ (void)inviteFacebookFriendsWithCompleteBlock:(AppotaSDKDictionaryBlock) resultBlock
+                                 andErorrBlock:(AppotaSDKErrorBlock) errorBlock;
 ```
 
 **Hiển thị Facebook Login**

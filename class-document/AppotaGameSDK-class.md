@@ -33,9 +33,7 @@ Set callback for `AppotaGameSDK`
 `handleOpenURL:sourceApplication:annotation:` Will be called in `AppDelegate.m` handle openURL function
 
 ```
-[AppotaGameSDK handleOpenURL:url
-	     sourceApplication:sourceApplication
-            annotation:annotation];
+[AppotaGameSDK  application:application handleOpenURL:url sourceApplication:sourceApplication annotation:annotation]
 ```
 There are 4 functions to control SDK flows:
 
