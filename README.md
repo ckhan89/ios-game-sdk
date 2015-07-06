@@ -40,9 +40,9 @@ The Appota Game SDK for iOS supports the following versions of software:
 * iOS 6 and later
 
 ###1.2. Obtain app api key and client key <a name="head2-obtain-app-api-key-and-client-key"> </a>
-* Retreive Appota app information `ClientKey`, `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/manage-content.html):  
+* Retreive Appota app information `ClientKey`, `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/beta/):  
 * Retreive Facebook Application ID. <a name="head3-facebook-appid"> </a> [Detail about how to create ,retreive and setup Facebook app info for iOS](https://developers.facebook.com/docs/ios/getting-started).
-* Create Facebook App Link. <a name = "head3-facebook-app-link"> </a>  [ Detail about how to create Facebook app link ](https://developers.facebook.com/docs/app-invites/ios) 
+* Create Facebook App Link. <a name = "head3-facebook-app-link"> </a>  [ Detail about how to create Facebook app link ](https://developers.facebook.com/docs/app-invites/ios)  -> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host)
 * Retreive Google Client ID and Client Secret. <a name="head3-google-appid"> </a> [Detail about create, retreive and setup Google app for iOS](https://developers.google.com/+/mobile/ios/getting-started)
 * Retreive Twitter Consumer Key and Twitter Consumer Secret Key. <a name= "head3-twitter-appid"> </a> [Detail about create, retreive and setup Twitter app for iOS](https://apps.twitter.com/)
 
@@ -291,7 +291,7 @@ Related class and function:
 - [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 - [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
-Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki) and payment configuration at [Appota Developer Portal]().
+Because using AppotaSDK payment function you should understand Appota Payment mechanism and configuration. Please study Appota payment mechanism at [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki) and payment configuration at [Appota Developer Portal](https://developer.appota.com/beta/).
 
 ####2.3.1. Show payment view <a name="head3-show-payment-view"> </a>
 
@@ -300,7 +300,7 @@ You have 3 methods to show payment view. Each payment view represents one or lis
 
 **Show default list payment view**
 
-You can show payment view with default list payment packages (which is configured on [Appota Developer Portal]())
+You can show payment view with default list payment packages (which is configured on [Appota Developer Portal](https://developer.appota.com/beta/))
 
 ```
 [AppotaGameSDK showPaymentView]

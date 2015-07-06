@@ -34,9 +34,9 @@ Appota Game SDK cho iOS hỗ trợ những phiên bản phần mềm sau:
 * Xcode 6 và những phiển bản mới hơn.
 * iOS 6 và những phiển bản mới hơn.
 ###1.2. Nhận app api key và client key.<a name = ""head2-obtain-app-api-key-and-client-key"> </a>
-* Truy xuất Appota app information `ClientKey`, `APIKey`, `ClientSecret` từ app dashboard <a name="head3-appota-appid"> </a>. Nếu bạn chưa đăng ký ứng dụng của bạn với Appota bằng cách tạo một ứng dụng Appota. Bạn phải [tạo một ứng dụng mới](https://developer.appota.com/manage-content.html):
+* Truy xuất Appota app information `ClientKey`, `APIKey`, `ClientSecret` từ app dashboard <a name="head3-appota-appid"> </a>. Nếu bạn chưa đăng ký ứng dụng của bạn với Appota bằng cách tạo một ứng dụng Appota. Bạn phải [tạo một ứng dụng mới](https://developer.appota.com/beta/):
 * Nhận Facebook Application ID <a name = "head3-facebook-appid"> </a>. [Cụ thể về cách làm sao để tạo, nhận và cài đặt Facebook app info cho iOS tham khảo tại đây](https://developers.facebook.com/docs/ios/getting-started).
-*  Nhận Facebook App Link <a name = "head3-facebook-app-link"> </a>. [Cụ thể về cách làm sao để tạo Facebook app link cho iOS tham khảo tại đây](https://developers.facebook.com/docs/app-invites/ios).
+*  Nhận Facebook App Link <a name = "head3-facebook-app-link"> </a>. [Cụ thể về cách làm sao để tạo Facebook app link cho iOS tham khảo tại đây](https://developers.facebook.com/docs/app-invites/ios) -> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host).
 * Nhận Google Client ID và Client Secret <a name = "head3-google-appid"> </a>. [Cụ thể về cách làm sao để tạo, nhận và cài đặt Google app cho iOS tham khảo tại đây](https://developers.google.com/+/mobile/ios/getting-started).
 * Nhận Twitter Consumer Key và Twitter Consumer Secret Key <a name= "head3-twitter-appid"> </a>. [Cụ thể về việc tạo, nhận và cài đặt Twitter app cho iOS tham khảo tại đây](https://apps.twitter.com/).
 
@@ -289,7 +289,7 @@ Các Class và function liên quan :
 - [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 - [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
-Do sử dụng tính năng thanh toán của Appota SDK bạn phải hiểu cơ chế thanh toán của Appota và cấu hình. Hãy tham khảo cơ chế thanh toán tại [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN) và và cấu hình thanh toán tại [Appota Developer Portal]().
+Do sử dụng tính năng thanh toán của Appota SDK bạn phải hiểu cơ chế thanh toán của Appota và cấu hình. Hãy tham khảo cơ chế thanh toán tại [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN) và và cấu hình thanh toán tại [Appota Developer Portal](https://developer.appota.com/beta/).
 
 ####2.3.1. Hiển thị payment view <a name="head3-show-payment-view"> </a>
 
@@ -298,7 +298,7 @@ Bạn có 3 phương thức để show payment view. Mỗi payment view biểu d
 
 **Show default list payment view**
 
-Bạn có thể show payment view với list payment packages mặc định (list này được configured trên [Appota Developer Portal]() )
+Bạn có thể show payment view với list payment packages mặc định (list này được configured trên [Appota Developer Portal](https://developer.appota.com/beta/) )
 
 ```
 [AppotaGameSDK showPaymentView]
