@@ -1,6 +1,6 @@
 #Version 4 of the Appta Game SDK for iOS
 
-<b> Version 4 of the Appota Game for iOS has been published in this reposity and in Developer Preview. Version 3 will continue to be available in our [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3) repository. </b>
+<b> Version 4 of the Appota Game for iOS integrate facebook iOS SDK version 4.2 has been published in this reposity and in Developer Preview.[In addition, We have Appota SDK 4 which integerate Facebok iOS SDK version 3](https://github.com/appota/ios-game-sdk/tree/facebooksdkv3). Version 3 will continue to be available in our [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3) repository. </b>
 
 
 

@@ -1,6 +1,6 @@
 # Phiên bản  4 của Appta Game SDK dành cho iOS.
 
-<b> Phiên bản 4 của Appota Game cho Android đã được triển khai và đang trong chế độ Developer Preview(Bản duyệt trước). Phiên bản 3 sẽ tiếp tục vẫn sẵn có tại repository [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3).
+<b> Phiên bản 4 của Appota Game SDK cho iOS tích hợp facebook iOS sdk version 4.2 đã được triển khai và đang trong chế độ Developer Preview(Bản duyệt trước).[Ngoài ra, có thêm phiên bản 4 của Appota Game SDK tích hợp facebook ios sdk version 3](https://github.com/appota/ios-game-sdk/tree/facebooksdkv3) . Phiên bản 3 sẽ tiếp tục vẫn sẵn có tại repository [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3).
 
 ##Highlights
 * **Appota Login** – Hỗ trợ nhiều phương thức login: Appota, Google, Facebook, Twitter, Guest.
@@ -455,7 +455,7 @@ Tất cả các hàm cần dùng khác đều nằm ở [AppotaGameSDK+Advance-C
 
 **Mời bạn trên facebook tham gia chơi game**
 
-Gọi [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; để mời bạn của bạn tham gia chơi game cùng bạn
+Gọi [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:andErorrBlock:]; để mời bạn của bạn tham gia chơi game cùng bạn
 (user phải login mới sử dụng được tính năng này).
 
 ```

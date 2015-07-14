@@ -1,6 +1,6 @@
 #IOS的APPOTA  Game SDK第四版本
 
-<b> Appota Game安卓的SDK4已展开并在开发人员预览版状态。第3版本还在 [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3) repository. </b>
+<b>在Appota游戏的iOS4版本整合Facebook的iOS SDK4.2版已刊登于本reposity和开发人员预览版。[施氮，我们有Appota SDK4，integerate Facebok的iOS的SDK版本3](https://github.com/appota/ios-game-sdk/tree/facebooksdkv3).第3版本还在 [appota-ios-game-sdk3](https://github.com/appota/ios-game-sdk3) repository. </b>
 
 
 
