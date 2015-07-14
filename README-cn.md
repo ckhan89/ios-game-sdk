@@ -41,14 +41,17 @@ The Appota Game SDK for iOS supports the following versions of software:
 
 ###1.2. 获取app api key 和客户端key <a name="head2-obtain-app-api-key-and-client-key"> </a>
 * 从应用管理页面取得 `ClientKey`, `APIKey`, `ClientSecret` 等Appota应用. 若您还没向Appota注册Appota应用，您应该 [建设新应用](https://developer.appota.com/manage-content.html):  
-* 获取 Facebook Application ID.建设, <a name="head3-facebook-appid"> </a> [获取及设置IOS的Facebook app info 具体查看](https://developers.facebook.com/docs/ios/getting-started).  
+* 获取 Facebook Application ID.建设, <a name="head3-facebook-appid"> </a> [获取及设置IOS的Facebook app info 具体查看](https://developers.facebook.com/docs/ios/getting-started). 
+*  获取 Facebook App Link.建设, <a name = "head3-facebook-app-link"> </a>  [获取及设置IOS的Facebook app link 具体查看](https://developers.facebook.com/docs/app-invites/ios)  -> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host). 
 * 获取  Google Client ID 和 Client Secret. 建设, <a name="head3-google-appid"> </a> [获取及设置IOS的Google app 具体查看](https://developers.google.com/+/mobile/ios/getting-started)
 * •	获取 Twitter Consumer Key 和 Twitter Consumer Secret Key. 建设, <a name= "head3-twitter-appid"> </a> [获取及设置IOS的Twitter app 具体查看](https://apps.twitter.com/)
 
 ###1.3. 您Xcode Project的配置 <a name="head2-configure-your-xcode-project"> </a>
 
 ####1.3.1. 添加 Appota iOS SDK 到您的Xcode Project
- 打开 [ios-game-sdk/Frameworks](Frameworks/) 并添加 [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FacebookSDK.framework](Frameworks/FacebookSDK.framework) 到您的项目. (注意选择 **Create groups for any added folders** 和选  **Copy items into destination group's folder (if needed)**)
+ 打开 [ios-game-sdk/Frameworks](Frameworks/) 并添加 [AppotaSDK.framework](Frameworks/AppotaSDK.framework), [AppotaBundle.bundle](Frameworks/AppotaBundle.bundle), [FBSDKCoreKit.framework](Frameworks/FBSDKCoreKit.framework),
+ [FBSDKLoginKit.framework](Frameworks/FBSDKLoginKit.framework), 
+[FBSDKShareKit.framework](Frameworks/FBSDKShareKit.framework) 到您的项目. (注意选择 **Create groups for any added folders** 和选  **Copy items into destination group's folder (if needed)**)
 ![](images/add_framework.gif)
 
 ####1.3.2. 添加并安装框架依赖
@@ -72,6 +75,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 ####1.3.3. Info `.plist` 文件配置
 
 - 打开 Info `plist` 输入您的 `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
+- 打开 Info `plist` 输入您的 `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
 - 打开 Info `plist` 输入您的 `GOOGLE_CLIENT_ID` 到 `GOOGLE_CLIENT_SECRET` [Google Client Id and Sceret](#head3-google-appid).
 - 打开 Info `plist` 输入您的 `TWITTER_CONSUMER_KEY` 到 `TWITTER_CONSUMER_SECRET` key. [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - 打开 Info `plist` 输入您的 `AppotaAPIKey` 到 [Appota APIKey](#head3-appota-appid).
@@ -89,8 +93,10 @@ The Appota Game SDK for iOS supports the following versions of software:
 * •	在Xcode中选择以下框架和捆绑，然后点击键盘上的 **delete**. Then select **Move to Trash**:
 
     * `ApppotaFramework.framework`
-    * `FacebookFramework.framework`
     * `AppotaBundle.bundle`
+    * `FBSDKCoreKit.framework`
+    * `FBSDKLoginKit.framework`
+    * `FBSDKShareKit.framework`
     
 * Include SDK的新版本按照 [上面](#head1-integrate-sdk) 的设置过程
 
@@ -125,7 +131,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 
 ```
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [AppotaGameSDK handleOpenURL:url 						   sourceApplication:sourceApplication 							  annotation:annotation];
+    return [AppotaGameSDK  application:application handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 ```
 有 4 种 function 可用来 control SDK follow:
@@ -286,7 +292,7 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 - [AppotaGameSDKCallback](class-document/AppotaGameSDKCallback-class.md)
 - [AppotaPaymentResult](class-document/AppotaPaymentResult-class.md)
 
-使用Appota SDK的支付功能需要了解 Appota 支付机制和支付配置。烦请在 [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki) 参考支付机制并且在 [Appota Developer Portal]() 参考支付配置.
+使用Appota SDK的支付功能需要了解 Appota 支付机制和支付配置。烦请在 [Appota Payment Document](https://github.com/appota/ios-game-sdk/wiki) 参考支付机制并且在 [Appota Developer Portal](https://developer.appota.com/beta/) 参考支付配置.
 
 ####2.3.1. 显示  payment view <a name="head3-show-payment-view"> </a>
 
@@ -295,7 +301,7 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 
 **Show default list payment view**
 
-您可以指定 payment packages 列表显示 payment view (列表被配置在 [Appota Developer Portal 上]())
+您可以指定 payment packages 列表显示 payment view (列表被配置在 [Appota Developer Portal 上](https://developer.appota.com/beta/))
 
 ```
 [AppotaGameSDK showPaymentView]
@@ -452,10 +458,11 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 
 **邀请 facebook 好友玩游戏**
 
-调 [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; 邀请facebook好友玩游戏 (用户要登录才能使用该功能)。
+调 [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:andErorrBlock:]; 邀请facebook好友玩游戏 (用户要登录才能使用该功能)。
 
 ```
-+ (void)inviteFacebookFriendsWithCompleteBlock:(AppotaInviteFriendBlock) inviteBlock;
++ (void)inviteFacebookFriendsWithCompleteBlock:(AppotaSDKDictionaryBlock) resultBlock
+                                 andErorrBlock:(AppotaSDKErrorBlock) errorBlock;
 ```
 **显示 Facebook登录**
 

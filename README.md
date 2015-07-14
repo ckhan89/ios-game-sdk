@@ -459,7 +459,7 @@ All advance function is locate in [AppotaGameSDK+Advance-Class](class-document/A
 
 **Invite facebook friends**
 
-Call [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock:]; to invite friends play your game
+Call [AppotaGameSDK inviteFacebookFriendsWithCompleteBlock: andErorrBlock:]; to invite friends play your game
 (you must login to use this function).
 
 ```
