@@ -2,7 +2,9 @@ ChangeLog
 =====
 
 ## 1. SDK
-
+Appota Game SDK version 4.0.7b7. Update:
++ fixed crash on iOS 6
++ fixed payment via techcombank web view show empty page.
 
 ## 2. Server
 
