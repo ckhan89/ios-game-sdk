@@ -229,7 +229,7 @@ Hàm này sẽ show lên lịch sử các giao dịch user đã thực hiện (k
 ```
 ####2.2.9. Handle authenticaiton callbacks <a name = "login-handle-login-response"> </a>
 
-AppotaSDK provide 4 callbacks delegate for login defined in [`AppotaGameSDKCallback`](class-document/AppotaGameSDKCallback-class.md) , please implement these functions to `Appdelegate.m`
+AppotaSDK cung cấp 4 callbacks delegate cho login được định nghĩa trong [`AppotaGameSDKCallback`](class-document/AppotaGameSDKCallback-class.md) , hãy implement các fuction này trong `Appdelegate.m`
 
 **Note** 2 callbacks là `@required` : `@required` và `@required`.
 
