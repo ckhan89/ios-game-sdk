@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		042887F91B1EF9C800555C4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C607E741AB2A7FC00C5C8EC /* Info.plist */; };
-		044E7C9A1B54EE3400E3788F /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */; };
 		047D24301B1EFCD400C0BDAF /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 047D242E1B1EFCD400C0BDAF /* AppotaBundle.bundle */; };
 		04C1780C1B18036E00DCFB76 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178091B18036E00DCFB76 /* FacebookSDK.framework */; };
+		04DDA76A1B590B4F00C74FFC /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */; };
 		1C607E761AB2A7FC00C5C8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E751AB2A7FC00C5C8EC /* main.m */; };
 		1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E781AB2A7FC00C5C8EC /* AppDelegate.m */; };
 		1C607E7C1AB2A7FC00C5C8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E7B1AB2A7FC00C5C8EC /* ViewController.m */; };
@@ -145,7 +145,7 @@
 				1C607EB01AB2A8C300C5C8EC /* OpenGLES.framework in Frameworks */,
 				1C607EAE1AB2A8B600C5C8EC /* AVFoundation.framework in Frameworks */,
 				1C607EAC1AB2A8A700C5C8EC /* libxml2.dylib in Frameworks */,
-				044E7C9A1B54EE3400E3788F /* AppotaSDK.framework in Frameworks */,
+				04DDA76A1B590B4F00C74FFC /* AppotaSDK.framework in Frameworks */,
 				1C607EAA1AB2A89800C5C8EC /* MobileCoreServices.framework in Frameworks */,
 				1C607EA81AB2A88A00C5C8EC /* AudioToolbox.framework in Frameworks */,
 				1C607EA61AB2A87600C5C8EC /* StoreKit.framework in Frameworks */,
@@ -536,6 +536,9 @@
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 				);
 				INFOPLIST_FILE = AppotaGameSDKV4Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -557,6 +560,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
