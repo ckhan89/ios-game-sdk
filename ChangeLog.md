@@ -5,6 +5,11 @@ ChangeLog
 Appota Game SDK version 4.0.7b7. Update:
 + fixed crash on iOS 6
 + fixed payment via techcombank web view show empty page.
+### . ChangelogID:
+
+CLUpdate01: 
+  + fixed: showPaymentViewWithPackageID:(NSString *)packageID method. show all payment with invalid packageID.
+
 
 ## 2. Server
 
