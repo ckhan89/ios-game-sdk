@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AppotaSDK/AppotaSDK.h>
+#import "GlobalGameVariables.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -22,6 +23,8 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     // Do any additional setup after loading the view, typically from a nib.
     [self.loginButton setTitle:@"Login/LogOut" forState:UIControlStateNormal];
+    
+    [GlobalGameVariables sharedInstance].gameState = @"GameDidLoad";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,10 +40,12 @@
     }
 }
 - (IBAction)showPaymentView:(id)sender {
+    [GlobalGameVariables sharedInstance].gameState = @"PaymentShow";
     [AppotaGameSDK showPaymentView];
 }
 
 - (IBAction)showPaymentWithPackage:(id)sender {
+    [GlobalGameVariables sharedInstance].gameState = @"PaymentShowsdk4.50";
     [AppotaGameSDK showPaymentViewWithPackageID:@"sdk4.50"];
 }
 - (IBAction)showProfileView:(id)sender {
