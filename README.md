@@ -367,6 +367,8 @@ For example packageID: com.gold.package1 - (defined in your developer page) corr
 
 **Note** :Length of **PAYMENT_STATE** does not exceed 150 characters
 
+For more information about payment state please view our [Sample](Sample). We implement a singleton `GlobalGameVariables` to explain how to use payment state in that callback
+
 
 ```
 - (NSString*) getPaymentStateWithPackageID:(NSString *) packageID;
@@ -517,3 +519,5 @@ in `AppDelegate.m` implements :
 
 }
 ```
+
+For more information about payment state please view our [Sample](Sample). We implement a singleton `GlobalGameVariables` to explain how to use payment state in that callback

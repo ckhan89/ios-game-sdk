@@ -366,6 +366,8 @@ Ví dụ packageID: com.gold.package1 - (được định nghĩa trên trang dev
 
 **Chú ý** :Độ dài của **PAYMENT_STATE** không được vượt quá 150 ký tự.
 
+Xem sample để rõ hơn về payment state [Sample](Sample). Chúng tôi đã tạo 1 singleton `GlobalGameVariables` để giải thích cách sử dụng callback payment state
+
 ```
 - (NSString*) getPaymentStateWithPackageID:(NSString *) packageID;
 ```
@@ -500,3 +502,4 @@ Gọi [AppotaGameSDK showTwitterLogin]; để show Twitter Login không có Appo
 - `PaymentState` <a name = "head3-payment-state"> </a> payment state phải được thực thi trong  hàm `getPaymentStateWithPackageID:`. Và sử dụng `PackageID` và thông tin game server để tạo nên `PaymentState`.   
 Ví dụ packageID: `com.gold.package1` - (được định nghĩa trong quá trình tạo payment config) tương ứng với một package của 1000 gold và game user hiện tại là X đang chơi trong server Y. Khi đó payment state sẽ có cấu trúc như sau : com.gold.package1_1000_gold_X_Y (tuỳ thuộc vào định dạng của bạn).
 
+Xem sample để rõ hơn về payment state [Sample](Sample). Chúng tôi đã tạo 1 singleton `GlobalGameVariables` để giải thích cách sử dụng callback payment state

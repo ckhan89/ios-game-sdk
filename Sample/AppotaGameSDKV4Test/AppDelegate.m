@@ -11,6 +11,7 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "GlobalGameVariables.h"
 
 @interface AppDelegate ()
 
@@ -94,8 +95,9 @@
     
 }
 
+// For this example we will return game user id, game server id, game state, package id seperated by |
 -(NSString *)getPaymentStateWithPackageID:(NSString *)packageID{
-    return [NSString stringWithFormat:@"%@_1000_gold_hieutt_server2",packageID];
+    return [NSString stringWithFormat:@"%@|%@|%@|%@", [GlobalGameVariables sharedInstance].gameServerID, [GlobalGameVariables sharedInstance].gameUserID, [GlobalGameVariables sharedInstance].gameState, packageID];
 }
 
 - (void)didLoginErrorWithMessage:(NSString *)message withError:(NSError *)error{

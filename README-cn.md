@@ -366,6 +366,7 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 
 **注** : **PAYMENT_STATE** 不超过 **150** 个字符即可
 
+有关付款状态的更多信息，请浏览我们的[示例]（样本）。我们实行单`GlobalGameVariables`讲解如何使用支付状态的回调
 
 ```
 - (NSString*) getPaymentStateWithPackageID:(NSString *) packageID;
@@ -516,3 +517,4 @@ in `AppDelegate.m` implements :
 
 }
 ```
+有关付款状态的更多信息，请浏览我们的[示例]（样本）。我们实行单`GlobalGameVariables`讲解如何使用支付状态的回调
