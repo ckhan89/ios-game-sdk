@@ -11,10 +11,11 @@
 		0467788E1B4648A200A79496 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046778861B46451200A79496 /* FBSDKCoreKit.framework */; };
 		0467788F1B4648A700A79496 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046778871B46451200A79496 /* FBSDKLoginKit.framework */; };
 		046778901B4648AA00A79496 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046778881B46451200A79496 /* FBSDKShareKit.framework */; };
+		048DA6B21B60DD7900049AE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E7B1AB2A7FC00C5C8EC /* ViewController.m */; };
+		048DA6B41B60DDFB00049AE2 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048DA6B31B60DDFB00049AE2 /* AppotaSDK.framework */; };
 		04DDA7641B57902E00C74FFC /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 046778841B46451100A79496 /* AppotaBundle.bundle */; };
 		1C607E761AB2A7FC00C5C8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E751AB2A7FC00C5C8EC /* main.m */; };
 		1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E781AB2A7FC00C5C8EC /* AppDelegate.m */; };
-		1C607E7C1AB2A7FC00C5C8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E7B1AB2A7FC00C5C8EC /* ViewController.m */; };
 		1C607E7F1AB2A7FC00C5C8EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C607E7D1AB2A7FC00C5C8EC /* Main.storyboard */; };
 		1C607E811AB2A7FC00C5C8EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C607E801AB2A7FC00C5C8EC /* Images.xcassets */; };
 		1C607E901AB2A7FD00C5C8EC /* AppotaGameSDKV4TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E8F1AB2A7FD00C5C8EC /* AppotaGameSDKV4TestTests.m */; };
@@ -52,7 +53,6 @@
 		1CD3AF3A1AB2CBA00089E63B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD3AF391AB2CBA00089E63B /* ImageIO.framework */; };
 		1CD3AF431AB2CFA00089E63B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CD3AF411AB2CFA00089E63B /* Localizable.strings */; };
 		3681E2431B60A193004A30D2 /* GlobalGameVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 3681E2421B60A193004A30D2 /* GlobalGameVariables.m */; };
-		3681E2441B60A217004A30D2 /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046778851B46451200A79496 /* AppotaSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +67,10 @@
 
 /* Begin PBXFileReference section */
 		046778841B46451100A79496 /* AppotaBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AppotaBundle.bundle; path = ../Frameworks/AppotaBundle.bundle; sourceTree = "<group>"; };
-		046778851B46451200A79496 /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppotaSDK.framework; path = ../Frameworks/AppotaSDK.framework; sourceTree = "<group>"; };
 		046778861B46451200A79496 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		046778871B46451200A79496 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		046778881B46451200A79496 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		048DA6B31B60DDFB00049AE2 /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppotaSDK.framework; path = ../Frameworks/AppotaSDK.framework; sourceTree = "<group>"; };
 		1C607E701AB2A7FC00C5C8EC /* AppotaGameSDKV4Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppotaGameSDKV4Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C607E741AB2A7FC00C5C8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C607E751AB2A7FC00C5C8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				1C607EA81AB2A88A00C5C8EC /* AudioToolbox.framework in Frameworks */,
 				1C607EA61AB2A87600C5C8EC /* StoreKit.framework in Frameworks */,
 				1C607EA41AB2A86B00C5C8EC /* CoreText.framework in Frameworks */,
-				3681E2441B60A217004A30D2 /* AppotaSDK.framework in Frameworks */,
+				048DA6B41B60DDFB00049AE2 /* AppotaSDK.framework in Frameworks */,
 				1C607EA21AB2A86100C5C8EC /* AssetsLibrary.framework in Frameworks */,
 				1C607EA01AB2A85600C5C8EC /* MediaPlayer.framework in Frameworks */,
 				1C607E9E1AB2A84500C5C8EC /* CoreLocation.framework in Frameworks */,
@@ -180,8 +180,8 @@
 		1C607E671AB2A7FC00C5C8EC = {
 			isa = PBXGroup;
 			children = (
+				048DA6B31B60DDFB00049AE2 /* AppotaSDK.framework */,
 				046778841B46451100A79496 /* AppotaBundle.bundle */,
-				046778851B46451200A79496 /* AppotaSDK.framework */,
 				046778861B46451200A79496 /* FBSDKCoreKit.framework */,
 				046778871B46451200A79496 /* FBSDKLoginKit.framework */,
 				046778881B46451200A79496 /* FBSDKShareKit.framework */,
@@ -382,8 +382,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3681E2431B60A193004A30D2 /* GlobalGameVariables.m in Sources */,
-				1C607E7C1AB2A7FC00C5C8EC /* ViewController.m in Sources */,
 				1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */,
+				048DA6B21B60DD7900049AE2 /* ViewController.m in Sources */,
 				1C607E761AB2A7FC00C5C8EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,7 +571,16 @@
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 					"/Volumes/Data/Work/Deployment/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 				);
 				INFOPLIST_FILE = AppotaGameSDKV4Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -641,7 +650,16 @@
 					/Volumes/DATA,
 					2/SDK4,
 					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 					"/Volumes/Data/Work/Deployment/ios-game-sdk/Frameworks",
+					/Volumes/DATA,
+					2/SDK4,
+					"github/ios-game-sdk/Frameworks",
 				);
 				INFOPLIST_FILE = AppotaGameSDKV4Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
