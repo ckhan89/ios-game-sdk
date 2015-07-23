@@ -409,7 +409,9 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 
 **注册群推送通知的功能**  
 
-注册推送通知 (目前只支持iOS). 使用群名称来选择推送用户群(比如：只推送1服的用户，群名称将为 = "server 1").
+
+注册推送通知 (目前只支持iOS). 使用群名称来选择推送用户群(比如：只推送1服的用户，群名称将为 = "server 1")
+.
 
 ```
 + (void) registerPushNotificationWithGroupName:(NSString*) groupName;
@@ -421,7 +423,8 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 + (NSString*) configurePushNotificationWithTokenData:(NSData*) deviceTokenData;
 ```  
 推送通知跟数据配置
-玩家注册推送通知之后将回调推送通知跟数据配置。您将该函数添加到您的application delegate (一般是在 AppDelegate.m里)。
+
+玩家注册推送通知之后将回调推送通知跟数据配置。您将该函数添加到您的application delegate (一般是在 AppDelegate.m里)。
 
 ```
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
@@ -517,4 +520,5 @@ in `AppDelegate.m` implements :
 
 }
 ```
-有关付款状态的更多信息，请浏览我们的[示例]（样本）。我们实行单`GlobalGameVariables`讲解如何使用支付状态的回调
+有关付款状态的更多信息，请浏览我们的[示例]（样本）。我们实行单`GlobalGameVariables`讲解如何使用支付状态的回调. Flow
+![State](images/payment_state_seq.png)
