@@ -518,3 +518,6 @@ in `AppDelegate.m` implements :
 }
 ```
 有关付款状态的更多信息，请浏览我们的[示例]（样本）。我们实行单`GlobalGameVariables`讲解如何使用支付状态的回调
+
+Flow of `getPaymentState` function: 
+![State](images/payment_state_seq.png)
