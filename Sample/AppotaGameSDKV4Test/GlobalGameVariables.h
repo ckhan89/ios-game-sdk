@@ -10,5 +10,7 @@
 // You Game State can be changed during game play
 @interface GlobalGameVariables : NSObject
 @property (nonatomic, strong) NSString *gameState;
+@property (nonatomic, strong) NSString *gameUserID;
+@property (nonatomic, strong) NSString *gameServerID;
 + (instancetype) sharedInstance;
 @end

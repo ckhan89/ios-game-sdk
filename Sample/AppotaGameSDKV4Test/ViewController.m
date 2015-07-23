@@ -25,6 +25,8 @@
     [self.loginButton setTitle:@"Login/LogOut" forState:UIControlStateNormal];
     
     [GlobalGameVariables sharedInstance].gameState = @"GameDidLoad";
+    [GlobalGameVariables sharedInstance].gameUserID = @"X";
+    [GlobalGameVariables sharedInstance].gameServerID = @"Y";    
 }
 
 - (void)didReceiveMemoryWarning {

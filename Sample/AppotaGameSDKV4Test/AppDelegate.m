@@ -95,8 +95,9 @@
     
 }
 
+// For this example we will return game user id, game server id, game state, package id seperated by |
 -(NSString *)getPaymentStateWithPackageID:(NSString *)packageID{
-    return [NSString stringWithFormat:@"%@%@", [GlobalGameVariables sharedInstance].gameState, packageID];
+    return [NSString stringWithFormat:@"%@|%@|%@|%@", [GlobalGameVariables sharedInstance].gameServerID, [GlobalGameVariables sharedInstance].gameUserID, [GlobalGameVariables sharedInstance].gameState, packageID];
 }
 
 - (void)didLoginErrorWithMessage:(NSString *)message withError:(NSError *)error{
