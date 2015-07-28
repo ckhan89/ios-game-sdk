@@ -10,6 +10,8 @@ Appota Game SDK version 4.0.7b7. Update:
 CLUpdate01: 
   + fixed: showPaymentViewWithPackageID:(NSString *)packageID method. show all payment with invalid packageID.
 
+CLUpdate02:
++ update sdk version label.
 
 ## 2. Server
 
