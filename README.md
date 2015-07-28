@@ -520,4 +520,5 @@ in `AppDelegate.m` implements :
 }
 ```
 
-For more information about payment state please view our [Sample](Sample). We implement a singleton `GlobalGameVariables` to explain how to use payment state in that callback
+For more information about payment state please view our [Sample](Sample). We implement a singleton `GlobalGameVariables` to explain how to use payment state in that callback. Flow of payment state 
+![State](images/payment_state_seq.png)
