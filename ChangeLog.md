@@ -12,6 +12,8 @@ CLUpdate01:
 
 CLUpdate02:
 + update sdk version label.
+CLUpdate03:
++ fix crash payment bank.
 
 ## 2. Server
 
