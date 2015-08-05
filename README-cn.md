@@ -42,7 +42,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 ###1.2. 获取app api key 和客户端key <a name="head2-obtain-app-api-key-and-client-key"> </a>
 * 从应用管理页面取得 `ClientKey`, `APIKey`, `ClientSecret` 等Appota应用. 若您还没向Appota注册Appota应用，您应该 [建设新应用](https://developer.appota.com/manage-content.html):  
 * 获取 Facebook Application ID.建设, <a name="head3-facebook-appid"> </a> [获取及设置IOS的Facebook app info 具体查看](https://developers.facebook.com/docs/ios/getting-started). 
-*  获取 Facebook App Link.建设, <a name = "head3-facebook-app-link"> </a>  [获取及设置IOS的Facebook app link 具体查看](https://developers.facebook.com/docs/app-invites/ios)  -> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host). 
+*  获取 Facebook App Link.建设, <a name = "head3-facebook-app-link"> </a> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host). 
 * 获取  Google Client ID 和 Client Secret. 建设, <a name="head3-google-appid"> </a> [获取及设置IOS的Google app 具体查看](https://developers.google.com/+/mobile/ios/getting-started)
 * •	获取 Twitter Consumer Key 和 Twitter Consumer Secret Key. 建设, <a name= "head3-twitter-appid"> </a> [获取及设置IOS的Twitter app 具体查看](https://apps.twitter.com/)
 

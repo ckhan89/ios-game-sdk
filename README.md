@@ -42,7 +42,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 ###1.2. Obtain app api key and client key <a name="head2-obtain-app-api-key-and-client-key"> </a>
 * Retreive Appota app information `ClientKey`, `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/beta/):  
 * Retreive Facebook Application ID. <a name="head3-facebook-appid"> </a> [Detail about how to create ,retreive and setup Facebook app info for iOS](https://developers.facebook.com/docs/ios/getting-started).
-* Create Facebook App Link. <a name = "head3-facebook-app-link"> </a>  [ Detail about how to create Facebook app link ](https://developers.facebook.com/docs/app-invites/ios)  -> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host)
+* Create Facebook App Link. <a name = "head3-facebook-app-link"> </a> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host)
 * Retreive Google Client ID and Client Secret. <a name="head3-google-appid"> </a> [Detail about create, retreive and setup Google app for iOS](https://developers.google.com/+/mobile/ios/getting-started)
 * Retreive Twitter Consumer Key and Twitter Consumer Secret Key. <a name= "head3-twitter-appid"> </a> [Detail about create, retreive and setup Twitter app for iOS](https://apps.twitter.com/)
 
