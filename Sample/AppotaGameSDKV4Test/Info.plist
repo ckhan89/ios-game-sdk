@@ -11,7 +11,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apt.publish.3qcb</string>
+	<string>com.apt.publish.xajh</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -39,10 +39,10 @@
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>789057937844518</string>
-	<key>FacebookDisplayName</key>
-	<string>AppotaSDK4Application</string>
 	<key>FacebookAppLinkUrl</key>
 	<string>https://fb.me/830240147059630</string>
+	<key>FacebookDisplayName</key>
+	<string>AppotaSDK4Application</string>
 	<key>GOOGLE_CLIENT_ID</key>
 	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
 	<key>GOOGLE_CLIENT_SECRET</key>

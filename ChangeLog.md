@@ -16,6 +16,9 @@ CLUpdate03:
 + fix crash payment bank.
 CLUpdate04:
 + fixed Unauthorized user. (401 error code) 
+CLUpdate05:
++ fixed error update user infor.
++ fixed crash facebook sdk ver 4.4.0
 ## 2. Server
 
 - Add `revenue` parameter in IPN callback to measure revenue of current payment method type `CARD`, `BANK`, ...
