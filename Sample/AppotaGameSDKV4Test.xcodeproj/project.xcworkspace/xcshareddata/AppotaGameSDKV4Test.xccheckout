@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>31F3CA65-CF94-427B-9DEE-45DEB774052C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>AppotaGameSDKV4Test</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>275C98D5735872B843F1A3A622C4FBE12329A996</key>
 		<string>https://github.com/appota/ios-game-sdk.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Sample/AppotaGameSDKV4Test.xcodeproj</string>
+	<string>Sample/AppotaGameSDKV4Test.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>275C98D5735872B843F1A3A622C4FBE12329A996</key>
