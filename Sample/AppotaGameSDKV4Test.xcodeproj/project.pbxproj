@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		042887F91B1EF9C800555C4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C607E741AB2A7FC00C5C8EC /* Info.plist */; };
-		047D24301B1EFCD400C0BDAF /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 047D242E1B1EFCD400C0BDAF /* AppotaBundle.bundle */; };
-		04C1780C1B18036E00DCFB76 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C178091B18036E00DCFB76 /* FacebookSDK.framework */; };
-		04DDA76A1B590B4F00C74FFC /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */; };
+		04FA607D1B7861B300A5AF1B /* AppotaBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04FA607A1B7861B300A5AF1B /* AppotaBundle.bundle */; };
+		04FA607E1B7861B300A5AF1B /* AppotaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FA607B1B7861B300A5AF1B /* AppotaSDK.framework */; };
+		04FA607F1B7861B300A5AF1B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FA607C1B7861B300A5AF1B /* FacebookSDK.framework */; };
 		1C607E761AB2A7FC00C5C8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E751AB2A7FC00C5C8EC /* main.m */; };
 		1C607E791AB2A7FC00C5C8EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E781AB2A7FC00C5C8EC /* AppDelegate.m */; };
 		1C607E7C1AB2A7FC00C5C8EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C607E7B1AB2A7FC00C5C8EC /* ViewController.m */; };
@@ -63,9 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppotaSDK.framework; path = ../Frameworks/AppotaSDK.framework; sourceTree = "<group>"; };
-		047D242E1B1EFCD400C0BDAF /* AppotaBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AppotaBundle.bundle; path = ../Frameworks/AppotaBundle.bundle; sourceTree = "<group>"; };
-		04C178091B18036E00DCFB76 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Frameworks/FacebookSDK.framework; sourceTree = "<group>"; };
+		04FA607A1B7861B300A5AF1B /* AppotaBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppotaBundle.bundle; sourceTree = "<group>"; };
+		04FA607B1B7861B300A5AF1B /* AppotaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppotaSDK.framework; sourceTree = "<group>"; };
+		04FA607C1B7861B300A5AF1B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1C607E701AB2A7FC00C5C8EC /* AppotaGameSDKV4Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppotaGameSDKV4Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C607E741AB2A7FC00C5C8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C607E751AB2A7FC00C5C8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,13 +131,14 @@
 				1C607ECC1AB2A9E200C5C8EC /* Foundation.framework in Frameworks */,
 				1C607ECA1AB2A9D300C5C8EC /* CFNetwork.framework in Frameworks */,
 				1C607EC81AB2A9C500C5C8EC /* SystemConfiguration.framework in Frameworks */,
-				04C1780C1B18036E00DCFB76 /* FacebookSDK.framework in Frameworks */,
 				1C607EC61AB2A98F00C5C8EC /* Security.framework in Frameworks */,
 				1C607EC41AB2A98000C5C8EC /* libsqlite3.dylib in Frameworks */,
 				1C607EC21AB2A97200C5C8EC /* Accounts.framework in Frameworks */,
 				1C607EC01AB2A95F00C5C8EC /* AdSupport.framework in Frameworks */,
 				1C607EBE1AB2A95600C5C8EC /* Social.framework in Frameworks */,
+				04FA607F1B7861B300A5AF1B /* FacebookSDK.framework in Frameworks */,
 				1C607EBC1AB2A94500C5C8EC /* QuartzCore.framework in Frameworks */,
+				04FA607E1B7861B300A5AF1B /* AppotaSDK.framework in Frameworks */,
 				1C607EBA1AB2A93900C5C8EC /* MessageUI.framework in Frameworks */,
 				1C607EB81AB2A92100C5C8EC /* CoreMedia.framework in Frameworks */,
 				1C607EB61AB2A90600C5C8EC /* AddressBook.framework in Frameworks */,
@@ -145,7 +146,6 @@
 				1C607EB01AB2A8C300C5C8EC /* OpenGLES.framework in Frameworks */,
 				1C607EAE1AB2A8B600C5C8EC /* AVFoundation.framework in Frameworks */,
 				1C607EAC1AB2A8A700C5C8EC /* libxml2.dylib in Frameworks */,
-				04DDA76A1B590B4F00C74FFC /* AppotaSDK.framework in Frameworks */,
 				1C607EAA1AB2A89800C5C8EC /* MobileCoreServices.framework in Frameworks */,
 				1C607EA81AB2A88A00C5C8EC /* AudioToolbox.framework in Frameworks */,
 				1C607EA61AB2A87600C5C8EC /* StoreKit.framework in Frameworks */,
@@ -171,9 +171,9 @@
 		1C607E671AB2A7FC00C5C8EC = {
 			isa = PBXGroup;
 			children = (
-				040888E01B1EFDD500E8F8E3 /* AppotaSDK.framework */,
-				047D242E1B1EFCD400C0BDAF /* AppotaBundle.bundle */,
-				04C178091B18036E00DCFB76 /* FacebookSDK.framework */,
+				04FA607A1B7861B300A5AF1B /* AppotaBundle.bundle */,
+				04FA607B1B7861B300A5AF1B /* AppotaSDK.framework */,
+				04FA607C1B7861B300A5AF1B /* FacebookSDK.framework */,
 				1CC50F951AE11DB60017AE07 /* CoreTelephony.framework */,
 				1CD3AF391AB2CBA00089E63B /* ImageIO.framework */,
 				1C607ED11AB2AA0A00C5C8EC /* CoreGraphics.framework */,
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C607E7F1AB2A7FC00C5C8EC /* Main.storyboard in Resources */,
-				047D24301B1EFCD400C0BDAF /* AppotaBundle.bundle in Resources */,
+				04FA607D1B7861B300A5AF1B /* AppotaBundle.bundle in Resources */,
 				1C63D6F01ACCFF3B003ABF14 /* Icon@2x.png in Resources */,
 				1CD3AF431AB2CFA00089E63B /* Localizable.strings in Resources */,
 				1C63D6EF1ACCFF3B003ABF14 /* Icon.png in Resources */,
