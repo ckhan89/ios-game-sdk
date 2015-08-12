@@ -39,20 +39,20 @@ function appota_payment($fields) {
                 $phone              = $fields['phone'];
                 $message            = $fields['message'];
                 $code               = $fields['code'];     
-                $check_hash = md5( $amount . $country_code .
+                $check_hash = md5( $amount . $code . $country_code .
                                 $currency . $revenue. $message . $phone . $sandbox . $state . $status . $target . $trans_id.
                                 $trans_type . CLIENT_SECRET );
                 break;
             case 'APPLE_ITUNES':
                 $productid              = $fields['productid'];    
                 $check_hash = md5( $amount . $country_code .
-                                $currency . $revenue. $productid . $message . $phone . $sandbox . $state . $status . $target . $trans_id.
+                                $currency . $revenue. $productid . $sandbox . $state . $status . $target . $trans_id.
                                 $trans_type . CLIENT_SECRET );
                 break;
             case 'GOOGLE_PLAY':
                 $productid              = $fields['productid'];    
                 $check_hash = md5( $amount . $country_code .
-                                $currency . $revenue. $productid . $message . $phone . $sandbox . $state . $status . $target . $trans_id.
+                                $currency . $revenue. $productid . $sandbox . $state . $status . $target . $trans_id.
                                 $trans_type . CLIENT_SECRET );
                 
             default :
