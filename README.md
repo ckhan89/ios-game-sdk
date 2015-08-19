@@ -499,7 +499,8 @@ Call [AppotaGameSDK showTwitterLogin]; to show Twitter Login without Appota Logi
 - [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md)
 
 ##4. FAQ and Glossary <a name="head1-faq"></a>
-- `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN
+- When using SDK in games with server and game user support. To prevent user to make payment before entering the game (actually choose server and game user). You should call `setSDKButtonVisibility:FALSE` when configure the SDK and then call `setSDKButtonVisibility:TRUE` when game user is ready.
+- `IPN` is payment machenism used by Appota System to increase gold for game user. Detail in https://github.com/appota/ios-game-sdk/wiki/Passive-Confirmation-via-IPN . Each app in Appota system will be configured with only one `IPN` url to callback when payment.
 - `PackageID` each payment package in game should be defined along with a package ID (provided by SDKTool) to identify package.
 - `PaymentState` <a name = "head3-payment-state"> </a> 
 Use payment state to increase gold for game user.

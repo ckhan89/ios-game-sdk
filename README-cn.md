@@ -495,7 +495,8 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 - [AppotaGameSDK+Advance-Class](class-document/AppotaGameSDK+Advance-Class.md)
 
 ##4. FAQ and Glossary <a name="head1-faq"></a>
-- `IPN` 是Appota系统为玩家增加元宝的机制. 具体查看 [IPN](https://github.com/appota/ios-game-sdk/wiki/%E5%8D%B3-%E6%97%B6-%E4%BB%98-%E6%AC%BE-%E9%80%9A-%E7%9F%A5) 
+- 当游戏服务器和游戏的用户使用支持SDK。为了防止用户在进入游戏之前进行支付（实际上是选择服务器和游戏的用户）。你应该叫`setSDKButtonVisibility：FALSE`当配置SDK，然后调用`setSDKButtonVisibility：TRUE`当游戏用户准备。
+- `IPN` 是Appota系统为玩家增加元宝的机制. 具体查看 [IPN](https://github.com/appota/ios-game-sdk/wiki/%E5%8D%B3-%E6%97%B6-%E4%BB%98-%E6%AC%BE-%E9%80%9A-%E7%9F%A5). 在Appota系统中的每个应用程序将只有一个`IPN` URL被配置为回调时支付。
 - `PackageID` 每个游戏内的支付包应该附带 package ID (提供SDKTool) 来确认包。
 - `PaymentState`  <a name = "head3-payment-state"> </a> 要在'
  `getPaymentStateWithPackageID:` 函数实施。使用`PackageID`和游戏服务器信息来建设  `PaymentState`.  
