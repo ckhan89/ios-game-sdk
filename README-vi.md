@@ -71,7 +71,7 @@ Mở **Build Settings**, tìm **Other Linker Flags**, thêm vào cờ `-ObjC` sa
 ####1.3.3. Cấu hình file Info `.plist`
 - Mở Info `plist` thêm vào `FacebookAppID` key với value là [Facebook AppID](#head3-facebook-appid) của bạn.
 - Mở Info `plist` thêm vào `FacebookAppLinkUrl` key với value là [Facebook App Link](#head3-facebook-app-link) của bạn.
-- Mở Info `plist` thêm vào `GOOGLE_CLIENT_ID` và `GOOGLE_CLIENT_SECRET` key với value là [Google Client Id and Sceret](#head3-google-appid) của bạn.
+- Mở Info `plist` thêm vào `GOOGLE_CLIENT_ID` và `GOOGLE_CLIENT_SECRET` key với value là [Google Client Id and Sceret](#head3-google-appid) của bạn, trong trường hợp không có client secret vui lòng giữ trường `GOOGLE_CLIENT_SECRET` trong plist và để trống.
 - Mở Info `plist` thêm vào `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` key với value là [Twitter consumer key and twitter consumer secret](#head3-twitter-appid) của bạn.
 - Mở Info `plist` thêm vào `AppotaAPIKey` key với value là [Appota APIKey](#head3-appota-appid) của bạn.
 - Thêm url schemes:
