@@ -77,7 +77,7 @@ Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if 
 
 - Open Info `plist` section add `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
 - Open Info `plist` section add `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
-- Open Info `plist` section add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` key with value is your [Google Client Id and Sceret](#head3-google-appid).
+- Open Info `plist` section add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` key with value is your [Google Client Id and Sceret](#head3-google-appid) in case of no client secret provided please leave `GOOGLE_CLIENT_SECRET` field blank.
 - Open Info `plist` section add `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` key with value is your [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - Open Info `plist` section add `AppotaAPIKey` key with value is your [Appota APIKey](#head3-appota-appid).
 - Add url schemes:
