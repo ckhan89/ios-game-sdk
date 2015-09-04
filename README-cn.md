@@ -76,7 +76,7 @@ The Appota Game SDK for iOS supports the following versions of software:
 
 - 打开 Info `plist` 输入您的 `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
 - 打开 Info `plist` 输入您的 `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
-- 打开 Info `plist` 输入您的 `GOOGLE_CLIENT_ID` 到 `GOOGLE_CLIENT_SECRET` [Google Client Id and Sceret](#head3-google-appid).
+- 打开 Info `plist` 输入您的 `GOOGLE_CLIENT_ID` 到 `GOOGLE_CLIENT_SECRET` [Google Client Id and Sceret](#head3-google-appid) 如果没有提供任何客户端秘密请留下`GOOGLE_CLIENT_SECRET`领域的空白.
 - 打开 Info `plist` 输入您的 `TWITTER_CONSUMER_KEY` 到 `TWITTER_CONSUMER_SECRET` key. [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - 打开 Info `plist` 输入您的 `AppotaAPIKey` 到 [Appota APIKey](#head3-appota-appid).
 - 添加 url 方案:
