@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppotaAPIKey</key>
-	<string>K-A164834-U00000-SMB02Y-809329F27CB81310</string>
+	<string>K-A175943-U00000-TAWJMX-DFAEB1781D6A5F1B</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -44,9 +44,9 @@
 	<key>FacebookDisplayName</key>
 	<string>AppotaSDK4Application</string>
 	<key>GOOGLE_CLIENT_ID</key>
-	<string>381575391023-q1kemg9m0m4pacje3dq12dufr890hvdg.apps.googleusercontent.com</string>
+	<string>71184019724-sfohl0e0j1hfv69nh8t8v0v3bt2j79ri.apps.googleusercontent.com</string>
 	<key>GOOGLE_CLIENT_SECRET</key>
-	<string>pm9A54oKzsqLMOWZBzichjCL</string>
+	<string></string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

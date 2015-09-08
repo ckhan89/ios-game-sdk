@@ -46,10 +46,13 @@ typedef NS_ENUM(NSInteger, EWALLETTYPE){
 
 - (NSString*) getPaymentCollectionImageName;
 - (NSString*) getPaymentCollectionName;
+- (NSString *)getPaymentCollectionGroupName;
 - (id) getVendorName;
 - (NSString *) getCurrency;
 +(PAYMENT_METHOD) getPaymentMethodFromString:(NSString*) pMethod;
 + (NSString*) getStringFromPaymentMethod:(PAYMENT_METHOD) pMethod;
 - (SMSTYPE)getSMSType;
 - (EWALLETTYPE) getEwalletType;
+- (NSString *) getCardCode;
+- (NSString *) getCardSerial;
 @end

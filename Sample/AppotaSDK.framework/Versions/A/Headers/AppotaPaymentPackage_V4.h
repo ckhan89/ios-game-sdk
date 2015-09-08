@@ -24,8 +24,9 @@ typedef enum : NSUInteger {
 - (AppotaGameCurrency*) getGameCurrency;
 - (int) getPackageAmount;
 - (NSString *) getMoneyCurrencyWithPaymentMethod:(NSString *) paymentMethod;
-- (NSString *) getMoneyAmountWithPaymentMethod:(NSString *) paymentMethod;
-- (NSString *) getContryCodeWithPaymentMethod:(NSString *) paymentMethod;
+- (NSString*) getMoneyAmountWithPaymentMethod:(NSString*) paymentMethod andGroup:(NSString *)group;
+- (NSString *)getContryCodeWithPaymentMethod:(NSString *)paymentMethod andGroup:(NSString *)group;
+- (NSString *)getGroupNameWithPaymentMethod:(NSString *)paymentMethod;
 - (NSArray *) getListPaymentMethod;
 -(NSString *)getProductAppleID;
 
