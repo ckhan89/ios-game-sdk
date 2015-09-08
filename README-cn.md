@@ -76,11 +76,10 @@ The Appota Game SDK for iOS supports the following versions of software:
 
 - 打开 Info `plist` 输入您的 `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
 - 打开 Info `plist` 输入您的 `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
-- 打开 Info `plist` 输入您的 `GOOGLE_CLIENT_ID` 到 `GOOGLE_CLIENT_SECRET` [Google Client Id and Sceret](#head3-google-appid).
+- 打开 Info `plist` 输入您的 `GOOGLE_CLIENT_ID` 到 `GOOGLE_CLIENT_SECRET` [Google Client Id and Sceret](#head3-google-appid) 如果没有提供任何客户端秘密请留下`GOOGLE_CLIENT_SECRET`领域的空白.
 - 打开 Info `plist` 输入您的 `TWITTER_CONSUMER_KEY` 到 `TWITTER_CONSUMER_SECRET` key. [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - 打开 Info `plist` 输入您的 `AppotaAPIKey` 到 [Appota APIKey](#head3-appota-appid).
 - 添加 url 方案:
-	- Appota 的标识, URL Schemes: `appotaYOUR_CLIENT_KEY`, [Appota Client Key](#head3-appota-appid) 可以从 Developer.appota.com 应用程序仪表板获得
 	- Facebook 的标识, URL Schemes: `fbYOUR_FACEOOK_APP_ID`, [Facebook AppID](#head3-facebook-appid) 可以从Facebook应用程序仪表板获得.
 
 一个完整的 `.plist` 文件就像下面图片或您可在 [sample apps](Sample/) 查看
@@ -409,7 +408,9 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 
 **注册群推送通知的功能**  
 
-注册推送通知 (目前只支持iOS). 使用群名称来选择推送用户群(比如：只推送1服的用户，群名称将为 = "server 1").
+
+注册推送通知 (目前只支持iOS). 使用群名称来选择推送用户群(比如：只推送1服的用户，群名称将为 = "server 1")
+.
 
 ```
 + (void) registerPushNotificationWithGroupName:(NSString*) groupName;
@@ -421,7 +422,8 @@ AppotaSDK 提供4个回调以在 [`AppotaGameSDKCallback`](class-document/Appota
 + (NSString*) configurePushNotificationWithTokenData:(NSData*) deviceTokenData;
 ```  
 推送通知跟数据配置
-玩家注册推送通知之后将回调推送通知跟数据配置。您将该函数添加到您的application delegate (一般是在 AppDelegate.m里)。
+
+玩家注册推送通知之后将回调推送通知跟数据配置。您将该函数添加到您的application delegate (一般是在 AppDelegate.m里)。
 
 ```
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken

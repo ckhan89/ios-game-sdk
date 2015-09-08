@@ -14,7 +14,7 @@
 ## Overview
 1. [Integrate SDK](#head1-integrate-sdk)
 	* 1.1 [Prerequisites](#head2-prerequisites)
-	* 1.2 [Obtain app api key and client key](#head2-obtain-app-api-key-and-client-key)
+	* 1.2 [Obtain app api key and client secret](#head2-obtain-app-api-key-and-client-key)
 	* 1.3 [Configure your XCode Project](#head2-configure-your-xcode-project)
 	* 1.4 [Update the SDK to a Newer Version](#head2-update-the-sdk-to-a-newer-version)
 2. [Client API](#head1-client-api)
@@ -39,8 +39,8 @@ The Appota Game SDK for iOS supports the following versions of software:
 * Xcode 6 and later
 * iOS 6 and later
 
-###1.2. Obtain app api key and client key <a name="head2-obtain-app-api-key-and-client-key"> </a>
-* Retreive Appota app information `ClientKey`, `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/beta/):  
+###1.2. Obtain app api key and client secret <a name="head2-obtain-app-api-key-and-client-key"> </a>
+* Retreive Appota app information `APIKey`, `ClientSecret` from app dashboard. <a name="head3-appota-appid"> </a> If you haven't already registered your app with Appota by creating a Appota app, you should [create a new app](https://developer.appota.com/beta/):  
 * Retreive Facebook Application ID. <a name="head3-facebook-appid"> </a> [Detail about how to create ,retreive and setup Facebook app info for iOS](https://developers.facebook.com/docs/ios/getting-started).
 * Create Facebook App Link. <a name = "head3-facebook-app-link"> </a> [App Link Tool](https://developers.facebook.com/quickstarts/?platform=app-links-host)
 * Retreive Google Client ID and Client Secret. <a name="head3-google-appid"> </a> [Detail about create, retreive and setup Google app for iOS](https://developers.google.com/+/mobile/ios/getting-started)
@@ -77,11 +77,10 @@ Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if 
 
 - Open Info `plist` section add `FacebookAppID` key with value is your [Facebook AppID](#head3-facebook-appid).
 - Open Info `plist` section add `FacebookAppLinkUrl` key with value is your [Facebook App Link](#head3-facebook-app-link).
-- Open Info `plist` section add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` key with value is your [Google Client Id and Sceret](#head3-google-appid).
+- Open Info `plist` section add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` key with value is your [Google Client Id and Sceret](#head3-google-appid) in case of no client secret provided please leave `GOOGLE_CLIENT_SECRET` field blank.
 - Open Info `plist` section add `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET` key with value is your [Twitter consumer key and twitter consumer secret](#head3-twitter-appid).
 - Open Info `plist` section add `AppotaAPIKey` key with value is your [Appota APIKey](#head3-appota-appid).
 - Add url schemes:
-	- Identifier Appota, URL Schemes: `appotaYOUR_CLIENT_KEY`, [Appota Client Key](#head3-appota-appid) can be retreived from developer portal
 	- Identifier Facebook, URL Schemes: `fbYOUR_FACEOOK_APP_ID`, [Facebook AppID](#head3-facebook-appid) can be retreived from Facebook App Dashboard
 
 The finished `.plist` should look like this or check the [sample apps](Sample/) for plist configuration
