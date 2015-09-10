@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 @property (readwrite) PAYMENT_METHOD selectedPaymentMethod;
 - (AppotaGameCurrency*) getGameCurrency;
 - (int) getPackageAmount;
-- (NSString *) getMoneyCurrencyWithPaymentMethod:(NSString *) paymentMethod;
+- (NSString*) getMoneyCurrencyWithPaymentMethod:(NSString*) paymentMethod andGroup:(NSString *) group;
 - (NSString*) getMoneyAmountWithPaymentMethod:(NSString*) paymentMethod andGroup:(NSString *)group;
 - (NSString *)getContryCodeWithPaymentMethod:(NSString *)paymentMethod andGroup:(NSString *)group;
 - (NSString *)getGroupNameWithPaymentMethod:(NSString *)paymentMethod;
