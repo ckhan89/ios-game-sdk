@@ -22,6 +22,8 @@ CLUpdate05:
 CLUpdate06: SDK Verion 4.0.9
 + fixed show error currency 
 + fixed refreshcontrol in history transaction 
+CLUpdate07: SDK Version 4.0.9b3
++ fixed sdk not show when tap on sdk button
 ## 2. Server
 
 - Add `revenue` parameter in IPN callback to measure revenue of current payment method type `CARD`, `BANK`, ...
