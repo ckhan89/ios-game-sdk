@@ -1,6 +1,8 @@
 AppotaGameSDK iOS Update for iOS9
 ====
 
+# Please wait till stable version for iOS9 SDK to update, use XCode 6 for now is better solution
+
 ## Preparing Your Apps for iOS9
 If you are building your Apps with iOS SDK 9.0 (`XCode7`). iOS 9 introduces changes that are likely to impact your app and `AppotaGameSDK` integration . This guide will review actions you should take to ensure the best app experience when using the AppotaGameSDK for iOS.
 
