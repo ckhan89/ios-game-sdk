@@ -65,6 +65,7 @@ Mở **Build Phases** tab, trong mục **Link Binary with Libraries**, thêm và
 - `MessageUI.framework`
 - `CoreMotion.framework`
 - `Security.framework`
+- `WebKit.framework`
 
 Mở **Build Settings**, tìm **Other Linker Flags**, thêm vào cờ `-ObjC` sau đó kiểm tra nếu **Link Frameworks Automatically**, **Enable Modules (C and Objectivce-C))** đều set là `YES`.
 

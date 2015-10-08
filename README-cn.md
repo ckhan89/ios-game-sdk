@@ -67,7 +67,8 @@ The Appota Game SDK for iOS supports the following versions of software:
 - `SystemConfiguration.framework`
 - `MessageUI.framework`
 - `CoreMotion.framework`
--  `Security.framework`
+- `Security.framework`
+- `WebKit.framework`
 
 打开 **Build Settings**, 找 **Other Linker Flags**, 添加 `-ObjC` 然后把  **Link Frameworks Automatically**, **Enable Modules (C and Objectivce-C))** 都设为 `YES`
 

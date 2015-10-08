@@ -69,6 +69,7 @@ Open **Build Phases** tab, within **Link Binary with Libraries**, add the follow
 - `MessageUI.framework`
 - `CoreMotion.framework`
 - `Security.framework`
+- `WebKit.framework`
 
 Open **Build Settings**, find **Other Linker Flags**, add `-ObjC` then check if **Link Frameworks Automatically**, **Enable Modules (C and Objectivce-C))** are set to `YES`
 
