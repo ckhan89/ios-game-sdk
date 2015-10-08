@@ -24,6 +24,8 @@ CLUpdate06: SDK Verion 4.0.9
 + fixed refreshcontrol in history transaction 
 CLUpdate07: SDK Version 4.0.9b3
 + fixed sdk not show when tap on sdk button
+CLUpdate08: SDK Version 4.0.9b4
++ update bitcode for xcode 7
 ## 2. Server
 
 - Add `revenue` parameter in IPN callback to measure revenue of current payment method type `CARD`, `BANK`, ...

@@ -38,7 +38,7 @@ typedef void (^AppotaSDKObjectHandler) (id object, NSError *error);
 //
 #define APPOTA_LANGUAGE_KEY @"kAppotaLangKey"
 #define APPOTAGame_SDK_VERSION @"4.0"
-#define APPOTAGame_SDK_LABEL_VERSION @"4.0.9b3"
+#define APPOTAGame_SDK_LABEL_VERSION @"4.0.9b4"
 #define APPOTAGame_SDK_BUILD 40
 #define APPOTA_GAME_DEVICE_TOKEN_KEY @"appota_game_push_device_token"
 #define APPOTA_LOGIN_DICT_KEY_SAVED @"key_appota_login_dict_saved"
@@ -82,12 +82,9 @@ typedef void (^AppotaSDKObjectHandler) (id object, NSError *error);
 
 
 //Orientation
-#define APPOTAGameSDK_IS_PORTRAIT ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortraitUpsideDown)
-#define APPOTAGameSDK_IS_LANDSCAPE ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft)
-#define APPOTAGameSDK_LANDSCAPE_RIGHT ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight)
-#define APPOTAGameSDK_LANDSCAPE_LEFT ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft)
-
-
-
+#define APPOTAGameSDK_IS_PORTRAIT ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)
+#define APPOTAGameSDK_IS_LANDSCAPE ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft)
+#define APPOTAGameSDK_LANDSCAPE_RIGHT ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeRight)
+#define APPOTAGameSDK_LANDSCAPE_LEFT ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationLandscapeLeft)
 
 #endif
