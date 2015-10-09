@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "275C98D5735872B843F1A3A622C4FBE12329A996",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1E141FFE90424962F74A5375BCC2151D60C0C55C" : 0,
+    "275C98D5735872B843F1A3A622C4FBE12329A996" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "31F3CA65-CF94-427B-9DEE-45DEB774052C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1E141FFE90424962F74A5375BCC2151D60C0C55C" : "",
+    "275C98D5735872B843F1A3A622C4FBE12329A996" : "ios-game-sdk"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AppotaGameSDKV4Test",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sample\/AppotaGameSDKV4Test.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:appota\/ios-game-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E141FFE90424962F74A5375BCC2151D60C0C55C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/appota\/ios-game-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "275C98D5735872B843F1A3A622C4FBE12329A996"
+    }
+  ]
+}
