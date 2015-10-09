@@ -59,3 +59,8 @@ This document gives instructions to upgrade from **AppotaGameSDK v3** to **Appot
 |`didFinishLogin:(NSDictionary *)`|`didLoginSuccess:(AppotaUserLoginResult*)`|Callback changed|
 ||`didCloseLoginView`|Callback changed|
 |`didFinishPaymentWithDictionary:(NSDictionary*) withState:(AppotaPaymentState) withError:(NSError*)`|`didPaymentSuccessWithResult:(AppotaPaymentResult*)withPackage:(NSString *)`|Callback change return result [`AppotaPaymentResult`](https://github.com/appota/ios-game-sdk/blob/master/class-document/AppotaPaymentResult-class.md)|
+
+## 3. Server IPN changes
+- Add `revenue` parameter in IPN callback to measure revenue of current payment method type `CARD`, `BANK`, ...
+- Reimplement your hash checking function to add `revenue` parameter (it will be add in `a-z` order)
+- For detail please read wiki about IPN for each payment method [https://github.com/appota/android-game-sdk/wiki/instant-payment-notification](https://github.com/appota/android-game-sdk/wiki/instant-payment-notification)
